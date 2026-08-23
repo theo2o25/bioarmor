@@ -1,0 +1,49 @@
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build files
+build/
+dist/
+*.o
+*.obj
+*.exe
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+
+# Node
+node_modules/
+npm-debug.log*
+
+# 3D files (keep STL, ignore temporary)
+*.tmp
+*.bak
+*.blend1
+
+# Project files
+*.project
+*.workspace
+
+# Local environment
+.env
+.env.local
