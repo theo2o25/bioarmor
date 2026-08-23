@@ -8,7 +8,14 @@
 
 ## Executive Summary
 
-BioArmor is a revolutionary spacesuit system that integrates living biological systems with advanced materials to create a self-sustaining, multi-functional protective garment for space exploration. By combining algae-based life support, 3D-printed ceramic armor, carbon nanotube structures, and bio-inspired materials, BioArmor reduces mass by **85%**, cost by **92%**, and extends EVA duration to **8+ hours** while providing superior protection compared to current NASA suits.
+BioArmor is a revolutionary spacesuit system that integrates living biological systems with advanced materials to create a self-sustaining, multi-functional protective garment for space exploration. Available in **two configurations**:
+
+| Version | Name | Mass | Use Case |
+|---------|------|------|----------|
+| **V1** | Integrated | 1.5 kg | Daily wear, light EVA, maximum mobility |
+| **V2** | Modular | 23 kg | Heavy EVA, lunar/Mars surface, maximum protection |
+
+By combining algae-based life support, 3D-printed ceramic armor, carbon nanotube structures, and bio-inspired materials, BioArmor reduces mass by **85%**, cost by **92%**, and extends EVA duration to **8+ hours** while providing superior protection compared to current NASA suits.
 
 ### Key Innovations
 
@@ -20,6 +27,83 @@ BioArmor is a revolutionary spacesuit system that integrates living biological s
 | **3D-Printed Armor** | Alumina ceramic tiles | Scalable, customizable |
 | **Joint Assistance** | Tendon-driven motors | 40% less fatigue |
 | **Dust Protection** | Electrodynamic shield | Repels lunar/Mars dust |
+
+---
+
+## Two Versions
+
+### V1: Integrated (Chain Mail Style)
+
+```
+V1 DAILY WEAR SUIT:
+┌─────────────────────────────────────────┐
+│  WHITE KEVLAR FABRIC                     │
+│  with hexagonal chain mail weave         │
+│  embedded within for protection          │
+├─────────────────────────────────────────┤
+│  HYDROPHILIC AEROGEL + ALGAE             │
+│  O2 production, thermal insulation       │
+├─────────────────────────────────────────┤
+│  SELYN PRESSURE BLADDER                  │
+│  Self-healing, 4.3 psi                   │
+├─────────────────────────────────────────┤
+│  LIQUID COOLING + COMFORT LINER          │
+│  Temperature regulation                  │
+└─────────────────────────────────────────┘
+Mass: 1.5 kg | Protection: Light | Mobility: Maximum
+```
+
+**Features:**
+- Chain mail woven directly into fabric
+- Sleek, form-fitting like compression wear
+- Lightest possible configuration
+- Best mobility and comfort
+- Suitable for: In-station work, light EVA, planetary surface
+
+### V2: Modular (Snap-On Tile System)
+
+```
+V2 EXOARMOR (removable):
+┌─────────────────────────────────────────┐
+│  PV COATING (0.1mm)                     │
+│  Perovskite solar cells                  │
+├─────────────────────────────────────────┤
+│  CERAMIC TILES (2mm)                    │
+│  3D-printed Al2O3 hexagonal tiles       │
+│  snap onto CNT mesh skeleton            │
+├─────────────────────────────────────────┤
+│  CNT MESH SKELETON (0.3mm)             │
+│  Structural framework + electrical bus  │
+├─────────────────────────────────────────┤
+│  FLUID TUBES (0.2mm)                    │
+│  Water/nutrient transport               │
+├─────────────────────────────────────────┤
+│  ATTACHES TO V1 DAILY WEAR SUIT         │
+└─────────────────────────────────────────┘
+
+V1 DAILY WEAR SUIT (permanent):
+┌─────────────────────────────────────────┐
+│  HYBRID ARAMID/UHMWPE                   │
+│  Heat/UV/creep resistant                │
+├─────────────────────────────────────────┤
+│  SELYN PRESSURE BLADDER                  │
+│  Self-healing, 4.3 psi                   │
+├─────────────────────────────────────────┤
+│  AEROGEL + ALGAE                         │
+│  O2 production, thermal                  │
+├─────────────────────────────────────────┤
+│  COMFORT LINER                           │
+│  Liquid cooling, moisture wicking        │
+└─────────────────────────────────────────┘
+Mass: 23 kg | Protection: Maximum | Mobility: Enhanced (joint assistance)
+```
+
+**Features:**
+- Hexagonal ceramic tiles snap onto CNT mesh
+- Removable and modular
+- Heaviest configuration
+- Most protection
+- Suitable for: Heavy EVA, lunar/Mars surface, multi-day missions
 
 ---
 
