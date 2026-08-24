@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>BioArmor — Bio-Integrated Spacesuit System | Grant Briefing</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reset.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/theme/black.min.css" id="theme">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/highlight/monokai.min.css">
+  <style>
+    :root { --ba-cyan:#3fd0ff; --ba-teal:#2ee6c0; --ba-violet:#8a7bff; }
+    body { background: radial-gradient(ellipse at top, #0b1430 0%, #05070f 60%, #02030a 100%); }
+    .reveal { font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif; }
+    .reveal h1, .reveal h2, .reveal h3 { color:#eaf6ff; text-transform:none; letter-spacing:.3px; }
+    .reveal h1 { color:var(--ba-cyan); font-weight:800; }
+    .reveal h2 { color:var(--ba-teal); border-bottom:2px solid rgba(63,208,255,.25); padding-bottom:.15em; }
+    .reveal strong { color:var(--ba-cyan); }
+    .reveal a { color:var(--ba-violet); }
+    .reveal .slides section { text-align:left; }
+    .reveal .center { text-align:center; }
+    .tagline { color:#9fb6cc; font-size:.6em; letter-spacing:2px; text-transform:uppercase; }
+    .pill { display:inline-block; padding:.15em .7em; border:1px solid rgba(63,208,255,.5); border-radius:999px; color:var(--ba-cyan); font-size:.5em; margin:.2em; }
+    table.ba { width:100%; font-size:.42em; border-collapse:collapse; margin-top:.4em; }
+    table.ba th { background:rgba(63,208,255,.15); color:#dff3ff; text-align:left; padding:.35em .5em; }
+    table.ba td { padding:.3em .5em; border-bottom:1px solid rgba(255,255,255,.08); color:#cfe2f2; }
+    table.ba tr td:first-child { color:#fff; font-weight:600; }
+    .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:1em; }
+    .card { background:rgba(20,32,60,.55); border:1px solid rgba(63,208,255,.2); border-radius:10px; padding:.7em .9em; }
+    .card h3 { color:var(--ba-teal); font-size:.55em; margin-top:0; }
+    .card p, .card li { font-size:.42em; color:#cfe2f2; margin:.2em 0; }
+    .small { font-size:.36em; color:#8fa6bd; }
+    .warn { border-left:3px solid #ffb454; padding-left:.6em; color:#ffd9a8; font-size:.42em; }
+    .ok { border-left:3px solid var(--ba-teal); padding-left:.6em; color:#bff3e6; font-size:.42em; }
+    .foot { position:fixed; bottom:8px; left:0; right:0; text-align:center; font-size:11px; color:#5e7a93; }
+    .reveal .slide-number { color:#5e7a93; }
+    .imgwrap img { max-height:62vh; border-radius:8px; border:1px solid rgba(63,208,255,.25); }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- 1. COVER -->
+      <section class="center" data-background-color="#05070f">
+        <img src="images/BIOARMOR_FULL_SUIT_CONCEPT.png" style="max-height:46vh;border-radius:10px;border:1px solid rgba(63,208,255,.3);">
+        <h1 style="font-size:1.5em;margin-bottom:0;">BioArmor</h1>
+        <p class="tagline">Next-Generation Bio-Integrated Spacesuit System</p>
+        <p><span class="pill">Lighter</span><span class="pill">Modular</span><span class="pill">Bio-Augmented</span></p>
+        <p class="small">Grant Briefing Deck &nbsp;•&nbsp; Reusable across NASA SBIR · NSF · DARPA · DOE &nbsp;•&nbsp; August 2026</p>
+      </section>
+
+      <!-- 2. THE BIG IDEA -->
+      <section>
+        <h2>The Big Idea</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>What BioArmor is</h3>
+            <p>A spacesuit system that fuses <strong>living biological systems</strong> with <strong>advanced materials</strong> — algae-based atmosphere processing, self-healing pressure bladders, 3D-printed ceramic armor, and a carbon-nanotube structural/electrical mesh.</p>
+            <p>Delivered in two configurations: a <strong>1.5 kg daily-wear</strong> suit (V1) and a <strong>23 kg modular</strong> exo-layer (V2) for heavy EVA.</p>
+          </div>
+          <div class="card">
+            <h3>Why now</h3>
+            <p>NASA's OIG reports the U.S. has a <strong>single active EVA suit vendor</strong> (Axiom) with documented schedule risk — AxEMU is <strong>1.5+ years behind</strong> plan.</p>
+            <p>Meanwhile, every key BioArmor material (CNT, perovskite, Surlyn, printed ceramic) has become <strong>commercially viable</strong> in the last 24 months.</p>
+          </div>
+        </div>
+        <p class="warn" style="margin-top:1em;">Positioning: not a replacement for flight-certified life support on day one — a <strong>credible, lighter, redundant alternative</strong> developed against an open market window.</p>
+      </section>
+
+      <!-- 3. PROBLEM -->
+      <section>
+        <h2>The Problem — EVA Suit Gap</h2>
+        <table class="ba">
+          <thead><tr><th>Constraint</th><th>Today's Reality</th></tr></thead>
+          <tbody>
+            <tr><td>Mass</td><td>EMU ~127 kg · AxEMU est. ~180 kg — joint fatigue, mobility cost</td></tr>
+            <tr><td>Cost</td><td>~$150M per unit (EMU/AxEMU class) — barrier to fleet scaling</td></tr>
+            <tr><td>Vendor risk</td><td>Axiom is the <strong>sole active</strong> U.S. EVA provider (Collins withdrew 2024) — NASA OIG flags concentration risk</td></tr>
+            <tr><td>Schedule</td><td>AxEMU 1.5+ yrs behind; OIG estimates realistic lunar slip to 2031</td></tr>
+            <tr><td>Redundancy</td><td>Limited architectural alternatives for pressurized EVA</td></tr>
+          </tbody>
+        </table>
+        <p class="ok" style="margin-top:1em;">Opportunity: NASA OIG explicitly notes "several companies that could compete." A lighter, cheaper, more modular suit addresses both cost and resilience.</p>
+      </section>
+
+      <!-- 4. SOLUTION -->
+      <section>
+        <h2>The Solution — Two Configurations</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>V1 — Integrated (Daily Wear)</h3>
+            <p><strong>~1.5 kg</strong> · maximum mobility</p>
+            <ul>
+              <li>Kevlar/chain-mail weave for protection</li>
+              <li>Hydrophilic aerogel + algae layer (thermal + atmosphere)</li>
+              <li>Self-healing Surlyn pressure bladder</li>
+              <li>Liquid-cooling comfort liner</li>
+            </ul>
+            <p class="small">Use: in-station work, light EVA, planetary surface</p>
+          </div>
+          <div class="card">
+            <h3>V2 — Modular (Exo-Layer)</h3>
+            <p><strong>~23 kg</strong> · maximum protection</p>
+            <ul>
+              <li>Snap-on 3D-printed alumina ceramic tiles</li>
+              <li>CNT mesh skeleton (structure + power bus)</li>
+              <li>Perovskite PV coating (record 27.5% efficiency)</li>
+              <li>Tendon-driven joint assistance (~40% less fatigue)</li>
+            </ul>
+            <p class="small">Use: heavy EVA, lunar/Mars surface, multi-day missions</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. KEY INNOVATIONS -->
+      <section>
+        <h2>Key Innovations</h2>
+        <div class="grid2">
+          <div class="card"><h3>Algae Atmosphere Module</h3><p>Supplemental O₂ + CO₂ scrubbing and redundancy. Wearable algae O₂ is <strong>proven at lab scale (TAPED, ACS Nano 2025)</strong>; sized as 10–30% contribution, not primary life support.</p></div>
+          <div class="card"><h3>Self-Healing Pressure</h3><p>Surlyn bladder seals micrometeoroid punctures (~2 km/s proven, Polimi/ESA). CNT doping boosts healing to ~80%.</p></div>
+          <div class="card"><h3>CNT Mesh Skeleton</h3><p>Carbon-nanotube structure is both <strong>load-bearing frame and electrical bus</strong> — now &lt;$50/kg at commercial scale.</p></div>
+          <div class="card"><h3>Power & Protection</h3><p>Perovskite PV (27.5% flexible, 1.77 W/g) + 3D-printed ceramic armor (DLP alumina, 97.5% density) + electrodynamic lunar-dust shield.</p></div>
+        </div>
+      </section>
+
+      <!-- 6. HOW IT WORKS -->
+      <section>
+        <h2>How It Works — Layered Architecture</h2>
+        <div class="grid2">
+          <div>
+            <p class="small">V2 exo-layer stacks onto the V1 daily-wear suit:</p>
+            <table class="ba">
+              <tbody>
+                <tr><td>PV Coating</td><td>Perovskite solar cells (0.1 mm)</td></tr>
+                <tr><td>Ceramic Tiles</td><td>3D-printed Al₂O₃ hexagons, snap-on</td></tr>
+                <tr><td>CNT Mesh</td><td>Structural frame + electrical bus (0.3 mm)</td></tr>
+                <tr><td>Fluid Tubes</td><td>Water / nutrient transport (0.2 mm)</td></tr>
+                <tr><td>V1 Suit</td><td>Aramid/UHMWPE + bladder + algae + liner</td></tr>
+              </tbody>
+            </table>
+            <p class="small">Full 3D models (STL) for every layer are tracked in <code>models/</code>.</p>
+          </div>
+          <div class="imgwrap center">
+            <img src="images/BIOARMOR_TILE_BLUEPRINT.png" alt="Tile blueprint">
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. PERFORMANCE TARGETS -->
+      <section>
+        <h2>Performance Targets</h2>
+        <table class="ba">
+          <thead><tr><th>Parameter</th><th>V1 Integrated</th><th>V2 Modular</th><th>NASA EMU</th><th>AxEMU</th></tr></thead>
+          <tbody>
+            <tr><td>Mass</td><td>1.5 kg</td><td>23 kg</td><td>127 kg</td><td>~180 kg</td></tr>
+            <tr><td>Cost / unit (target)</td><td>$2M</td><td>$10M</td><td>$150M</td><td>$150M</td></tr>
+            <tr><td>EVA duration (target)</td><td>4–6 hr</td><td>8+ hr</td><td>6–8 hr</td><td>8+ hr</td></tr>
+            <tr><td>Life support</td><td>Algae (supp.)</td><td>Algae + backup</td><td>PLSS</td><td>PLSS</td></tr>
+            <tr><td>Power</td><td>Passive</td><td>Solar + CNT</td><td>Battery</td><td>Battery</td></tr>
+            <tr><td>Self-healing</td><td>Yes</td><td>Yes</td><td>No</td><td>No</td></tr>
+          </tbody>
+        </table>
+        <p class="warn">These are <strong>design targets</strong>, not measured flight performance. Mass/cost reductions assume successful subsystem prototyping — see Technical Readiness.</p>
+      </section>
+
+      <!-- 8. TECHNICAL READINESS -->
+      <section>
+        <h2>Technical Readiness (Honest View)</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>Externally validated</h3>
+            <ul>
+              <li>Wearable algae O₂ — proof of concept (TAPED, 2025)</li>
+              <li>Surlyn self-healing — proven to ~2 km/s impacts</li>
+              <li>Perovskite PV — 27.5% efficiency, durable</li>
+              <li>DLP alumina armor — 97.5% density, mature printing</li>
+              <li>CNT &lt;$50/kg — commercially scalable</li>
+            </ul>
+            <p class="small">Individually TRL 4–6 in the open literature.</p>
+          </div>
+          <div class="card">
+            <h3>BioArmor-specific work remaining</h3>
+            <ul>
+              <li>Integrated suit prototype (V1 + V2 coupling)</li>
+              <li>Algae scale-up for suit-volume O₂/CO₂</li>
+              <li>Radiation shielding for Surlyn healing (gamma degradation)</li>
+              <li>CNT fiber containment (WHO exposure concern)</li>
+              <li>Vacuum + NBL pressurized testing</li>
+            </ul>
+            <p class="small">System integration currently ~<strong>TRL 2–3</strong>. This is the funded work.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 9. ROADMAP -->
+      <section>
+        <h2>Development Roadmap</h2>
+        <table class="ba">
+          <thead><tr><th>Phase</th><th>Goal</th><th>Milestone</th></tr></thead>
+          <tbody>
+            <tr><td>Yr 1–2 · Concept & Seed</td><td>Prove algae bioreactor + materials</td><td>30-day algae test; Surlyn+CNT composite</td></tr>
+            <tr><td>Yr 2–4 · Series A & Prototype</td><td>Integrated subsystem test</td><td>Full suit prototype; vacuum + NBL test</td></tr>
+            <tr><td>Yr 4–5 · Series B & Cert</td><td>NASA safety review</td><td>Flight qualification</td></tr>
+            <tr><td>Yr 5–8 · Production</td><td>Delivery to operators</td><td>First EVA with BioArmor</td></tr>
+          </tbody>
+        </table>
+        <p class="small">Near-term technical metrics (FUNDING.md): algae O₂ &gt;2,500 mL/hr · self-healing &gt;90% · CNT mesh &gt;500 MPa · PV &gt;35 mW avg — all within 12–18 months of seed funding.</p>
+      </section>
+
+      <!-- 10. TEAM & PARTNERS -->
+      <section>
+        <h2>Team &amp; Partnerships</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>Founding team</h3>
+            <p class="warn">[ Placeholder — add founders, advisors, and key hires. Grants weight team heavily; populate with named roles + relevant credentials before submission. ]</p>
+          </div>
+          <div class="card">
+            <h3>Proposed partners</h3>
+            <ul>
+              <li><strong>Agencies:</strong> NASA (test/cert), ESA, JAXA, CSA</li>
+              <li><strong>Academia:</strong> MIT (algae), Stanford (materials), Georgia Tech (aero), U. Houston (human factors)</li>
+              <li><strong>Commercial:</strong> Axiom, Blue Origin, Sierra Space (customers / testbeds)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 11. BUDGET -->
+      <section>
+        <h2>Budget &amp; Use of Funds</h2>
+        <table class="ba">
+          <thead><tr><th>Phase</th><th>Amount</th><th>Primary use</th></tr></thead>
+          <tbody>
+            <tr><td>Seed</td><td>$2–5M</td><td>Algae bioreactor prototype, materials testing, patents</td></tr>
+            <tr><td>Series A</td><td>$10–20M</td><td>Integrated prototype, subsystem testing, NBL/vacuum</td></tr>
+            <tr><td>Series B</td><td>$50–100M</td><td>Flight qualification, production line, certification</td></tr>
+          </tbody>
+        </table>
+        <p class="small">Total ~$40M over 5 years to a flight-ready suit (FUNDING.md). Mix of SBIR/STTR, Tipping Point, strategic investment, and contracts.</p>
+      </section>
+
+      <!-- 12. COMMERCIALIZATION -->
+      <section>
+        <h2>Commercialization &amp; Broader Impact</h2>
+        <div class="grid2">
+          <div class="card">
+            <h3>Market</h3>
+            <p>Commercial space EVA &amp; LSS market projected toward <strong>$23B by 2040</strong>. Multiple agency + commercial customers reduce single-buyer risk.</p>
+          </div>
+          <div class="card">
+            <h3>Dual-use &amp; spinoffs</h3>
+            <ul>
+              <li>Defense / CBRN protective garments</li>
+              <li>Firefighter &amp; hazmat / extreme-environment suits</li>
+              <li>Algae CO₂ scrubbing for submarines, habitats</li>
+              <li>Self-healing materials for infrastructure</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 13. RISK -->
+      <section>
+        <h2>Risk &amp; Mitigation</h2>
+        <table class="ba">
+          <thead><tr><th>Risk</th><th>Mitigation</th></tr></thead>
+          <tbody>
+            <tr><td>Algae can't meet full O₂ demand</td><td>Reframed as supplemental O₂ + CO₂ scrubber + redundancy; chemical/compressed O₂ primary</td></tr>
+            <tr><td>Gamma radiation degrades Surlyn healing</td><td>Add dedicated radiation-shielding layer</td></tr>
+            <tr><td>CNT fiber release (WHO concern)</td><td>Encapsulation / containment in composite matrix</td></tr>
+            <tr><td>Cost / schedule overrun</td><td>Phased milestones; parallel traditional-suit fallback</td></tr>
+            <tr><td>No early customers</td><td>Engage multiple agencies + commercial partners upfront</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- 14. THE ASK -->
+      <section class="center">
+        <h2>The Ask &amp; Next Steps</h2>
+        <table class="ba" style="font-size:.46em;">
+          <thead><tr><th>Action</th><th>Window</th></tr></thead>
+          <tbody>
+            <tr><td>Register ProSAMS (NASA) + SAM.gov</td><td>Immediate</td></tr>
+            <tr><td>NSF SBIR Phase I ($305K)</td><td>Opens Nov 4, 2026</td></tr>
+            <tr><td>DOE SBIR Genesis/AI</td><td>~Sept 10, 2026</td></tr>
+            <tr><td>NASA SBIR (BAA 80NSSC26R0003)</td><td>Valid thru Sept 2027</td></tr>
+            <tr><td>File provisional patent (algae module)</td><td>Next 30 days</td></tr>
+          </tbody>
+        </table>
+        <p class="tagline" style="margin-top:1em;">BioArmor Technologies</p>
+        <p class="small">grants@bioarmor.space &nbsp;·&nbsp; investors@bioarmor.space &nbsp;·&nbsp; partners@bioarmor.space</p>
+      </section>
+
+    </div>
+  </div>
+
+  <div class="foot">BioArmor — Grant Briefing Deck · Targets are projections; TRL reflects system-integration stage. Retarget per solicitation.</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/highlight/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.6.1/plugin/notes/notes.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      slideNumber: 'c/t',
+      transition: 'slide',
+      backgroundTransition: 'fade',
+      plugins: [ RevealHighlight, RevealNotes ]
+    });
+  </script>
+</body>
+</html>

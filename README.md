@@ -138,7 +138,7 @@ bioarmor/
 │
 ├── docs/                              # Documentation
 │   ├── BIOARMOR_CONCEPT.md            # Full technical specification
-│   ├── PERCHANCE_PROMPTS.md           # AI image generation prompts
+│   ├── RESEARCH_BRIEF_2026.md         # Research findings & positioning
 │   ├── FUNDING.md                     # Grant and investor guide
 │   ├── CONTRIBUTING.md                # Contribution guidelines
 │   └── PROJECT_STRUCTURE.md           # Structure guide
@@ -170,7 +170,8 @@ bioarmor/
 |----------|-------------|
 | [Technical Specification](docs/BIOARMOR_CONCEPT.md) | Complete 1800+ line technical document |
 | [Funding Guide](docs/FUNDING.md) | Grant opportunities and investor strategy |
-| [Perchance Prompts](docs/PERCHANCE_PROMPTS.md) | AI image generation prompts (V1 + V2) |
+| [Research Brief](docs/RESEARCH_BRIEF_2026.md) | Findings, TRL positioning & grant calendar |
+| [Grant Briefing Deck](index.html) | Reusable slide deck for funders (NASA/NSF/DARPA/DOE) |
 | [Contributing](docs/CONTRIBUTING.md) | How to contribute to the project |
 
 ---
