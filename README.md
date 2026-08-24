@@ -21,7 +21,7 @@ By combining algae-based life support, 3D-printed ceramic armor, carbon nanotube
 
 | Innovation | Technology | Benefit |
 |------------|------------|---------|
-| **Living Life Support** | Algae bioreactor | Self-producing O2 from CO2 |
+| **Living Life Support** | Algae bioreactor | Supplemental O2 + CO2 scrubbing (redundancy) |
 | **Self-Healing Pressure** | Surlyn bladder | Automatic puncture repair |
 | **Solar-Powered** | Perovskite PV + CNT mesh | No external power needed |
 | **3D-Printed Armor** | Alumina ceramic tiles | Scalable, customizable |
@@ -159,7 +159,10 @@ bioarmor/
         ├── LAYER_2B_CNT_Underlayer.stl
         ├── LAYER_3_Chain_Mail_v2.stl
         ├── LAYER_4_Aerogel_Algae.stl
-        └── LAYER_5_Inner_Comfort.stl
+        ├── LAYER_5_Inner_Comfort.stl
+        ├── LAYER_6_Surlyn_Bladder.stl   # Self-healing pressure bladder (1mm)
+        ├── LAYER_7_Aramid_UHMWPE.stl    # Hybrid aramid + UHMWPE shell (0.5mm)
+        └── LAYER_8_SMA_Wires.stl        # Shape-memory actuator wires (0.2mm)
 ```
 
 ---
