@@ -719,12 +719,12 @@ IN-STATION CONFIGURATION:
 ### Mass Comparison
 | Configuration | Mass | vs EMU (127 kg) |
 |---------------|------|-----------------|
-| Daily wear suit | 1.5 kg | 1% |
-| + Joint assistance | 2.4 kg | 2% |
-| + Gloves + Boots | 2.9 kg | 2% |
-| + Chest armor | 9.6 kg | 8% |
-| + Full ExoArmor | 21.5 kg | 17% |
-| + Algae pods (4) | 23.7 kg | 19% |
+| Daily wear suit | 2.2 kg | 2% |
+| + Joint assistance | 2.2 kg | 2% |
+| + Gloves + Boots | 2.7 kg | 2% |
+| + Chest armor | 9.4 kg | 7% |
+| + Full ExoArmor | 21.4 kg | 17% |
+| + Algae pods (4) | 23.6 kg | 19% |
 | + All improvements | 25.5 kg | 20% |
 | EMU (current) | 127 kg | 100% |
 
@@ -1635,6 +1635,20 @@ When a tile is damaged:
 
 **What doesn't exist:** The integrated system combining all components.
 
+### 2026 Research Updates (August 2026)
+
+| Finding | Impact | Source |
+|---------|--------|--------|
+| **CNT fiber costs now <$50/kg** | Affordable structural mesh | OCSiAl Serbia 60t/yr plant; Canatu+DENSO tripled throughput |
+| **Perovskite PV: 27.5% efficient** | Record efficiency flexible PV | Nature Photonics, Aug 2025; 97.2% retained after 10,000 bends |
+| **Self-healing Surlyn proven at ~2 km/s** | Micrometeorite defense validated | Polimi/ESA; CNT doping boosts healing to 80% |
+| **⚠️ Radiation degrades Surlyn healing** | Must shield from gamma radiation | Polimi team — critical design constraint |
+| **Lunar Palace 365: 98.2% closure** | Bio-regen life support proven long-duration | Chinese Academy of Sciences, 370-day run |
+| **TAPED: Wearable algae O₂ demonstrated** | Proof of concept for body-worn algae | ACS Nano, April 2025 |
+| **DLP-printed alumina: 97.5% density** | Ceramic armor 3D printable | MDPI Materials; Army Research Lab |
+| **Soft PAM actuator: 897N force** | Viable soft robotics for joint assist | npj Flex Electronics, Feb 2026 |
+| **WHO concern: CNT fiber release on washing** | Safety risk — need containment layer | MDPI Nanomaterials, Aug 2025 |
+
 ---
 
 ## Open Questions
@@ -1671,9 +1685,9 @@ When a tile is damaged:
 | Surlyn bladder | 200g | 1mm layer, pressure + self-healing |
 | Aerogel + algae | 300g | 6mm layer, thermal + O2/CO2 |
 | LEDs | 50g | 10-15 micro-LEDs for algae lighting |
-| SMA wires | 200g | 6 joints × 4-6 wires each |
+| Joint assistance (tendon-driven) | 900g | 3 motors + controller + springs |
 | Comfort liner | 100g | 0.5mm layer, skin contact |
-| **TOTAL DAILY WEAR** | **1,450g (1.5kg)** | |
+| **TOTAL DAILY WEAR** | **2,150g (2.2kg)** | |
 
 ### ExoArmor (Chest Plate Only - 42 tiles)
 | Component | Weight | Notes |
@@ -1696,10 +1710,10 @@ When a tile is damaged:
 ### Full Suit Extrapolation
 | Configuration | Mass | vs EMU (127 kg) |
 |---------------|------|-----------------|
-| Daily wear suit only | 1.5 kg | 1% |
-| + Chest armor | 8.2 kg | 6% |
-| + Full ExoArmor | 19.2 kg | 15% |
-| + 4 algae pods | 21.4 kg | 17% |
+| Daily wear suit only | 2.2 kg | 2% |
+| + Chest armor | 8.9 kg | 7% |
+| + Full ExoArmor | 19.9 kg | 16% |
+| + 4 algae pods | 22.1 kg | 17% |
 | EMU (current) | 127 kg | 100% |
 
 ---

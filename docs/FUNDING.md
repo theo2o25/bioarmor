@@ -14,8 +14,8 @@ BioArmor requires approximately **$40M over 5 years** to develop a flight-ready 
 
 | Source | Amount | Timeline | Probability |
 |--------|--------|----------|-------------|
-| NASA SBIR Phase I | $150K | 3 months | 30% |
-| NSF SBIR | $200K | 6 months | 40% |
+| NASA SBIR Phase I | $225K | 3 months | 30% |
+| NSF SBIR | $305K | 6 months | 40% |
 | Angel investors | $1-2M | 6 months | 50% |
 | Space accelerators | $500K | 3 months | 40% |
 | **Total Phase 1** | **$2-3M** | — | — |
@@ -51,13 +51,16 @@ BioArmor requires approximately **$40M over 5 years** to develop a flight-ready 
 
 #### SBIR/STTR Program
 
-**Phase I ($150K)**
+**Phase I ($225K — updated PY2026)**
 - Apply to: Topic in Advanced Manufacturing or Life Support
+- BAA: 80NSSC26R0003 (valid through Sept 2027)
 - Timeline: 6-12 months
 - Deliverable: Proof of concept
+- **Portal:** Register in ProSAMS + SAM.gov before applying
 
 **Phase II ($750K)**
 - Apply to: Follow-on to Phase I
+- **Phase II Sequential white papers due Sept 11, 2026** (if Phase I awardee)
 - Timeline: 24 months
 - Deliverable: Prototype
 
@@ -105,14 +108,30 @@ BioArmor requires approximately **$40M over 5 years** to develop a flight-ready 
 **Amount:** $1-5M
 **Strategy:** Emphasize sustainability and manufacturing innovation
 
+#### Additional Opportunities (2026)
+
+| Program | Amount | Deadline | Notes |
+|---------|--------|----------|-------|
+| **DOE SBIR Genesis/AI** | Phase I | Sept 10, 2026 | ConnectWerx AMP portal |
+| **NASA CCRPP** | Varies | ~Aug 29, 2026 | SpaceActAgreement required |
+| **NASA SBIR new appendix** | $225K Phase I | TBD | BAA 80NSSC26R0003 valid through Sept 2027 |
+| **NASA Tipping Point** | $10-50M | Irregular | Last round 2022; ≤500 employees = 10% cost share |
+| **Seraphim Space Accelerator** | Equity-based | ~Annual | TRL 5-9, $1.1B+ alumni raised |
+| **CDL Space** | No equity | ~Annual | Mentor-focused |
+
+**Portal Registration Required:**
+- **ProSAMS** — NASA SBIR portal (register immediately)
+- **SAM.gov** — Federal grant eligibility (register immediately)
+
 #### NSF
 
 **Programs:**
-- SBIR/STTR ($200K Phase I)
+- SBIR/STTR ($305K Phase I) — **Opens Nov 4, 2026** (topic-agnostic)
 - Partnerships for Innovation ($550K)
 - Engineering Research Centers ($5-10M)
 
 **Strategy:** Focus on fundamental research and innovation
+**Tip:** Submit mandatory Project Pitch 3-8 weeks before proposal deadline
 
 ---
 
@@ -308,4 +327,4 @@ Partnerships: [partners@bioarmor.space](mailto:partners@bioarmor.space)
 
 ---
 
-**Last updated:** August 2024
+**Last updated:** August 2026
