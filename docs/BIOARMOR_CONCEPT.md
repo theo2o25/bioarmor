@@ -1527,6 +1527,41 @@ Aerogel insulates — but sometimes you need to shed heat.
 | Reentry heating | Outer tiles reject heat, aerogel insulates |
 | Exercise/heavy work | Active cooling channels (liquid circulation) |
 
+### Thermal Envelope
+
+Estimated operating envelope (design target, TRL 2-3 - NOT flight-qualified):
+
+| Parameter | Value |
+|-----------|-------|
+| Crew (internal) target | 18-24 degC (active control required) |
+| Passive internal equilibrium (no active cooling) | ~35-40 degC (aerogel + algae metabolic heat) - too warm for crew |
+| External environment (est.) | ~-170 degC (lunar night / LEO shadow) to +130 degC (lunar day / LEO sun) |
+| Internal hard limit | Surlyn bladder melts ~95 degC (never reached; deep behind insulation) |
+
+Mechanism: passive silica-aerogel insulation + active CNT heater grid (cold) + liquid-cooling/comfort layer + PCM in the aerogel (hot). No water sublimator - cooling is non-consumable (radiator + liquid loop), the main differentiator vs EMU/AxEMU.
+
+Comparison vs reference suits:
+
+| Aspect | EMU / AxEMU (flight) | BioArmor (target) |
+|--------|----------------------|-------------------|
+| Crew temp | ~18-24 degC | ~18-24 degC |
+| External envelope | ~-150 to +120 degC (LEO) | ~-170 to +130 degC (est.) |
+| Insulation | MLI | Aerogel (lighter) |
+| Heating | Electric LCVG heaters | CNT grid in tile |
+| Cooling | Water sublimator (consumable) | Liquid loop + PCM + radiator (non-consumable) |
+| Maturity | Flight-proven | TRL 2-3, unverified |
+
+Proposed thermal enhancements (beyond aerogel + CNT-in-ceramic):
+- Variable-emissivity outer coating (VO2 / electrochromic) - radiate heat when hot, retain when cold.
+- Dedicated radiative surface (backpack / shaded panel) - in vacuum, heat is rejected by radiation only.
+- Circulating coolant loop through the CNT mesh to a radiator; pump-driven active cooling.
+- Microencapsulated PCM for transient buffering during sun/shade transitions.
+- Localized heaters at extremities (hands/feet) from the CNT power bus.
+- Algae/water thermal mass + modulated LED lighting to tune metabolic heat.
+- Sensor-driven thermal control (vary emissivity, pump, heaters) - "smart" integration.
+
+> Caveat: external reference figures (EMU/AxEMU sublimator cooling, temp ranges) are general published knowledge and must be verified before inclusion in the deck.
+
 ### Radiation Protection
 
 | Source | Shielding |
