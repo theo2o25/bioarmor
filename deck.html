@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BioArmor — Investor / Technical Deck</title>
+<style>
+  :root { --navy:#16324f; --accent:#2e8b57; --warn:#c0392b; --panel:#f4f7fa; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: "Segoe UI", Arial, sans-serif; background:var(--navy); color:#fff; }
+  #stage { height:100vh; display:flex; flex-direction:column; }
+  #slide { flex:1; overflow:auto; padding:48px 64px; display:flex; flex-direction:column; justify-content:center; }
+  h1 { font-size:34px; margin:0 0 6px; color:#fff; }
+  h2 { font-size:24px; margin:18px 0 10px; color:#bfe0ff; border-left:4px solid var(--accent); padding-left:12px; }
+  .sub { color:#9fb6cc; font-size:16px; margin:0 0 18px; }
+  ul { font-size:18px; line-height:1.5; max-width:760px; }
+  li { margin:6px 0; }
+  .imgwrap { margin:14px 0; text-align:center; }
+  .imgwrap img { max-width:100%; max-height:46vh; background:#fff; border-radius:8px; padding:8px; }
+  table { border-collapse:collapse; font-size:15px; margin:10px 0; background:#fff; color:#16324f; border-radius:6px; overflow:hidden; }
+  th, td { border:1px solid #cdd8e3; padding:6px 12px; text-align:left; }
+  th { background:var(--navy); color:#fff; }
+  .muted { color:#9fb6cc; font-size:14px; }
+  .gap-done { color:var(--accent); font-weight:700; }
+  .gap-miss { color:var(--warn); font-weight:700; }
+  #bar { display:flex; align-items:center; gap:18px; padding:10px 24px; background:#0e2236; }
+  #bar button { background:var(--accent); color:#fff; border:none; padding:8px 18px; border-radius:6px; font-size:15px; cursor:pointer; }
+  #bar button:disabled { opacity:.4; cursor:default; }
+  #counter { font-size:14px; color:#9fb6cc; }
+  .pill { display:inline-block; padding:2px 8px; border-radius:10px; font-size:12px; margin-right:6px; }
+  .pill.green { background:var(--accent); } .pill.red { background:var(--warn); } .pill.amber { background:#e0a800; }
+  a { color:#bfe0ff; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="slide"></div>
+  <div id="bar">
+    <button id="prev">‹ Prev</button>
+    <button id="next">Next ›</button>
+    <span id="counter"></span>
+  </div>
+</div>
+<script>
+const I = {
+  exploded: "images/BIOARMOR_TILE_EXPLODED.svg",
+  blueprint: "images/BIOARMOR_TILE_BLUEPRINT.svg",
+  subsystems: "images/BIOARMOR_SUBSYSTEMS.svg",
+  thermal: "images/BIOARMOR_THERMAL_LOOP.svg",
+  arch: "docs/assets/BIOARMOR_SYSTEM_ARCHITECTURE.svg",
+  concept: "images/BIOARMOR_FULL_SUIT_CONCEPT.png"
+};
+
+const slides = [
+  {
+    title: "BIOARMOR",
+    sub: "A two-system spacesuit architecture — daily-wear life support + modular EVA armor",
+    bullets: [
+      "Separates <b>permanent soft life-support suit</b> from <b>snap-on hard ExoArmor tiles</b>.",
+      "Buildable with current technology: soft-goods manufacturing + printable ceramic tiles.",
+      "Target: ~80% mass reduction vs the 127&nbsp;kg EMU (documented goal: 85%).",
+      "Integrates algae supplemental O2/CO2 scrubbing, self-healing pressure bladder, and active thermal control."
+    ],
+    image: I.concept
+  },
+  {
+    title: "1 · Overview — Two Systems",
+    bullets: [
+      "<b>System 1 — Daily Wear Suit (Bio-Layer):</b> soft suit worn in-station; life support, thermal, comfort, basic radiation shielding. Passive (no external power).",
+      "<b>System 2 — ExoArmor (Modular Shell):</b> hard ceramic tiles that snap onto the daily suit for EVA; impact, energy harvesting, heavy radiation, extreme thermal.",
+      "Modular approach lets ExoArmor iterate independently of the soft suit."
+    ]
+  },
+  {
+    title: "2 · Daily Wear Suit — Layer Stack",
+    sub: "Inside → outside (≈8.2 mm total, ~3 kg)",
+    bullets: [
+      "Comfort liner (Lyocell/silicone gel) — moisture wick.",
+      "Hydrophilic aerogel + algae (6 mm) — insulation, CO2 scrub + supplemental O2, radiation (H-rich).",
+      "Self-healing Surlyn bladder (1 mm) — airtight, puncture repair.",
+      "Hybrid Aramid + UHMWPE (0.5 mm) — structural, cut/heat/UV resistant.",
+      "SMA wires (0.2 mm) — joint movement assistance."
+    ],
+    image: I.blueprint
+  },
+  {
+    title: "3 · Daily Wear Suit — Specs & Life Support",
+    bullets: [
+      "Total thickness ≈ 8.2 mm · Mass ≈ 3.0 kg · Pressure 4.3 psi (29.6 kPa).",
+      "Thermal 35–40 °C passive (aerogel + algae metabolism).",
+      "O2 production ~3 L/hr ≈ 20–33% of resting need — <i>complements</i> primary O2 from tanks.",
+      "Closed loop: sweat → aerogel wicks → algae get water+CO2+LED light → O2 diffuses back to astronaut."
+    ]
+  },
+  {
+    title: "4 · Surlyn Self-Healing Bladder",
+    bullets: [
+      "Does <b>not</b> need body heat — the <b>impact itself</b> supplies energy.",
+      "Micrometeorite at 300 m/s–5 km/s → friction ~240 °C locally; Surlyn melts at 95 °C and re-seals in microseconds.",
+      "Aerogel insulates against external temps but does not block impact-generated heat — it helps keep the rest of the suit cool.",
+      "Residual strength after heal: 80–90% · NASA-validated (LAR-TOPS-122)."
+    ]
+  },
+  {
+    title: "5 · Modular Algae Pods (Snap-On)",
+    sub: "Redundant, scalable life support",
+    bullets: [
+      "500 mL pod, 500 g filled · O2 ~2,500 mL/hr · ~50 mW (internal LEDs).",
+      "Mission scaling: 0 pods (short EVA) → 4 pods (+10,000 mL/hr, +2 kg) for multi-day.",
+      "Self-contained, swappable, transparent health panels, O2/CO2 sensors → HUD.",
+      "Snap onto CNT mesh; fluid quick-connect for water/nutrients."
+    ]
+  },
+  {
+    title: "6 · SMA Joint Assistance",
+    bullets: [
+      "Nitinol wires along joint axes (shoulders, elbows, knees, optional wrists).",
+      "Cool = flexible; electrical pulse heats → contracts → assists extension.",
+      "Per joint: 4–6 wires, ~20–30 N, ~100 mW pulsed · total ~500 mW (6 joints).",
+      "Lower metabolic rate → less O2 use; flexible when unpowered."
+    ]
+  },
+  {
+    title: "7 · Active Thermal Control",
+    sub: "Liquid cooling/heating garment (LCHG)",
+    bullets: [
+      "Heats in lunar shadow (−173 °C), cools in sun (127 °C), removes body heat.",
+      "Micro-tubes (100 g) + micro-pump (50 g) + Peltier (100 g) + sensors/controller (50 g) = 300 g.",
+      "60–100 °F adjustable · 500 mW peak, 100 mW avg · powered by CNT mesh + battery buffer.",
+      "Works with the aerogel insulation layer as the primary thermal barrier."
+    ],
+    image: I.thermal
+  },
+  {
+    title: "8 · Subsystem Overview",
+    sub: "Breathing loop, power, thermal, comms",
+    image: I.subsystems,
+    bullets: [
+      "Breathing loop: helmet → O2 supply → algae scrub (supplemental) → CO2 removal (LiOH/adsorbent backup).",
+      "Power: PV coating → CNT mesh bus → battery buffer → loads.",
+      "Thermal + comms + HUD feed off the same distributed architecture."
+    ]
+  },
+  {
+    title: "9 · System 2 — ExoArmor Layer Stack",
+    sub: "Outside → inside (≈2.4 mm tiles)",
+    bullets: [
+      "PV coating (0.1 mm, perovskite) — solar energy collection.",
+      "Ceramic tiles (2 mm, Al2O3/VisiJet) — impact + thermal + CNT underlayer for mesh contact.",
+      "CNT mesh skeleton (0.3 mm) — structural framework + power/signal bus; tiles snap on.",
+      "PEEK fluid tubes (0.2 mm) — water/nutrient transport alongside mesh."
+    ],
+    image: I.exploded
+  },
+  {
+    title: "10 · ExoArmor Specs & Combined Mass",
+    bullets: [
+      "Hex tile 60 mm (20–30 mm at joints) · ~125 g/tile · chest plate 42 tiles = 5.3 kg · full armor ≈ 17 kg.",
+      "Power harvesting ~35.5 mW avg (PV + piezo + TEG)."
+    ],
+    table: `<table>
+      <tr><th>Configuration</th><th>Mass</th><th>vs EMU (127 kg)</th></tr>
+      <tr><td>Daily wear suit</td><td>2.2 kg</td><td>2%</td></tr>
+      <tr><td>+ Gloves + Boots</td><td>2.7 kg</td><td>2%</td></tr>
+      <tr><td>+ Chest armor</td><td>9.4 kg</td><td>7%</td></tr>
+      <tr><td>+ Full ExoArmor</td><td>21.4 kg</td><td>17%</td></tr>
+      <tr><td>+ Algae pods (4)</td><td>23.6 kg</td><td>19%</td></tr>
+      <tr><td>+ All improvements</td><td>25.5 kg</td><td>20%</td></tr>
+      <tr><td>EMU (current)</td><td>127 kg</td><td>100%</td></tr>
+    </table>`,
+    sub: "≈80% lighter than EMU — the documented target is 85%."
+  },
+  {
+    title: "11 · Avionics, Data & Closed-Loop Control",
+    sub: "The missing 'brain' — now specified",
+    bullets: [
+      "<b>Tier 1:</b> distributed sensors on the CNT mesh (pressure, temp, O2/CO2, IMU, dosimeter, HR) via body-area network.",
+      "<b>Tier 2:</b> radiation-tolerant edge MCU fuses data and runs closed-loop controllers — thermal, life-support (algae LED duty), mobility (SMA).",
+      "<b>Tier 3:</b> science data pipeline (timestamp, sensor_id, value) buffered and uplinked via comms.",
+      "Adds ~3–5 W to the ~39 W load (trivial battery mass). This is the layer that turns materials into a system."
+    ],
+    image: I.arch
+  },
+  {
+    title: "12 · Subsystem Coverage & Open Gaps",
+    sub: "Honest status — strong on passive stack, gaps in the active layer",
+    table: `<table>
+      <tr><th>Function</th><th>Status</th></tr>
+      <tr><td>Pressure / O2 / Thermal / MMOD / SPE rad</td><td class="gap-done">DONE</td></tr>
+      <tr><td>GCR radiation / Mobility / Water-waste</td><td class="gap-done">PARTIAL</td></tr>
+      <tr><td>Avionics &amp; data / Closed-loop control</td><td class="gap-miss">GAP → now specified</td></tr>
+      <tr><td>Lunar dust / Helmet-visor / Gamma-on-Surlyn</td><td class="gap-miss">GAP</td></tr>
+      <tr><td>Redundancy (SPOF) / Prebreathe protocol</td><td class="gap-miss">GAP</td></tr>
+    </table>`,
+    bullets: [
+      "Priority gaps: avionics/data (architected above), lunar dust (EDS shields + purge), helmet/visor, gamma-hardening of Surlyn, redundancy.",
+      "Full matrix + design responses in BIOARMOR_CONCEPT.md → 'Subsystem Coverage &amp; Open Gaps'."
+    ]
+  },
+  {
+    title: "13 · Key Gap Responses",
+    bullets: [
+      "<b>Dust:</b> Electrostatic Dust Shields (EDS), lotus coatings, positive-pressure purge at joints, sealed dust-tolerant bearings.",
+      "<b>Helmet/visor:</b> impact-rated polycarbonate, active anti-fog film, HUD, bone-conduction comms, EDS dust ring.",
+      "<b>Radiation hardening:</b> thin HDPE/B4C liner outboard of bladder for gamma; algae water for neutrons; dual bladder + dual O2 path for redundancy.",
+      "<b>Prebreathe:</b> 4.3 psi pure-O2 matches EMU protocol — standard denitrogenation still required."
+    ]
+  },
+  {
+    title: "14 · Design Philosophy & Roadmap",
+    bullets: [
+      "Mimic mitochondria — create gradients, harvest them, store the energy, protect the source.",
+      "Near-term: tile layer-order validation, thermal model, algae sizing, self-healing under radiation.",
+      "Mid-term: integrated subsystem test — full prototype in vacuum + NBL.",
+      "Concept art (right) communicates the vision; engineering lives in the spec docs."
+    ],
+    image: I.concept
+  },
+  {
+    title: "BioArmor",
+    sub: "Materials exist. Integration is the innovation.",
+    bullets: [
+      "Two-system architecture: daily-wear life support + modular ExoArmor.",
+      "Passive stack solved; active avionics/data layer now specified.",
+      "Open gaps are engineering tasks, not unknown science.",
+      "See BIOARMOR_CONCEPT.md for full spec, matrix, and design responses."
+    ]
+  }
+];
+
+let i = 0;
+const slideEl = document.getElementById('slide');
+const counterEl = document.getElementById('counter');
+function render(){
+  const s = slides[i];
+  let h = `<h1>${s.title}</h1>`;
+  if (s.sub) h += `<p class="sub">${s.sub}</p>`;
+  if (s.image) h += `<div class="imgwrap"><img src="${s.image}" alt=""></div>`;
+  if (s.bullets) h += `<ul>${s.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>`;
+  if (s.table) h += s.table;
+  slideEl.innerHTML = h;
+  counterEl.textContent = (i+1) + ' / ' + slides.length;
+  document.getElementById('prev').disabled = (i===0);
+  document.getElementById('next').disabled = (i===slides.length-1);
+}
+function next(){ if(i<slides.length-1){ i++; render(); } }
+function prev(){ if(i>0){ i--; render(); } }
+document.getElementById('next').onclick = next;
+document.getElementById('prev').onclick = prev;
+document.addEventListener('keydown', e => {
+  if(e.key==='ArrowRight'||e.key===' ') { e.preventDefault(); next(); }
+  if(e.key==='ArrowLeft') { e.preventDefault(); prev(); }
+});
+render();
+</script>
+</body>
+</html>
