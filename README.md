@@ -15,7 +15,7 @@ BioArmor is a revolutionary spacesuit system that integrates living biological s
 | **V1** | Integrated | 1.5 kg | Daily wear, light EVA, maximum mobility |
 | **V2** | Modular | 23 kg | Heavy EVA, lunar/Mars surface, maximum protection |
 
-By combining algae-based life support, 3D-printed ceramic armor, carbon nanotube structures, and bio-inspired materials, BioArmor reduces mass by **85%**, cost by **92%**, and extends EVA duration to **8+ hours** while providing superior protection compared to current NASA suits.
+By combining algae-based atmosphere processing (supplemental O2 + CO2 scrubbing), 3D-printed ceramic armor, carbon nanotube structures, and bio-inspired materials, BioArmor reduces mass by **85%**, cost by **92%**, and extends EVA duration to **8+ hours** while providing superior protection compared to current NASA suits.
 
 ### Key Innovations
 

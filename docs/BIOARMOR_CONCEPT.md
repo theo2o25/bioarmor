@@ -15,7 +15,7 @@ This modular approach is **buildable with current technology** — the daily wea
 ## SYSTEM 1: DAILY WEAR SUIT
 
 ### Purpose
-- Life support (O2/CO2 exchange via algae)
+- Life support (algae supplemental O2 + CO2 scrubbing, complementing primary O2)
 - Pressure containment (airtight bladder)
 - Thermal regulation
 - Comfort + moisture management
@@ -32,10 +32,10 @@ This modular approach is **buildable with current technology** — the daily wea
 ├─────────────────────────────────────────┤
 │  HYDROPHILIC AEROGEL + ALGAE (6mm)      │
 │  Material: Silica aerogel + Chlorella   │
-│  Function: Thermal insulation, O2/CO2   │
+│  Function: Thermal insulation, CO2 scrub + supplemental O2   │
 │  Exchange, radiation shielding          │
 │  Key: Wicks sweat from skin to feed     │
-│  algae. Algae produce O2 back to skin.  │
+│  algae. Algae add supplemental O2 + scrub CO2 (primary O2 is from tanks).  │
 ├─────────────────────────────────────────┤
 │  SELF-HEALING PRESSURE BLADDER (1mm)    │
 │  Material: Surlyn ionomer               │
@@ -62,7 +62,7 @@ This modular approach is **buildable with current technology** — the daily wea
 ```
 Astronaut sweats → Hydrophilic aerogel wicks moisture →
 Algae receive water + CO2 + light (LEDs) →
-Algae produce O2 → O2 diffuses through aerogel →
+Algae produce supplemental O2 (~20-33% of need) → O2 diffuses through aerogel →
 Astronaut breathes O2
 ```
 
@@ -71,7 +71,7 @@ Astronaut breathes O2
 - **Mass:** ~3.0 kg (full suit — increased with SMA wires)
 - **Pressure:** 4.3 psi (29.6 kPa) maintained by Surlyn bladder
 - **Thermal:** 35-40°C passive (aerogel insulation + algae metabolism)
-- **O2 production:** ~5,000 mL/hr (3x astronaut need at rest)
+- **O2 production:** ~3 L/hr (approx 20-33% of resting need; complements primary O2 system)
 - **Power required:** ~500mW for SMA joints (from ExoArmor CNT mesh)
 - **Manufacturing:** Standard soft-goods + aerogel composite + SMA integration
 
@@ -152,7 +152,7 @@ Assist flexion   Assist extension  Stabilize
 ## MODULAR ALGAE PODS (Snap-On Life Support Extensions)
 
 ### Purpose
-- Extend O2 production for long-duration EVAs
+- Extend O2 reserves for long-duration EVAs
 - Provide redundant life support
 - Scale capacity for different mission profiles
 - Breed algae for replenishment
@@ -561,9 +561,9 @@ RETINAL PROJECTION HUD:
 LIFE SUPPORT HIERARCHY:
 ┌─────────────────────────────────┐
 │  1. ALGAE (primary)             │
-│     - Produces O2 from CO2     │
+│     - Supplemental O2 from CO2     │
 │     - Continuous operation      │
-│     - 2,500 mL/hr O2           │
+│     - 2,500 mL/hr (supplemental O2)           │
 ├─────────────────────────────────┤
 │  2. CHEMICAL O2 GENERATOR       │
 │     - Lithium perchlorate       │
@@ -826,7 +826,7 @@ Temperature:  -200°C to 1200°C range
 
 4B: ALGAE SUSPENSION (within aerogel)
 Material:     Chlorella or Spirulina
-Function:     O2 production + CO2 removal + radiation shielding
+Function:     supplemental O2 + CO2 removal + radiation shielding
 Properties:   Water content blocks cosmic rays
 Light Source:  LEDs in daily wear suit (powered by PV electricity)
 Cycle:        4-6 hours/day (intermittent)
@@ -891,7 +891,7 @@ engineering diagram, 4K, high resolution"
 │                    MODULAR ALGAE PODS (Optional)                     │
 │  ┌─────────────────────────────────────────────────────────────┐   │
 │  │  SNAP-ON ALGAE CULTURE TANKS                                │   │
-│  │  • 500mL per pod, 2,500 mL/hr O2                           │   │
+│  │  • 500mL per pod, 2,500 mL/hr (supplemental O2)                           │   │
 │  │  • Snap onto CNT mesh at chest/back/shoulders               │   │
 │  │  • Self-contained: algae + nutrients + LEDs                  │   │
 │  │  • Swappable: disconnect fluid quick-connect, snap off/on    │   │
