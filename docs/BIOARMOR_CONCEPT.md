@@ -67,7 +67,7 @@ Astronaut breathes O2
 
 ### Daily Wear Suit Specs
 - **Total thickness:** ~8.2mm
-- **Mass:** ~3.1 kg (full suit — SMA wires + CNT-Aramid EDS)
+- **Mass:** ~2.2 kg (base daily-wear suit); ~3.1 kg with SMA joint assistance + CNT-Aramid EDS (reconciles with Mass Comparison table)
 - **Pressure:** 4.3 psi (29.6 kPa) maintained by Surlyn bladder
 - **Thermal:** 35-40°C passive (aerogel insulation + algae metabolism)
 - **O2 production:** ~3 L/hr (≈10-20% of resting need; optimistic — complements primary O2 system, validate at bench scale)
@@ -216,7 +216,7 @@ CNT-ARAMID EDS LAYER (cross-section):
 **Open risks (address before flight):**
 - **Healing needs oxygen:** the thiol-ene monomer polymerizes using O₂, so reliable self-healing in hard vacuum is *uncertain* and must be validated (e.g., an oxygen-bearing layer at the puncture interface).
 - **Radiation degrades healing:** gamma/space radiation measurably reduces healing efficiency (confirmed risk) — mitigate with a thin HDPE/B4C liner or a more radiation-tolerant elastomer.
-- **Freedom-to-operate:** NASA's active patent **US 11,192,667** (LAR-TOPS-122, expires ~2039) covers the exact Surlyn 8940 + Barex + thiol-ene triad as a "space suit wall." Either **license from NASA** or **design around** using the now-expired capsule-healing chemistry (**WO2008154107A1 / US 7,612,152**, free to use). See *Freedom-to-Operate & IP Notes* below.
+- **Freedom-to-operate:** NASA's active patent **US 11,192,667** (LAR-TOPS-122, expires **2037-02-17**) covers the exact Surlyn 8940 + Barex + thiol-ene triad as a "space suit wall." Either **license from NASA** or **design around** using expired capsule-healing chemistry. ⚠ **Correction:** US **7,612,152** (Univ. of Illinois) is **still active until 2026-12-17** — it is *not* free yet; the design-around via this patent is unavailable until then. **WO2008154107A1** (Estée Lauder) is *ceased* but in the cosmetics field (weak/uncertain basis). Until Dec 2026, the practical path is a **NASA license** or finding a genuinely-expired capsule/microvascular self-healing patent. See *Freedom-to-Operate & IP Notes* below.
 
 ---
 
@@ -814,11 +814,13 @@ IN-STATION CONFIGURATION:
 | Daily wear suit | 2.2 kg | 2% |
 | + Joint assistance | 2.2 kg | 2% |
 | + Gloves + Boots | 2.7 kg | 2% |
-| + Chest armor | 9.4 kg | 7% |
+| + Chest armor | 8.9 kg | 7% |
 | + Full ExoArmor | 21.4 kg | 17% |
 | + Algae pods (4) | 23.6 kg | 19% |
 | + All improvements | 25.5 kg | 20% |
 | EMU (current) | 127 kg | 100% |
+
+*Mass-reconciliation note: the detailed STL-derived chest plate is **6.7 kg (7.3% EMU)** (Refined Mass Budget); the 8.9 kg "chest armor" above and the ±0.5 kg differences between summary tables are engineering estimates pending full reconciliation. The STL figure is the authoritative chest-plate mass.*
 
 ---
 
@@ -1018,7 +1020,7 @@ engineering diagram, 4K, high resolution"
 │  │                                                              │   │
 │  │  STRUCTURAL FRAMEWORK                                        │   │
 │  │  • CNT fiber woven into flexible mesh                        │   │
-│  │  • ~10–50× specific strength vs steel (Galvorn-class woven CNT)    │   │
+│  │  • ~6–12× specific strength vs high-strength steel (~30× vs mild steel; vendor top-spec — woven-fabric macroscale is lower)    │   │
 │  │  • Tiles snap onto mesh surface                              │   │
 │  │  • Mesh articulates naturally at joints                      │   │
 │  │                                                              │   │
@@ -1082,7 +1084,7 @@ Tiles snap onto the mesh. Fluid tubes alongside the mesh carry water/nutrients t
 
 | Property | Value | Why It Matters |
 |----------|-------|----------------|
-| **Tensile strength** | 1–2 GPa (up to 3 GPa premium) | ~10–50× specific strength vs steel (Galvorn-class woven CNT) |
+| **Tensile strength** | 1–2 GPa (up to 3 GPa premium) | ~6–12× specific strength vs high-strength steel (~30× vs mild steel; vendor top-spec — woven-fabric macroscale is lower) |
 | **Electrical conductivity** | 5×10⁶ S/m | Conductive — mesh IS the wiring |
 | **Density** | 1.3 g/cm³ | 6x lighter than steel |
 | **Flexibility** | Woven textile | Articulates at joints naturally |
@@ -1841,7 +1843,7 @@ When a tile is damaged:
 | **Perovskite PV: 27.5% efficient** | Record efficiency flexible PV | Nature Photonics, Aug 2025; 97.2% retained after 10,000 bends |
 | **Self-healing Surlyn proven at ~2 km/s** | Micrometeorite defense validated | Polimi/ESA; CNT doping boosts healing to 80% |
 | ** Radiation degrades Surlyn healing** | Must shield from gamma radiation | Polimi team — critical design constraint |
-| **Lunar Palace 365: 98.2% closure** | Bio-regen life support proven long-duration | Chinese Academy of Sciences, 370-day run |
+| **Lunar Palace 365: 98.2% closure** | Bio-regen life support proven long-duration | Beihang University (BUAA), 370-day run |
 | **TAPED: Wearable algae O₂ demonstrated** | Proof of concept for body-worn algae | ACS Nano, April 2025 |
 | **DLP-printed alumina: 97.5% density** | Ceramic armor 3D printable | MDPI Materials; Army Research Lab |
 | **Soft PAM actuator: 897N force** | Viable soft robotics for joint assist | npj Flex Electronics, Feb 2026 |
@@ -1975,7 +1977,7 @@ The EDS pulsed at ~100 ms every 1-10 s during dust events → average ~0.5-1 W, 
 
 - **O₂ production (algae, supplemental):** ~3 L/hr ≈ 10–20% of the ~15 L/hr resting need (optimistic bench-scale max with ample illumination; in-suit, PV-limited lighting yields a few-percent contribution — primary O₂ from compressed/chemical reserves).
 - **CO₂ removal (algae, supplemental):** partial; primary CO₂ removal via LiOH/amine scrubber.
-- **Radiation shielding:** ~15% dose reduction (hydrogen in algae water content)
+- **Radiation shielding:** partial — hydrogen in the algae water content attenuates some SPE/charged-particle flux, but GCR (high-Z, high-energy) is largely unmitigated by a ~6 mm algae layer (see Radiation Gaps; rated PARTIAL).
 - **Thermal regulation:** 35-40°C passive (aerogel insulation + algae metabolism)
 
 ---
@@ -2144,7 +2146,7 @@ Treat the head as its own protected module:
 
 The BioArmor architecture sits in a mixed patent landscape. Key points for any grant submission or patent filing:
 
-**Surlyn self-healing bladder — active NASA patent (FTO warning).** US **11,192,667** (LAR-TOPS-122, expires ~2039) covers the exact Surlyn 8940 + Barex + thiol-ene triad as a "space suit wall" between atmosphere and vacuum. BioArmor cannot practice that triad freely. Options: (a) **license from NASA**, or (b) **design around** using the now-expired capsule-healing chemistry (**WO2008154107A1 / US 7,612,152**, free to use).
+**Surlyn self-healing bladder — active NASA patent (FTO warning).** US **11,192,667** (LAR-TOPS-122, expires **2037-02-17**) covers the exact Surlyn 8940 + Barex + thiol-ene triad as a "space suit wall" between atmosphere and vacuum. BioArmor cannot practice that triad freely. Options: (a) **license from NASA** (also consider US 11,001,684, expires 2037-05-06), or (b) **design around** using expired capsule-healing chemistry. ⚠ **Correction:** US **7,612,152** (Univ. of Illinois) is **still active until 2026-12-17** — *not* free yet; the design-around via this patent is unavailable until then. **WO2008154107A1** (Estée Lauder) is *ceased* but in the cosmetics field (weak basis). Until Dec 2026 the practical route is a NASA license or a different genuinely-expired capsule/microvascular healing patent.
 
 **Free foundations to build on:**
 - **US 7,354,877** — Lockheed CNT-fiber garment fabric (incl. spacesuit fabrics). **Expired Oct 2023.**
