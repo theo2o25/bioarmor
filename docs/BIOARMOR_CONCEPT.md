@@ -1562,6 +1562,35 @@ Proposed thermal enhancements (beyond aerogel + CNT-in-ceramic):
 
 > Caveat: external reference figures (EMU/AxEMU sublimator cooling, temp ranges) are general published knowledge and must be verified before inclusion in the deck.
 
+### Energy-Prioritized Thermal Strategy
+
+Principle: the cheapest watt is the one you never lose. For warmth and comfort, cut heat loss before generating heat. Ranked by warmth + comfort delivered per watt:
+
+| Rank | Intervention | Why it is efficient | Energy benefit |
+|------|--------------|--------------------|----------------|
+| 1 | Low / variable-emissivity outer (cold mode) | ~Zero steady power; cuts radiative loss ~5-10x and shrinks delta-T across the aerogel | Can cut required heating from hundreds of W to tens of W |
+| 2 | Seal thermal bridges + tune aerogel thickness | Conduction through the shell is the dominant leak; seams/joints/visor are worst spots; cheap (mass, not power) | Large reduction in steady heating load |
+| 3 | Localized extremity heaters (hands/feet) | Resistive heating is ~100% efficient; only heat zones that drive "cold" sensation | Comfort at tens of W, not hundreds |
+| 4 | Algae metabolic heat + thermal-mass buffering | Already present (O2 function); zero marginal power; store heat when PV is plentiful | Free/low-cost load leveling |
+| 5 | Whole-suit CNT heater grid | 100% efficient but fights the leak across the entire body | Highest W cost; use as trim/backup only |
+
+First-order energy-budget sketch (illustrative; A ~ 2 m2, outer surface ~ 250 K in shadow, T_space ~ 3 K):
+
+```
+Radiative loss  Q = epsilon * sigma * A * T^4      (sigma = 5.67e-8 W/m2/K4)
+
+  High-emissivity outer (epsilon = 0.9) + 6 mm aerogel:
+      Q_rad ~ 0.9 * 5.67e-8 * 2 * 250^4  ~  400 W   -> must be generated
+  Same stack, low-emissivity outer (epsilon = 0.1):
+      Q_rad ~ 0.1 * 5.67e-8 * 2 * 250^4  ~   44 W   -> ~10x less generation
+  + MLI / thicker aerogel / sealed bridges:  further toward tens of W
+  Localized extremity heating to reach comfort:  typically tens of W, not hundreds
+```
+
+Conclusion: invest first in (1) variable-emissivity outer + insulation continuity, then (2) free/cheap heat (algae, thermal-mass buffering), and use whole-suit resistive heating only as backup trim. All draw from the shared CNT/PV bus - track every path in the energy budget alongside the algae LEDs.
+
+> Caveat: budget figures are illustrative first-order estimates. Validate with a lumped thermal + energy model before quoting in the deck.
+
 ### Radiation Protection
 
 | Source | Shielding |
