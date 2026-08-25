@@ -1588,11 +1588,11 @@ Assumptions:
 | Aerogel conductivity k | 0.015 W/m-K | Mid of cited 0.004-0.02 range |
 | Suit area A | 2.0 m2 | Estimate (typical suited area) |
 | Inner shell T_in | 305 K (32 degC) | Crew-comfort target |
-| Emissivity epsilon | 0.9 (bare) / 0.1 (cold-coat) | Estimate / variable-coating spec |
+| Emissivity epsilon | 0.9 (bare) / 0.1 (cold-coat) | VO2 smart radiator validated: Kim et al. Sci. Rep. 9, 11329 (2019); Benkahoul et al. Sol. Energy Mater. Sol. Cells 95, 3504 (2011); Delta-epsilon up to 0.79 (PMC11357278). Native VO2 switches opposite sign - use engineered Fabry-Perot stack for low-e-when-cold |
 | Metabolic heat | 120 W | Physiology estimate (resting-suited) |
-| Algae LED load | ~5 W | Estimate (not in repo) |
+| Algae LED load | ~20-35 W | Geiman 2021: 40 L Chlorella PBR LED ~83 W (~2 W/L); AlgaeResearchSupply ~1 W/L. Suit aerogel volume ~18 L (BIOARMOR_CONCEPT.md) -> ~20-35 W. Cut via pulsed LEDs (Springer 2013: -10% power, 2.9x productivity) + active irradiance control (Geiman 2021: -57% lighting energy) |
 | SMA actuation | 0.5 W | BIOARMOR_CONCEPT.md (~500 mW, 6 joints) |
-| PV (flexible perovskite) | ~200 W/m2 -> ~400 W peak sun | Estimate; deck cites 27.5% eff, 1.77 W/g |
+| PV (flexible perovskite) | ~200 W/m2 -> ~400 W peak sun | Flexible perovskite 27-34% eff (NREL 2025; Sun et al. Nat Commun 2025, 29.88%; GreenFuel 2026, 33.6%). ~200 W/m2 conservative for 2 m2. Dominant parasitic load is algae LEDs, not heating |
 
 Results (shadow, no PV):
 
@@ -1607,17 +1607,28 @@ Power budget (W):
 
 | Mode | Heating | Algae LEDs | SMA | Total load | PV available | Battery role |
 |------|---------|------------|-----|------------|--------------|--------------|
-| Sunlight | ~0 | 5 | 0.5 | ~5.5 | ~400 | Charges |
-| Shadow (low-emissivity) | ~0 | 5 | 0.5 | ~5.5 | 0 | Supplies ~5.5 W |
-| Shadow (high-emissivity) | ~46 | 5 | 0.5 | ~52 | 0 | Supplies ~52 W |
+| Sunlight | ~0 | ~25 | 0.5 | ~25.5 | ~400 | Charges (surplus) |
+| Shadow (low-emissivity) | ~0 | ~25 | 0.5 | ~25.5 | 0 | Supplies ~25.5 W |
+| Shadow (high-emissivity) | ~46 | ~25 | 0.5 | ~71.5 | 0 | Supplies ~71.5 W |
 
-Over an 8 hr EVA (~half in shadow), a low-emissivity outer saves roughly (52 - 5.5) x 4 h ~ 186 Wh of battery - before any thicker aerogel or sealed bridges, which push the load even lower.
+Note: the dominant parasitic load is the algae LEDs (~25 W), not heating - so optimizing LED drive (pulsed + active irradiance control) is itself a major energy win, independent of the emissivity choice.
+
+Over an 8 hr EVA (~half in shadow), a low-emissivity outer saves roughly (71.5 - 25.5) x 4 h ~ 184 Wh of battery - before any thicker aerogel or sealed bridges, which push the load even lower.
+
+![BioArmor thermal control loop](../images/BIOARMOR_THERMAL_LOOP.svg)
+*Figure: thermal control loop - insulation + variable emissivity + active heating/cooling, with feedback control.*
 
 Conclusion: invest first in (1) variable-emissivity outer + insulation continuity, then (2) free/cheap heat (algae, thermal-mass buffering), and use whole-suit resistive heating only as backup trim. All draw from the shared CNT/PV bus - track every path in the energy budget alongside the algae LEDs.
 
-> Caveat: model ignores joint/seam thermal bridges, solar input, and transient PCM - directionally correct. Validate with a full lumped thermal + energy simulation before quoting in the deck; flagged estimates (area, PV areal density, algae LED load, emissivity) must be sourced.
+> Caveat: model ignores joint/seam thermal bridges, solar input, and transient PCM - directionally correct. Estimates flagged earlier (suit area, PV areal density, algae-LED load, emissivity) are now sourced via literature (2026 web review); suit area A and exact PV areal density remain design assumptions. Validate with a full lumped thermal + energy simulation before quoting hard numbers in the deck.
 
-> Caveat: budget figures are illustrative first-order estimates. Validate with a lumped thermal + energy model before quoting in the deck.
+#### References
+- Kim H. et al., VO2-based switchable radiator for spacecraft thermal control, Sci. Rep. 9, 11329 (2019).
+- Benkahoul M. et al., Thermochromic VO2 film on Al with tunable emissivity for space applications, Sol. Energy Mater. Sol. Cells 95, 3504-3508 (2011).
+- VO2 smart radiator with high emissivity tunability (Delta-epsilon up to 0.79), PMCID 11357278 (2015/2024).
+- Geiman C.B., Improving algae photobioreactor energy efficiency via active irradiance control, 2021 (LED ~75% of PBR load; -57% lighting energy).
+- Springer 2013, flashing-LED PBR: -9.6% power, 2.86x productivity.
+- NREL 2025 / Sun Y. et al. Nat Commun 16, 5733 (2025) / GreenFuel 2026 - flexible perovskite 27-34% efficiency.
 
 ### Radiation Protection
 
