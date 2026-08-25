@@ -1574,20 +1574,48 @@ Principle: the cheapest watt is the one you never lose. For warmth and comfort, 
 | 4 | Algae metabolic heat + thermal-mass buffering | Already present (O2 function); zero marginal power; store heat when PV is plentiful | Free/low-cost load leveling |
 | 5 | Whole-suit CNT heater grid | 100% efficient but fights the leak across the entire body | Highest W cost; use as trim/backup only |
 
-First-order energy-budget sketch (illustrative; A ~ 2 m2, outer surface ~ 250 K in shadow, T_space ~ 3 K):
+### Quantified Model (first-order, cold/shadow case)
 
-```
-Radiative loss  Q = epsilon * sigma * A * T^4      (sigma = 5.67e-8 W/m2/K4)
+Steady state in vacuum: heat conducts through the aerogel shell (k, d) to the outer surface, then radiates to space. Coupled balance (per unit area, total A):
 
-  High-emissivity outer (epsilon = 0.9) + 6 mm aerogel:
-      Q_rad ~ 0.9 * 5.67e-8 * 2 * 250^4  ~  400 W   -> must be generated
-  Same stack, low-emissivity outer (epsilon = 0.1):
-      Q_rad ~ 0.1 * 5.67e-8 * 2 * 250^4  ~   44 W   -> ~10x less generation
-  + MLI / thicker aerogel / sealed bridges:  further toward tens of W
-  Localized extremity heating to reach comfort:  typically tens of W, not hundreds
-```
+    k * (T_in - T_out) / d  =  epsilon * sigma * (T_out^4 - T_space^4)     sigma = 5.67e-8
+
+Assumptions:
+
+| Parameter | Value | Source / note |
+|-----------|-------|---------------|
+| Aerogel thickness d | 6 mm | BIOARMOR_CONCEPT.md (daily-wear layer) |
+| Aerogel conductivity k | 0.015 W/m-K | Mid of cited 0.004-0.02 range |
+| Suit area A | 2.0 m2 | Estimate (typical suited area) |
+| Inner shell T_in | 305 K (32 degC) | Crew-comfort target |
+| Emissivity epsilon | 0.9 (bare) / 0.1 (cold-coat) | Estimate / variable-coating spec |
+| Metabolic heat | 120 W | Physiology estimate (resting-suited) |
+| Algae LED load | ~5 W | Estimate (not in repo) |
+| SMA actuation | 0.5 W | BIOARMOR_CONCEPT.md (~500 mW, 6 joints) |
+| PV (flexible perovskite) | ~200 W/m2 -> ~400 W peak sun | Estimate; deck cites 27.5% eff, 1.77 W/g |
+
+Results (shadow, no PV):
+
+| Case | T_out | Shell loss Q_loss | Net heat to add (Q_loss - 120 W metabolic) |
+|------|-------|-------------------|--------------------------------------------|
+| High-emissivity outer (0.9) | ~239 K (-34 degC) | ~166 W | ~46 W |
+| Low-emissivity outer (0.1) | ~289 K (16 degC) | ~40 W | ~0 W (metabolic covers it; cooling path needed) |
+
+Interpretation: switching the outer to low emissivity in cold mode cuts the heating power from ~46 W to ~0 W in shadow - the crew's own metabolism keeps them warm. That is the dominant energy win.
+
+Power budget (W):
+
+| Mode | Heating | Algae LEDs | SMA | Total load | PV available | Battery role |
+|------|---------|------------|-----|------------|--------------|--------------|
+| Sunlight | ~0 | 5 | 0.5 | ~5.5 | ~400 | Charges |
+| Shadow (low-emissivity) | ~0 | 5 | 0.5 | ~5.5 | 0 | Supplies ~5.5 W |
+| Shadow (high-emissivity) | ~46 | 5 | 0.5 | ~52 | 0 | Supplies ~52 W |
+
+Over an 8 hr EVA (~half in shadow), a low-emissivity outer saves roughly (52 - 5.5) x 4 h ~ 186 Wh of battery - before any thicker aerogel or sealed bridges, which push the load even lower.
 
 Conclusion: invest first in (1) variable-emissivity outer + insulation continuity, then (2) free/cheap heat (algae, thermal-mass buffering), and use whole-suit resistive heating only as backup trim. All draw from the shared CNT/PV bus - track every path in the energy budget alongside the algae LEDs.
+
+> Caveat: model ignores joint/seam thermal bridges, solar input, and transient PCM - directionally correct. Validate with a full lumped thermal + energy simulation before quoting in the deck; flagged estimates (area, PV areal density, algae LED load, emissivity) must be sourced.
 
 > Caveat: budget figures are illustrative first-order estimates. Validate with a lumped thermal + energy model before quoting in the deck.
 
