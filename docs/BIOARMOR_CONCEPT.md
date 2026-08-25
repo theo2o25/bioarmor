@@ -62,7 +62,7 @@ This modular approach is **buildable with current technology** — the daily wea
 ```
 Astronaut sweats → Hydrophilic aerogel wicks moisture →
 Algae receive water + CO2 + light (LEDs) →
-Algae produce supplemental O2 (~20-33% of need) → O2 diffuses through aerogel →
+Algae produce supplemental O2 (~10-20% of need — optimistic, validate at bench scale) → O2 diffuses through aerogel →
 Astronaut breathes O2
 ```
 
@@ -71,7 +71,7 @@ Astronaut breathes O2
 - **Mass:** ~3.0 kg (full suit — increased with SMA wires)
 - **Pressure:** 4.3 psi (29.6 kPa) maintained by Surlyn bladder
 - **Thermal:** 35-40°C passive (aerogel insulation + algae metabolism)
-- **O2 production:** ~3 L/hr (approx 20-33% of resting need; complements primary O2 system)
+- **O2 production:** ~3 L/hr (≈10-20% of resting need; optimistic — complements primary O2 system, validate at bench scale)
 - **Power required:** ~500mW for SMA joints (from ExoArmor CNT mesh)
 - **Manufacturing:** Standard soft-goods + aerogel composite + SMA integration
 
@@ -128,24 +128,26 @@ Assist flexion   Assist extension  Stabilize
 
 **Healing mechanism:**
 1. Micrometeorite hits at 300 m/s to 5 km/s
-2. Friction generates **~240°C locally** at puncture site
+2. Friction generates localized heating at the puncture site
 3. Surlyn melts at **95°C** — impact heat far exceeds this
 4. Material's elastic memory snaps back and closes hole
 5. Healing happens in **microseconds**
 
 **Why aerogel doesn't block healing:**
 - Healing is triggered by impact energy, not external heat
-- The 240°C is generated *inside* the Surlyn layer by the projectile
+- The heat is generated *inside* the Surlyn layer by the projectile's kinetic energy
 - Aerogel only insulates against external temps, not impact-generated heat
 - Aerogel actually helps by keeping the rest of the suit cool while puncture site heats up
 
-**Key properties:**
-- Works in vacuum (no oxygen needed for healing)
-- Self-heals at ambient temperature (24°C) for ballistic puncture
-- Residual strength after healing: 80-90% of original
-- NASA-validated for space applications (LAR-TOPS-122 patent)
+**Key properties (verified):**
+- Self-heals from impact energy at ambient temperature (24°C) for ballistic puncture — passive and automatic.
+- Residual **seal** recovery after a heal is shown at ~80-90%; *structural*-strength recovery is not yet verified and must be treated as unproven.
+- NASA-validated concept (LAR-TOPS-122) for a space-suit wall.
 
-**This is why Surlyn is perfect for spacesuits** — it's passive, heals automatically, and the vacuum of space doesn't interfere.
+**Open risks (address before flight):**
+- **Healing needs oxygen:** the thiol-ene monomer polymerizes using O₂, so reliable self-healing in hard vacuum is *uncertain* and must be validated (e.g., an oxygen-bearing layer at the puncture interface).
+- **Radiation degrades healing:** gamma/space radiation measurably reduces healing efficiency (confirmed risk) — mitigate with a thin HDPE/B4C liner or a more radiation-tolerant elastomer.
+- **Freedom-to-operate:** NASA's active patent **US 11,192,667** (LAR-TOPS-122, expires ~2035) covers the exact Surlyn 8940 + Barex + thiol-ene triad as a "space suit wall." Either **license from NASA** or **design around** using the now-expired capsule-healing chemistry (**WO2008154107A1 / US 7,612,152**, free to use). See *Freedom-to-Operate & IP Notes* below.
 
 ---
 
@@ -187,19 +189,21 @@ ALGAE POD CROSS-SECTION:
 | **Volume** | 500 mL per pod |
 | **Mass (empty)** | 300g |
 | **Mass (filled)** | 500g |
-| **O2 production** | ~2,500 mL/hr per pod |
+| **O2 production** | tens of mL O₂/hr per pod (peak, literature-scale — not a primary source) |
 | **Power draw** | ~50mW (internal LEDs) |
 | **Connection** | Snap-fit to CNT mesh + fluid quick-connect |
 | **Lifespan** | 2-4 weeks (algae need nutrients) |
 
 ### Mission Configurations
 
-| Mission Duration | Pods | Total O2 | Mass Added |
-|------------------|------|----------|------------|
+| Mission Duration | Pods | Supplemental O2 Added | Mass Added |
+|------------------|------|----------------------|------------|
 | Short EVA (2-4 hrs) | 0 | Baseline suit only | 0g |
-| Standard EVA (6-8 hrs) | 1 | +2,500 mL/hr | 500g |
-| Extended EVA (12-24 hrs) | 2 | +5,000 mL/hr | 1,000g |
-| Multi-day mission | 4 | +10,000 mL/hr | 2,000g |
+| Standard EVA (6-8 hrs) | 1 | +~40 mL/hr (tens of mL/hr per pod, peak) | 500g |
+| Extended EVA (12-24 hrs) | 2 | +~80 mL/hr | 1,000g |
+| Multi-day mission | 4 | +~160 mL/hr | 2,000g |
+
+*Algae is a **low-rate supplemental/redundant** O2 source; primary O2 is compressed/chemical reserves. Per-pod output is literature-scale (tens of mL O₂/hr) — scale with pod count, not mission O2 demand.*
 
 ### Pod Placement
 
@@ -219,6 +223,8 @@ Pods snap onto the CNT mesh at designated mounting points:
 ---
 
 ## HYBRID JOINT ASSISTANCE SYSTEM
+
+> **Scope — resolves the dual joint-system description:** This is the **active (motorized) joint-assistance option** for EVA-heavy configurations. It is distinct from the passive **SMA-wire** assist described under System 1. Baseline daily-wear uses the lightweight SMA wires (~50 g, pulsed ~500 mW); the active tendon-motor system below is an *optional add-on* (≈850–900 g, ≈2 W) for demanding EVAs. Pick the architecture per mission profile — do not apply both as baseline.
 
 ### Purpose
 - Reduce astronaut fatigue during long EVAs (6-8 hours)
@@ -560,10 +566,10 @@ RETINAL PROJECTION HUD:
 ```
 LIFE SUPPORT HIERARCHY:
 ┌─────────────────────────────────┐
-│  1. ALGAE (primary)             │
+│  1. ALGAE (supplemental)        │
 │     - Supplemental O2 from CO2     │
 │     - Continuous operation      │
-│     - 2,500 mL/hr (supplemental O2)           │
+│     - tens of mL/hr supplemental O2 (literature-scale)           │
 ├─────────────────────────────────┤
 │  2. CHEMICAL O2 GENERATOR       │
 │     - Lithium perchlorate       │
@@ -681,7 +687,7 @@ CLOSED-LOOP WATER RECOVERY:
 - **Fluid tubes:** PEEK micro-channels alongside mesh for water/nutrient transport
 - **Chest plate:** 42 tiles = 5.3 kg
 - **Full armor (chest + back + arms + legs):** ~17 kg
-- **Power harvesting:** 35.5 mW avg
+- **Power harvesting:** ~35.5 mW avg (duty-cycle average; PV peak ~285 mW)
 - **Manufacturing:** Weave CNT mesh, print fluid tubes, snap ceramic tiles on
 - **Algae lighting:** LEDs in daily wear suit (powered by PV electricity)
 
@@ -699,7 +705,7 @@ EVA CONFIGURATION:
 │  Aramid/UHMWPE + Surlyn + Algae │
 ├──────────────────────────────────┤
 │  JOINT ASSISTANCE                │
-│  Tendon motors + Passive springs │
+│  SMA wires (baseline) + opt. motors (EVA) │
 ├──────────────────────────────────┤
 │  ASTRONAUT                       │
 └──────────────────────────────────┘
@@ -710,7 +716,7 @@ IN-STATION CONFIGURATION:
 │  Aramid/UHMWPE + Surlyn + Algae │
 ├──────────────────────────────────┤
 │  JOINT ASSISTANCE                │
-│  Tendon motors + Passive springs │
+│  SMA wires (baseline) + opt. motors (EVA) │
 ├──────────────────────────────────┤
 │  ASTRONAUT                       │
 └──────────────────────────────────┘
@@ -763,7 +769,7 @@ LAYER 1: PV COATING (0.1mm)
 ═══════════════════════════════════════════════════════════════════════
 Material:     Thin-film Gallium Arsenide (GaAs)
 Function:     Solar energy collection
-Output:       285 mW (full suit average)
+Output:       285 mW (peak, sunlit — duty-cycle average ≈35.5 mW)
 Thickness:    0.1mm (100 micrometers)
 Properties:   Flexible, lightweight, 28-30% efficient
 
@@ -834,7 +840,7 @@ Cycle:        4-6 hours/day (intermittent)
 4C: ENERGY STORAGE (within aerogel)
 Materials:    CNT supercapacitors + graphene fibers
 Function:     Store harvested energy
-Capacity:     285 mW average harvesting
+Capacity:     285 mW peak harvesting (≈35.5 mW duty-cycle average)
 
 4D: O2 STORAGE (within aerogel)
 Materials:    MOF beds + chemical generators
@@ -891,7 +897,7 @@ engineering diagram, 4K, high resolution"
 │                    MODULAR ALGAE PODS (Optional)                     │
 │  ┌─────────────────────────────────────────────────────────────┐   │
 │  │  SNAP-ON ALGAE CULTURE TANKS                                │   │
-│  │  • 500mL per pod, 2,500 mL/hr (supplemental O2)                           │   │
+│  │  • 500mL per pod, tens of mL/hr O2 (supplemental, literature-scale)        │   │
 │  │  • Snap onto CNT mesh at chest/back/shoulders               │   │
 │  │  • Self-contained: algae + nutrients + LEDs                  │   │
 │  │  • Swappable: disconnect fluid quick-connect, snap off/on    │   │
@@ -901,7 +907,7 @@ engineering diagram, 4K, high resolution"
 │                         OUTER LAYER (ExoArmor)                       │
 │  ┌─────────────────────────────────────────────────────────────┐   │
 │  │  THIN-FILM GaAs PV COATING                                   │   │
-│  │  • Solar energy collection (285 mW)                           │   │
+│  │  • Solar energy collection (285 mW peak, sunlit)              │   │
 │  │  • Thin-film on ceramic surface                               │   │
 │  │  • Converts sunlight → electricity                            │   │
 │  └─────────────────────────────────────────────────────────────┘   │
@@ -926,7 +932,7 @@ engineering diagram, 4K, high resolution"
 │  │                                                              │   │
 │  │  STRUCTURAL FRAMEWORK                                        │   │
 │  │  • CNT fiber woven into flexible mesh                        │   │
-│  │  • 150x stronger than steel by weight                        │   │
+│  │  • ~10–50× specific strength vs steel (Galvorn-class woven CNT)    │   │
 │  │  • Tiles snap onto mesh surface                              │   │
 │  │  • Mesh articulates naturally at joints                      │   │
 │  │                                                              │   │
@@ -987,8 +993,8 @@ Tiles snap onto the mesh. Fluid tubes alongside the mesh carry water/nutrients t
 
 | Property | Value | Why It Matters |
 |----------|-------|----------------|
-| **Tensile strength** | 63 GPa | 150x stronger than steel by weight |
-| **Electrical conductivity** | 10^6 S/m | Conductive — mesh IS the wiring |
+| **Tensile strength** | 1–2 GPa (up to 3 GPa premium) | ~10–50× specific strength vs steel (Galvorn-class woven CNT) |
+| **Electrical conductivity** | 5×10⁶ S/m | Conductive — mesh IS the wiring |
 | **Density** | 1.3 g/cm³ | 6x lighter than steel |
 | **Flexibility** | Woven textile | Articulates at joints naturally |
 
@@ -1132,7 +1138,7 @@ Aerogel is **99.8% air** by volume — the lightest solid material known. It's a
 | Triboelectric | Link friction | 25 | Movement only |
 | RF harvesting | Ambient radio waves | 5 | Yes |
 | Electromagnetic | Vibration | 15 | Movement only |
-| **Total** | | **285 mW** | |
+| **Total** | | **285 mW (combined peak)** | |
 
 ### Energy Storage Options
 
@@ -1181,7 +1187,7 @@ DIRECT HARVESTING → Power continuous low-draw systems
 | Communication | 5-50 mW | Burst mode only |
 | **Total** | **115-850 mW** | |
 
-**Note:** Lighting is the largest consumer, but intermittent operation (4-6 hours on, 8-10 hours off) keeps average power within the 285 mW harvesting capacity.
+**Note:** Lighting is the largest consumer, but intermittent operation (4-6 hours on, 8-10 hours off) keeps average power within the ~285 mW combined peak (≈35.5 mW duty-cycle average).
 
 ---
 
@@ -1243,16 +1249,16 @@ ASTONAUT INHALES
 **Coverage at Rest:**
 
 ```
-HUMAN NEEDS:     15 L O2/hour
-ALGAE PRODUCES:   3-5 L/hour (depending on illumination)
-COVERS:           20-33% of O2 needs
+HUMAN NEEDS:     15-30 L O2/hour (resting)
+ALGAE PRODUCES:   3-5 L/hour (depending on illumination, optimistic)
+COVERS:           10-20% of O2 needs (optimistic — validate at bench scale)
 ```
 
 ### Revised Life Support Architecture
 
 | System | Role | Coverage |
 |--------|------|----------|
-| **Algae photosynthesis** | Supplemental O2 + CO2 removal | 20-33% |
+| **Algae photosynthesis** | Supplemental O2 + CO2 removal | 10-20% (optimistic) |
 | **MOF O2 storage** | Primary O2 reserve | 2-4 hours |
 | **Chemical O2 generator** | Emergency backup | 1-2 hours |
 | **CO2 scrubber** | Primary CO2 removal | LiOH or amine system |
@@ -1272,7 +1278,7 @@ COVERS:           20-33% of O2 needs
 | Lighting schedule | 4-6 hours on, 8-10 hours off |
 | Daily consumption | 400-4500 mWh |
 
-**Power budget impact:** Lighting is the largest single consumer, but intermittent operation keeps it within the 285 mW harvesting capacity.
+**Power budget impact:** Lighting is the largest single consumer, but intermittent operation keeps it within the ~285 mW combined peak (≈35.5 mW duty-cycle average).
 
 ### Biomass Byproduct
 
@@ -1745,7 +1751,7 @@ When a tile is damaged:
 | **CNT fiber costs now <$50/kg** | Affordable structural mesh | OCSiAl Serbia 60t/yr plant; Canatu+DENSO tripled throughput |
 | **Perovskite PV: 27.5% efficient** | Record efficiency flexible PV | Nature Photonics, Aug 2025; 97.2% retained after 10,000 bends |
 | **Self-healing Surlyn proven at ~2 km/s** | Micrometeorite defense validated | Polimi/ESA; CNT doping boosts healing to 80% |
-| **⚠️ Radiation degrades Surlyn healing** | Must shield from gamma radiation | Polimi team — critical design constraint |
+| ** Radiation degrades Surlyn healing** | Must shield from gamma radiation | Polimi team — critical design constraint |
 | **Lunar Palace 365: 98.2% closure** | Bio-regen life support proven long-duration | Chinese Academy of Sciences, 370-day run |
 | **TAPED: Wearable algae O₂ demonstrated** | Proof of concept for body-worn algae | ACS Nano, April 2025 |
 | **DLP-printed alumina: 97.5% density** | Ceramic armor 3D printable | MDPI Materials; Army Research Lab |
@@ -1788,7 +1794,7 @@ When a tile is damaged:
 | Surlyn bladder | 200g | 1mm layer, pressure + self-healing |
 | Aerogel + algae | 300g | 6mm layer, thermal + O2/CO2 |
 | LEDs | 50g | 10-15 micro-LEDs for algae lighting |
-| Joint assistance (tendon-driven) | 900g | 3 motors + controller + springs |
+| Joint assistance — active motors (OPTIONAL add-on; baseline = SMA wires) | 900g | 3 motors + controller + springs |
 | Comfort liner | 100g | 0.5mm layer, skin contact |
 | **TOTAL DAILY WEAR** | **2,150g (2.2kg)** | |
 
@@ -1849,7 +1855,7 @@ When a tile is damaged:
 | Piezo (motion) | 5 | 50% | 2.5 |
 | Tribo (flex) | 10 | 30% | 3.0 |
 | TEG (body heat) | 15 | 100% | 15.0 |
-| **TOTAL** | | | **35.5 mW** |
+| **TOTAL** | | | **35.5 mW (duty-cycle average)** |
 
 ### Energy Loads
 | System | Power (mW) | Duty | Average (mW) |
@@ -1956,12 +1962,6 @@ When a tile is damaged:
 
 ---
 
-*Concept developed through collaborative brainstorming session.*
-*All individual technologies exist; integration is the innovation.*
-*The polymath sees what the specialist cannot.*
-
----
-
 ## Subsystem Coverage & Open Gaps
 
 The BioArmor concept has solved the *passive material stack* (pressure, O2/CO2, thermal, MMOD) but is missing the *active system layer* - avionics/data, dust, helmet, radiation hardening, and failure survival. This section tracks coverage and proposes design responses. All are concept-level (TRL 2-4); none are flight-qualified. See `docs/assets/BIOARMOR_SYSTEM_ARCHITECTURE.svg` for the avionics/data-flow map.
@@ -2035,3 +2035,27 @@ Treat the head as its own protected module:
 3. Helmet impact + anti-fog test plan.
 4. Radiation liner mass vs shielding trade (add to mass budget).
 5. Redundancy / failure-mode tree.
+
+---
+
+## Freedom-to-Operate & IP Notes
+
+The BioArmor architecture sits in a mixed patent landscape. Key points for any grant submission or patent filing:
+
+**Surlyn self-healing bladder — active NASA patent (FTO warning).** US **11,192,667** (LAR-TOPS-122, expires ~2035) covers the exact Surlyn 8940 + Barex + thiol-ene triad as a "space suit wall" between atmosphere and vacuum. BioArmor cannot practice that triad freely. Options: (a) **license from NASA**, or (b) **design around** using the now-expired capsule-healing chemistry (**WO2008154107A1 / US 7,612,152**, free to use).
+
+**Free foundations to build on:**
+- **US 7,354,877** — Lockheed CNT-fiber garment fabric (incl. spacesuit fabrics). **Expired Oct 2023.**
+- **US 7,834,527** — DEA fiber/joint transducers. **Expired May 2026 (free now).**
+
+**Defensible white space.** The combination of **wearable algae life support** and the **integrated modular architecture** (CNT mesh bus + snap-on pods + closed-loop control) is essentially unpatented — this is the strongest IP to claim.
+
+> Caveat: FTO positions above are based on the Aug-2026 deep-dive (see `docs/RESEARCH_DEEPDIVE_Aug2026.md`). Confirm current status with counsel before filing.
+
+## Conclusion
+
+BioArmor demonstrates that a modular, two-system spacesuit — passive daily-wear life support plus snap-on ExoArmor — can cut suit mass by ~80% versus the EMU while remaining buildable from existing technologies. The passive material stack is solved; the active avionics/data layer and the open gaps above are the real engineering work, and all are tractable. Integration, not invention, is the innovation.
+
+*Concept developed through collaborative brainstorming session.*
+*All individual technologies exist; integration is the innovation.*
+*The polymath sees what the specialist cannot.*

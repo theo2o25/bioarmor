@@ -266,7 +266,7 @@ BioArmor requires approximately **$40M over 5 years** to develop a flight-ready 
 
 | Metric | Current | Target | Timeline |
 |--------|---------|--------|----------|
-| Algae O2 production | Lab scale | >2,500 mL/hr | 12 months |
+| Algae O2 production | Lab scale | tens of mL/hr per 500 mL pod (validate) | 12 months |
 | Self-healing success | TBD | >90% | 18 months |
 | CNT mesh strength | TBD | >500 MPa | 12 months |
 | Power generation | TBD | >35mW avg | 18 months |

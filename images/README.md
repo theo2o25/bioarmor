@@ -8,8 +8,8 @@ The four renders below were generated with the **original** Perchance prompts,
 which depicted the algae layer as a primary / glowing O₂ source
 ("O₂ diffuses from algae to skin", "O₂ OUT"). That framing **overstates**
 the technology. Per `docs/RESEARCH_BRIEF_2026.md` and the grant deck, algae is a
-**supplemental O₂ source + CO₂ scrubber / redundancy layer** (≈20–33% of resting
-O₂ need); primary O₂ comes from compressed/chemical reserves.
+**supplemental O₂ source + CO₂ scrubber / redundancy layer** (≈10–20% of resting
+O₂ need, optimistic); primary O₂ comes from compressed/chemical reserves.
 
 These renders are therefore **visually inconsistent** with the honest framing used
 in `index.html` (grant deck), `README.md`, and `docs/BIOARMOR_CONCEPT.md`, and
