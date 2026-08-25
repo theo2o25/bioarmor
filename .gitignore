@@ -47,3 +47,7 @@ npm-debug.log*
 # Local environment
 .env
 .env.local
+
+# opencode project tooling/data (tools, skills, node_modules) — kept on disk
+# for local discovery but not version-controlled with the BioArmor project.
+.opencode/
