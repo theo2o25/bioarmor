@@ -25,7 +25,7 @@ By combining algae-based atmosphere processing (supplemental O2 + CO2 scrubbing)
 | **Self-Healing Pressure** | Surlyn bladder | Automatic puncture repair |
 | **Solar-Powered** | Perovskite PV + CNT mesh | No external power needed |
 | **3D-Printed Armor** | Alumina ceramic tiles | Scalable, customizable |
-| **Joint Assistance** | Tendon-driven motors | 40% less fatigue |
+| **Joint Assistance** | SMA baseline (~25-30% fatigue reduction) + optional tendon motors (~40-50%) | Pulsed micro-rest + optional EVA add-on |
 | **Dust Protection** | Electrodynamic shield | Repels lunar/Mars dust |
 
 ---
