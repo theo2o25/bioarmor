@@ -8,7 +8,7 @@ bioarmor/
 │
 ├── docs/                              # Documentation
 │   ├── BIOARMOR_CONCEPT.md            # Full technical specification (1800+ lines)
-│   ├── PERCHANCE_PROMPTS.md           # AI image generation prompts (V1 + V2)
+│   ├── archive/PERCHANCE_PROMPTS.md      # AI image generation prompts (dev; V1+V2)
 │   ├── FUNDING.md                     # Grant and investor strategy
 │   ├── CONTRIBUTING.md                # Contribution guidelines
 │   └── PROJECT_STRUCTURE.md           # This file
@@ -47,7 +47,7 @@ bioarmor/
 | File | Description | Lines |
 |------|-------------|-------|
 | `BIOARMOR_CONCEPT.md` | Complete technical specification | 1800+ |
-| `PERCHANCE_PROMPTS.md` | AI image generation prompts for V1 and V2 | 200+ |
+| `archive/PERCHANCE_PROMPTS.md` | AI image generation prompts (dev) for V1 and V2 | 200+ |
 | `FUNDING.md` | Detailed grant and investor information | 400+ |
 | `CONTRIBUTING.md` | Guidelines for contributors | 50+ |
 | `PROJECT_STRUCTURE.md` | This file | — |
