@@ -1959,3 +1959,79 @@ When a tile is damaged:
 *Concept developed through collaborative brainstorming session.*
 *All individual technologies exist; integration is the innovation.*
 *The polymath sees what the specialist cannot.*
+
+---
+
+## Subsystem Coverage & Open Gaps
+
+The BioArmor concept has solved the *passive material stack* (pressure, O2/CO2, thermal, MMOD) but is missing the *active system layer* - avionics/data, dust, helmet, radiation hardening, and failure survival. This section tracks coverage and proposes design responses. All are concept-level (TRL 2-4); none are flight-qualified. See `docs/assets/BIOARMOR_SYSTEM_ARCHITECTURE.svg` for the avionics/data-flow map.
+
+### Subsystem Coverage Matrix
+
+| Function | Status | Notes |
+|----------|--------|-------|
+| Pressure containment | DONE | Surlyn self-healing bladder, 4.3 psi |
+| O2 supply + CO2 removal | DONE (partial) | Compressed/chemical O2 + algae scrub (supplemental) |
+| Thermal (hot/cold) | DONE | Aerogel + variable-e + CNT heat + coolant (modeled) |
+| MMOD / impact (body) | DONE | Ceramic tiles |
+| Radiation - SPE | DONE | Ceramic (Al2O3) |
+| Radiation - GCR | PARTIAL | Algae water content (hydrogen) |
+| Radiation - gamma on Surlyn healing | MISSING | Flagged risk, no mitigation |
+| Lunar dust | MISSING | Not in design |
+| Helmet / visor subsystem | MISSING | Imagery only |
+| Mobility / joint torque | PARTIAL | SMA assist named, no budget |
+| Avionics / data collection | MISSING | Sensors listed, no architecture |
+| Closed-loop control | MISSING | "Smart" claimed, not specified |
+| Power | DONE | PV + snap-on batteries (modeled) |
+| Water / waste | PARTIAL | Liquid cooling + sweat recycling thin |
+| Redundancy / SPOF | MISSING | Not analyzed |
+| Prebreathe / decompression | MISSING | Not addressed |
+
+### Design Response 1 - Avionics, Data Collection & Closed-Loop Control (priority)
+
+The suit needs a "brain." Proposed architecture:
+
+- **Sensor layer (distributed):** pressure, skin/shell temp, O2/CO2 (cascade/MLS), humidity, radiation dosimeter, IMU (pose/joint angle), crew health (HR/SpO2), suit-integrity (mic). Formalize as a sensor bus on the CNT mesh.
+- **Edge fusion + controller ("Avionics Core"):** low-power MCU/SoC samples at 1-10 Hz and runs:
+  - *Thermal loop* - reads crew/shell temp + sun/shade, sets variable-emissivity coating state, CNT heater PWM, coolant-pump speed.
+  - *Life-support loop* - tracks O2/CO2, modulates algae-LED duty (active irradiance control) and backup scrubber.
+  - *Mobility loop* - drives SMA actuation per joint angle.
+- **Science data collection:** same bus logs environmental/sample/crew data to onboard flash and streams via comms using a simple schema (timestamp, sensor_id, value) - so EVA *science* is captured, not just life support.
+- **Comms:** BAN (intra-suit, ~5 mW) + selectable radio (100 mW-2 W) to rover/station.
+- **Power add:** core ~1-2 W + sensors ~0.5 W + radio avg ~1-2 W -> adds ~3-5 W to the ~39 W load (still trivial battery mass).
+
+Caveat: functional architecture, not flight software.
+
+### Design Response 2 - Lunar Dust Mitigation
+
+Dust is the top real-world EVA risk (Apollo joint seizing; Artemis concern). Responses:
+- **Electrostatic Dust Shields (EDS):** AC-driven transparent electrodes on suit exterior/visor repel charged regolith (in AxEMU research).
+- **Lotus-effect / oleophobic coatings** on fabric and low-adhesion ceramic tile surfaces.
+- **Sealed, dust-tolerant joints:** bellows + positive-pressure purge at bearings; sacrificial dust seals.
+- **Interface discipline:** snap-on modules sealed; suit pressure kept positive vs regolith.
+
+### Design Response 3 - Helmet / Visor Subsystem
+
+Treat the head as its own protected module:
+- **Visor:** polycarbonate / ortho-carbonated polycarbonate, impact-rated; UV/IR/anti-glare coating; **active anti-fog** (transparent conductive heater film).
+- **HUD:** low-power visor display showing O2, battery, dosimeter, checklist (deck already shows HUD).
+- **Comms:** bone-conduction audio + boom mic in helmet ring.
+- **Dust:** EDS ring at visor seal; quick-attach dust cover.
+- **Thermal:** head is high surface-area - include in the thermal loop (small heater; variable-e outer still applies).
+
+### Design Response 4 - Radiation Hardening of Self-Healing & Redundancy
+
+- **Gamma on Surlyn healing:** known risk is gamma reducing healing efficiency. Mitigation: add a thin **radiation-shielding liner** (HDPE or boron-PE, ~2-5 mm) between outer ceramic and the Surlyn bladder to attenuate gamma/neutrons; algae water content already helps neutrons. Alternative: keep Surlyn thin and add a *second* redundant bladder so healing loss is not single-point.
+- **Redundancy / SPOF:** (a) dual bladder (primary + backup), (b) dual O2 path (primary tank + secondary O2 pack), (c) snap-on modules let a failed battery/life-support be field-swapped, (d) avionics core with watchdog + manual override for thermal/heating. Document a failure tree.
+
+### Design Response 5 - Mobility & Prebreathe (notes)
+
+- **Mobility:** at 4.3 psi suit pressure is comparable to EMU; advantage is lower mass + flexible CNT mesh. Quantify a joint-torque budget (pressure x seal area moment) and target EMU-class or better; SMA assist reduces actuator torque. Needs a mobility test (already in roadmap).
+- **Prebreathe:** 4.3 psi pure-O2 matches EMU protocol; standard prebreathe / in-suit denitrogenation is still required before EVA to avoid decompression sickness. State explicitly - low pressure does not eliminate it.
+
+### Open Items to Engineer Next
+1. Avionics Core hardware/software spec + sensor-fusion algorithms.
+2. Dust EDS power/area trade study.
+3. Helmet impact + anti-fog test plan.
+4. Radiation liner mass vs shielding trade (add to mass budget).
+5. Redundancy / failure-mode tree.
