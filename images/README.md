@@ -20,7 +20,7 @@ in `index.html` (grant deck), `README.md`, and `docs/BIOARMOR_CONCEPT.md`, and
 | `BIOARMOR_FULL_SUIT_CONCEPT.png` | Full V1/V2 suit hero | Pending re-render | V1/V2 Hero + Full Body prompts |
 | `Bioarmor concept.jpg` | V1 integrated daily-wear suit | Pending re-render | V1 Daily Wear / In-Station prompts |
 | `Bioarmor concept2.jpg` | V2 modular exo-layer | Pending re-render | V2 Full Body / ExoArmor prompts |
-| `BIOARMOR_TILE_BLUEPRINT.png` | Tile layer stack / blueprint | Mostly OK (layers), verify labels | V2 Tile Exploded View prompt |
+| `BIOARMOR_TILE_BLUEPRINT.svg` | Tile layer-stack blueprint (clean vector, non-overlapping labels) | **Done (replaces PNG)** | n/a — generated from spec |
 
 ## How to regenerate (honest framing)
 

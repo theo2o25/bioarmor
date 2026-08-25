@@ -67,7 +67,7 @@ Mass: 1.5 kg | Protection: Light | Mobility: Maximum
 ### V2: Modular (Snap-On Tile System)
 
 ![V2 Concept](images/Bioarmor%20concept2.jpg)
-![Tile Blueprint](images/BIOARMOR_TILE_BLUEPRINT.png)
+![Tile Blueprint](images/BIOARMOR_TILE_BLUEPRINT.svg)
 
 ```
 V2 EXOARMOR (removable):
@@ -147,7 +147,7 @@ bioarmor/
 │   ├── BIOARMOR_FULL_SUIT_CONCEPT.png # Full suit render
 │   ├── Bioarmor concept.jpg           # V1 concept
 │   ├── Bioarmor concept2.jpg          # V2 concept
-│   └── BIOARMOR_TILE_BLUEPRINT.png    # Tile technical drawing
+│   └── BIOARMOR_TILE_BLUEPRINT.svg     # Tile layer-stack blueprint (clean, labeled)
 │
 └── models/                            # 3D models
     ├── BIOARMOR_CHEST_V2.stl          # Chest armor

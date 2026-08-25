@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1380" font-family="Segoe UI, Helvetica, Arial, sans-serif">
+  <rect width="1000" height="1380" fill="#0a1020"/>
+  <rect x="0" y="0" width="1000" height="6" fill="#3fd0ff"/>
+
+  <text x="80" y="74" fill="#3fd0ff" font-size="34" font-weight="800">BioArmor V2 — Tile &amp; Suit Layer Stack</text>
+  <text x="80" y="108" fill="#9fb6cc" font-size="20">Not to scale · thicknesses per spec (mm) · outer (top) → inner (skin, bottom)</text>
+
+  <!-- direction arrow -->
+  <line x1="48" y1="190" x2="48" y2="1235" stroke="#3fd0ff" stroke-width="2"/>
+  <polygon points="48,1248 42,1230 54,1230" fill="#3fd0ff"/>
+  <text x="30" y="200" fill="#9fb6cc" font-size="15" transform="rotate(-90 30 200)">OUTER</text>
+  <text x="30" y="1230" fill="#9fb6cc" font-size="15" transform="rotate(-90 30 1230)">SKIN</text>
+
+  <!-- ROW 0: PV -->
+  <rect x="90" y="190" width="360" height="100" rx="8" fill="#f4c542" opacity="0.9" stroke="#3fd0ff" stroke-width="1.5"/>
+  <text x="480" y="228" fill="#eaf6ff" font-size="23" font-weight="700">PV Coating — 0.1 mm</text>
+  <text x="480" y="256" fill="#aebfd0" font-size="18">Material: Perovskite solar cells</text>
+  <text x="480" y="282" fill="#aebfd0" font-size="18">Function: Power generation (record 27.5% efficiency, 1.77 W/g)</text>
+
+  <!-- ROW 1: Ceramic -->
+  <rect x="90" y="325" width="360" height="100" rx="8" fill="#e8eef5" opacity="0.92" stroke="#3fd0ff" stroke-width="1.5"/>
+  <text x="480" y="363" fill="#eaf6ff" font-size="23" font-weight="700">Ceramic Tile — 2 mm</text>
+  <text x="480" y="391" fill="#aebfd0" font-size="18">Material: 3D-printed alumina (Al2O3)</text>
+  <text x="480" y="417" fill="#aebfd0" font-size="18">Function: Micrometeoroid / radiation armor (97.5% density)</text>
+
+  <!-- ROW 2: CNT -->
+  <rect x="90" y="460" width="360" height="100" rx="8" fill="#2b2f3a" opacity="0.95" stroke="#3fd0ff" stroke-width="1.5"/>
+  <text x="480" y="498" fill="#eaf6ff" font-size="23" font-weight="700">CNT Mesh — 0.3 mm</text>
+  <text x="480" y="526" fill="#aebfd0" font-size="18">Material: Carbon-nanotube fabric (&lt;$50/kg)</text>
+  <text x="480" y="552" fill="#aebfd0" font-size="18">Function: Structural frame + electrical bus</text>
+
+  <!-- ROW 3: Surlyn -->
+  <rect x="90" y="595" width="360" height="100" rx="8" fill="#2ee6c0" opacity="0.9" stroke="#3fd0ff" stroke-width="1.5"/>
+  <text x="480" y="633" fill="#eaf6ff" font-size="23" font-weight="700">Surlyn Bladder — 1 mm</text>
+  <text x="480" y="661" fill="#aebfd0" font-size="18">Material: Surlyn ionomer (self-healing)</text>
+  <text x="480" y="687" fill="#aebfd0" font-size="18">Function: Pressure retention; seals punctures to ~2 km/s</text>
+
+  <!-- ROW 4: Aerogel + Algae -->
+  <rect x="90" y="730" width="360" height="100" rx="8" fill="#54d98b" opacity="0.9" stroke="#3fd0ff" stroke-width="1.5"/>
+  <text x="480" y="768" fill="#eaf6ff" font-size="23" font-weight="700">Aerogel + Algae — 6 mm</text>
+  <text x="480" y="796" fill="#aebfd0" font-size="18">Material: Silica aerogel + Chlorella culture</text>
+  <text x="480" y="822" fill="#aebfd0" font-size="18">Function: Thermal insulation + supplemental O2 / CO2 scrub (≈20–33%)</text>
+
+  <!-- ROW 5: Aramid + UHMWPE -->
+  <rect x="90" y="865" width="360" height="100" rx="8" fill="#8a93a6" opacity="0.92" stroke="#3fd0ff" stroke-width="1.5"/>
+  <text x="480" y="903" fill="#eaf6ff" font-size="23" font-weight="700">Aramid + UHMWPE — 0.5 mm</text>
+  <text x="480" y="931" fill="#aebfd0" font-size="18">Material: Hybrid aramid / UHMWPE</text>
+  <text x="480" y="957" fill="#aebfd0" font-size="18">Function: Daily-suit outer shell (cut / abrasion resistant)</text>
+
+  <!-- ROW 6: SMA -->
+  <rect x="90" y="1000" width="360" height="100" rx="8" fill="#ff9f43" opacity="0.92" stroke="#3fd0ff" stroke-width="1.5"/>
+  <text x="480" y="1038" fill="#eaf6ff" font-size="23" font-weight="700">SMA Wires — 0.2 mm</text>
+  <text x="480" y="1066" fill="#aebfd0" font-size="18">Material: Shape-memory alloy</text>
+  <text x="480" y="1092" fill="#aebfd0" font-size="18">Function: Joint actuation / assistance</text>
+
+  <!-- ROW 7: Comfort -->
+  <rect x="90" y="1135" width="360" height="100" rx="8" fill="#a78bfa" opacity="0.9" stroke="#3fd0ff" stroke-width="1.5"/>
+  <text x="480" y="1173" fill="#eaf6ff" font-size="23" font-weight="700">Comfort Liner — 0.5 mm</text>
+  <text x="480" y="1201" fill="#aebfd0" font-size="18">Material: Moisture-wicking fabric</text>
+  <text x="480" y="1227" fill="#aebfd0" font-size="18">Function: Liquid cooling + comfort next to skin</text>
+
+  <text x="80" y="1310" fill="#7fe9d2" font-size="17">Algae layer = supplemental O2 + CO2 scrubber (≈20–33% of resting O2 need).</text>
+  <text x="80" y="1334" fill="#7fe9d2" font-size="17">Primary O2 is from compressed / chemical reserves. See docs/RESEARCH_BRIEF_2026.md.</text>
+</svg>
