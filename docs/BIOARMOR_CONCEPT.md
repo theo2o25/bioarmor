@@ -788,7 +788,7 @@ EVA CONFIGURATION:
 │  PV + Ceramic + CNT mesh         │
 ├──────────────────────────────────┤
 │  DAILY WEAR SUIT (permanent)     │
-│  Aramid/UHMWPE + Surlyn + Algae │
+│  UHMWPE + Aramid (Kevlar) + Surlyn + Algae │
 ├──────────────────────────────────┤
 │  JOINT ASSISTANCE                │
 │  SMA wires (baseline) + opt. motors (EVA) │
@@ -799,7 +799,7 @@ EVA CONFIGURATION:
 IN-STATION CONFIGURATION:
 ┌──────────────────────────────────┐
 │  DAILY WEAR SUIT ONLY            │
-│  Aramid/UHMWPE + Surlyn + Algae │
+│  UHMWPE + Aramid (Kevlar) + Surlyn + Algae │
 ├──────────────────────────────────┤
 │  JOINT ASSISTANCE                │
 │  SMA wires (baseline) + opt. motors (EVA) │
@@ -902,7 +902,7 @@ Note: In the two-system architecture, the aerogel + algae layer is part
 of the DAILY WEAR SUIT, not the ExoArmor. The ExoArmor tiles snap ON
 TOP of the daily wear suit. This means:
 
-- Daily wear suit = Aramid/UHMWPE + Surlyn + Aerogel/Algae + Liner (8.2mm)
+- Daily wear suit = UHMWPE + Aramid (Kevlar) + Surlyn + Aerogel/Algae + Liner (8.2mm)
 - ExoArmor = PV + Ceramic (printed paths) + CNT + Clips (3mm)
 
 The ExoArmor tiles are thin, hard shells that protect the soft suit
@@ -951,7 +951,7 @@ CROSS-SECTION DIAGRAM
 ├───────────────────────────────────────────────┤    FC = Fluid Channel
 │                                              │    CNT = Power wiring
 │  DAILY WEAR SUIT:                            │    GM = Graphene mesh
-│  Aramid/UHMWPE + Surlyn + Aerogel/Algae + Liner   │
+│  UHMWPE + Aramid (Kevlar) + Surlyn + Aerogel/Algae + Liner   │
 │  (soft, passive life support)                │
 │  + LEDs for algae lighting                   │
 └───────────────────────────────────────────────┘
@@ -1499,10 +1499,12 @@ Every component serves multiple functions:
 | **PV coating** | Skin (outermost protection) | Solar collection |
 | **Ceramic + CNT + pathways** | Epidermis (protective layer) | Impact protection + energy transfer + distribution |
 | **Snap-fit attachment** | Joints (connective tissue) | Modular connection to daily wear suit |
-| **Hybrid Aramid/UHMWPE** | Fascia (structural layer) | Cut resistance + radiation shielding + heat/UV resistance |
+| **Hybrid UHMWPE + Aramid (Kevlar), CNT co-woven** | Fascia (structural + EDS layer) | Cut resistance + radiation shielding + heat/UV resistance + electrodynamic dust shield (EDS) |
 | **Surlyn bladder** | Peritoneum (membrane) | Pressure containment + self-healing |
 | **Aerogel + algae** | Tissue/organs (functional tissue) | Thermal + gas exchange + radiation |
 | **Comfort liner** | Dermis (innermost interface) | Comfort + moisture wicking |
+
+> **Material rationale:** UHMWPE (Spectra/Dyneema-class) is the higher-performance face of the hybrid — best strength-to-weight of any technical fiber and H-rich, so it also serves as radiation shielding for its mass. Aramid (Kevlar) supplies the high-temperature/UV heritage resistance that UHMWPE lacks. CNT is co-woven into the aramid to form the electrodynamic dust shield (EDS), so a single layer performs structural + dust-repulsion roles.
 
 ### Printed Pathways as Capillary System
 
@@ -1881,7 +1883,7 @@ When a tile is damaged:
 ### Daily Wear Suit
 | Component | Weight | Notes |
 |-----------|--------|-------|
-| Hybrid Aramid + UHMWPE | 600g | 0.5mm layer, structural + radiation |
+| UHMWPE + Aramid (Kevlar), CNT co-woven | 600g | 0.5mm layer, structural + radiation + electrodynamic dust shield (EDS) |
 | Surlyn bladder | 200g | 1mm layer, pressure + self-healing |
 | Aerogel + algae | 300g | 6mm layer, thermal + O2/CO2 |
 | LEDs | 50g | 10-15 micro-LEDs for algae lighting |

@@ -98,7 +98,7 @@
 | OCSiAl opened 60 t/yr plant (Serbia) | TextileWorld | Supply scaling |
 | Canatu + DENSO tripled throughput | Canatu | Cost reduction |
 | MWCNT fiber <$50/kg | Dataintelo | **Affordable** |
-| CNT-silicone/Kevlar hybrid (90x25cm) | MDPI | Scalable production |
+| CNT-silicone/Kevlar hybrid (90x25cm) | MDPI | Scalable CNT-aramid fabrication (BioArmor structural layer = UHMWPE + aramid (Kevlar) with CNT co-woven) |
 | WHO concern: fiber release on washing | MDPI | **Safety flag** |
 
 ### Self-Healing Polymers (Surlyn)
