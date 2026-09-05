@@ -112,17 +112,18 @@ Mass: 23.39 kg | Thick 8.81mm | Cost $10.16M | Protection: Max (polar hardened) 
 
 ## Technical Specifications
 
-| Parameter | V1 Integrated | V2 Modular (reconfigured 2026-09) | NASA EMU | AxEMU |
-|-----------|---------------|-------------------------------|----------|-------|
-| **Mass** | 1.5 kg (2.0 kg with BNNT+ATSP) | 23.39 kg (was 23kg, +1.7%, 8.81mm) | 127 kg | ~180 kg |
-| **Cost per unit** | $2M | $10.16M (was $10M, +1.6%) | $150M | $150M |
-| **EVA duration** | 4-6 hrs | 8+ hrs (2x lunar with BNNT) | 6-8 hrs | 8+ hrs |
-| **Life support** | Algae | Algae + backup | PLSS | PLSS |
-| **Power** | Passive | Solar 33.6% 44.2mW avg + CNT | Battery | Battery |
-| **Pressure** | 4.3 psi (8.2 capable) | 4.3 psi (sPUU O2-independent) | 4.3 psi | 8.2 psi |
-| **Self-healing** | sPUU vitrimer RT | sPUU + Surlyn sacrificial | No | No |
-| **Radiation** | BNNT 0.2mm | BNNT 15% >Al, 990% >HDPE | Minimal | Minimal |
-| **Dust** | ATSP 0.3kV spiral | ATSP 0.3kV 90-97% | Brush | EDS add-on |
+| Parameter | V1 Integrated | V2 Modular (reconfigured + killer review) | NASA EMU | AxEMU |
+|-----------|---------------|------------------------------------------|----------|-------|
+| **Mass** | 1.5 kg tube (2.0 kg with BNNT+ATSP; PLSS excl.) | 23.39 kg tube (8.81mm, +1.7%); **system = +8-12kg PLSS for 8hr or 500g/3hr emergency only** | 127 kg **system** (82kg suit +45kg PLSS) | ~180 kg system |
+| **Cost per unit** | $2M tube | $10.16M tube (+1.6%) — system cost +PLSS | $150M system | $150M system |
+| **EVA duration** | 4-6 hrs tube | 8+ hrs **requires PLSS** (BNNT 2x is research garment) | 6-8 hrs with PLSS | 8+ hrs with PLSS |
+| **Life support** | Algae habitat loop | **Helmet+fan+LiOH/amine primary; algae OFF EVA bus** (44mW vs 25W) | PLSS closed loop | PLSS |
+| **Power** | Passive | Solar 33.6% 44.2mW avg + CNT — EDS 0.3kV 1.5W | Battery | Battery |
+| **Pressure** | 4.3 psi **bladder+UHMWPE/aramid restraint** (Test #1 gating <5% growth) | 4.3 psi sPUU O2-independent (vacuum test pending) | 4.3 psi with restraint | 8.2 psi |
+| **Self-healing** | sPUU vitrimer RT | sPUU + Surlyn sacrificial (vacuum test pending) | No | No |
+| **Radiation** | BNNT 0.2mm SPE 2/5 | **GCR 1/5 unmitigated — admit PARTIAL; tiles = abrasion not shield** | Minimal | Minimal |
+| **Dust** | ATSP 0.3kV spiral 90% flat | **E 90% insufficient at seals — need wash + labyrinth + 6mbar arc test** | Brush | EDS add-on |
+| **Patent** | — | **US 11,192,667 blocks woven EDS until 2037 — spiral on top is design-around or license** | — | — |
 
 ---
 
@@ -180,12 +181,15 @@ bioarmor/
 ## Mass Comparison
 
 ```
-MASS (kg) RECONFIGURED 2026-09:
+MASS (kg) RECONFIGURED 2026-09 + KILLER REVIEW (tube vs system):
 
-NASA EMU:      ████████████████████████████████████████████████████ 127 kg
-AxEMU:         ████████████████████████████████████████████████████████████████████ 180 kg
-BioArmor V1:   █ 1.5 kg (2.0 kg with upgrades)
-BioArmor V2:   █████████ 23.39 kg (+0.39kg +1.7%, still 18.4% EMU)
+NASA EMU tube:     ████████████████████████████████ 82 kg (suit only, no PLSS)
+NASA EMU system:   ████████████████████████████████████████████████████ 127 kg (with PLSS)
+AxEMU system:      ████████████████████████████████████████████████████████████████████ 180 kg
+BioArmor V1 tube:  █ 1.5 kg (2.0 kg with upgrades, PLSS excl.)
+BioArmor V2 tube:  █████████ 23.39 kg (tube only - add 8-12kg PLSS for 8hr)
+BioArmor V1 sys:   ~3.5 kg emergency 3hr (500g PLSS) vs EMU 127kg system = valid IVA comp
+BioArmor V2 sys:   ~31-35 kg with PLSS vs 127kg = still 75% lighter BUT requires PLSS
 ```
 
 ---
@@ -231,7 +235,7 @@ BioArmor V2:   ███ $10.16M (+$0.16M +1.6%, still 6.8% EMU)
 ├── Mars mission preparation
  └── Milestone: 100 units delivered (polar-hardened V2)
 
-> **Reconfig 2026-09 notes:** BNNT liner, sPUU heal, ceramic NF aerogel, ATSP spiral EDS, 33.6% tandem PV, DEA cuff added. Mass 23→23.39kg, cost $10→$10.16M, thick 10.6→8.81mm, power 35.5→44.2mW avg. Still 85% lighter / 92% cheaper than EMU.
+> **Reconfig 2026-09 + Killer review:** IVA/EVA split kept; mass is tube-only — valid comp is 31-35kg system vs 127kg EMU (still 75% lighter). Algae OFF EVA bus (44mW vs 25W), helmet+fan+LiOH mandatory, GCR 1/5 admit, polar ops = stay off cap spring, EDS needs 99% at seals + 6mbar arc test, hoop Test #1 gates 2.2kg claim, patent 11,192,667 workaround via spiral.
 ```
 
 ---

@@ -67,16 +67,19 @@ Algae produce supplemental O2 (~10-20% of need — optimistic, validate at bench
 Astronaut breathes O2
 ```
 
-### Daily Wear Suit Specs (Reconfigured 2026-09)
-- **Total thickness:** ~6.5mm daily-wear (was 8.2mm) — 4mm ceramic NF aerogel + 1mm sPUU + 0.2mm BNNT + 0.5mm CNT-Aramid+ATSP + 0.5mm liner + 0.2mm SMA/hydrogel; ExoArmor 2.4mm → total EVA 8.81mm (was 10.6mm)
-- **Mass:** ~2.0 kg (base daily-wear, -0.2kg via thinner aerogel); ~2.9 kg with SMA/hydrogel+TE + BNNT + ATSP EDS; Full V2 23.39kg (+0.39kg, +1.7%) — see mass test 2026-09-05
-- **Pressure:** 4.3 psi (29.6 kPa) maintained by sPUU vitrimer bladder (primary, O2-independent) + Surlyn sacrificial outer; 8.2psi capable with same stack
-- **Thermal:** 35-40°C passive + active PCM/VO2 low-e (0.1) in shadow — ceramic NF aerogel 14 mW/mK radial, -196 to 1200C stable, 10k cycles
-- **O2 production:** ~3 L/hr (≈10-20% of resting need; optimistic — complements primary O2 system, validate at bench scale) — unchanged
-- **Power required:** ~400mW for SMA+hydrogel/TE (faster cooling), ~1.5W peak EDS (was 5W, -70% via 0.3kV spiral) — PV avg 44.2mW (+24% via 33.6% tandem)
-- **Dust protection:** ATSP/MWCNT/PTFE spiral EDS 0.3kV repels 90%+ at 1.8-3kV, 56% friction reduction, TPFS cuts residuals 50%, repairable 40C/30min spray; bipolar still
-- **Radiation:** + BNNT liner 0.2mm (990% linear abs vs HDPE, 15% > Al) — doubles allowable lunar EVA time (KIST/NASA sims)
-- **Manufacturing:** Soft-goods + ceramic NF aerogel (freeze-dry) + sPUU cast + BNNT-HDPE hot-press + CNT-Aramid co-weave + ATSP spray
+### Daily Wear Suit Specs (Reconfigured 2026-09 + Killer Review 2026-09-05)
+
+> **Killer review applied:** 2.2kg bladder alone cannot carry hoop stress; EMU is 127-145kg because restraint/bearings/PLSS carry load. Figures below are **bladder+restraint tube mass only**, not suited system.
+
+- **Total thickness:** ~6.5mm daily-wear (4mm ceramic NF aerogel + 1mm sPUU + 0.2mm BNNT + 0.5mm CNT-Aramid+ATSP + 0.5mm liner + 0.2mm SMA/hydrogel); ExoArmor 2.6mm → total 8.81mm
+- **Mass (tube only):** ~2.0 kg bladder+restraint tube; ~2.9 kg with SMA/hydrogel+TE + BNNT + EDS; Full V2 tube 23.39kg — **DOES NOT INCLUDE PLSS** (see Mass Split below). Add PLSS for 8hr EVA or down-scope to 500g/3hr emergency IVA.
+- **Pressure:** 4.3 psi (29.6 kPa) **sPUU bladder + UHMWPE/aramid restraint** must carry hoop stress. **Test #1 required: Surlyn/sPUU + UHMWPE/aramid cylinder at 4.3 psi, <5% diametral growth at 24h.** Until then, 2.2kg target invalid. Drop “Surlyn healing in vacuum” until vacuum-chamber data.
+- **Life support:** **Helmet + closed fan loop + LiOH/amine scrubber required.** Passive aerogel pores do NOT deliver O2 to alveoli. Kill “breathe through aerogel.” Algae = **habitat loop, OFF EVA power bus** (harvest 44.2mW vs 25W lighting deficit). Keep 10mW UV + LiOH primary.
+- **Thermal:** **Ranked 1) low-e outer (VO2 0.1) 2) LCHG + fingertip/foot heaters only 3) no whole-suit Peltier.** 500mW cannot move 100-300W metabolic heat. Spec 35-40°C passive invalid for Mars thin-gas convection + dust. Require Mars-chamber manikin test.
+- **Dust:** ATSP spiral 0.3kV 90-97% **flat swatch only** — residual 3-10% kills rotary seals. Require 2-stage: EDS + mechanical wash + seal labyrinth (Test #3b at seal geometry, perchlorate-spiked 0.5wt%, <1% residual, no arcing at 500V/6mbar CO2).
+- **Radiation:** **Admit GCR PARTIAL = unmitigated** — 300g wet /1.8m² = 0.02 g/cm², need 10-1000x for GCR. BNNT 0.2mm helps SPE 2/5 only; Al2O3 tiles increase secondaries. Storm shelter stays in habitat. Don't mass-compare to wearable HDPE research garments.
+- **Polar geysers:** **Operational control only — stay off caps during spring** (Ls180-250). Tiles 2/5 for debris only, not jet impingement. Impingement test required to claim otherwise.
+- **Manufacturing:** Same + add helmet/fan qualification + restraint seam qualification
 
 ### SMA Joint Assistance
 
@@ -815,19 +818,20 @@ IN-STATION CONFIGURATION:
 └──────────────────────────────────┘
 ```
 
-### Mass Comparison (Reconfigured 2026-09 Test)
-| Configuration | Mass | vs EMU (127 kg) | Delta vs 2026-08 |
-|---------------|------|-----------------|-----------------|
-| Daily wear suit | 2.0 kg | 2% | -0.2kg (4mm aerogel) |
-| + BNNT + ATSP + hydrogel/TE | 2.9 kg | 2% | +0.7kg |
-| + Gloves + Boots | 3.4 kg | 3% | +0.7kg |
-| + Chest armor | 9.4 kg | 7% | +0.5kg BNNT |
-| + Full ExoArmor (+DEA) | 21.8 kg | 17% | +0.4kg |
-| + Algae pods (4) | 24.0 kg | 19% | +0.4kg |
-| **Reconfigured V2 (4 pods)** | **23.39 kg (8.81mm, $10.16M)** | **18.4%** | **+0.39kg +$0.16M vs 23.0kg $10.0M** |
-| EMU (current) | 127 kg | 100% | — |
+### Mass Comparison (Reconfigured 2026-09 Test — TUBE ONLY, PLSS EXCLUDED)
+| Configuration | Mass (tube only) | vs EMU tube | Notes |
+|---------------|------------------|-------------|-------|
+| Daily wear suit (bladder+restraint) | 2.0 kg | — | Gating on Test #1 hoop |
+| + BNNT + ATSP + hydrogel/TE | 2.9 kg | — | +0.7kg |
+| + Gloves + Boots | 3.4 kg | — | — |
+| + Chest armor | 9.4 kg | — | — |
+| + Full ExoArmor (+DEA) | 21.8 kg | 17% tube | +0.4kg vs Aug |
+| + Algae pods (4) | 24.0 kg | — | Habitat only now |
+| **Reconfigured V2 tube (4 pods)** | **23.39 kg (8.81mm, $10.16M tube)** | **18.4% tube** | **+0.39kg +$0.16M vs 23.0kg $10.0M** |
+| EMU **with PLSS** | 127 kg (45kg PLSS + 82kg suit) | 100% system | BioArmor system = add PLSS 8-12kg for 8hr or down-scope to 500g/3hr emergency IVA |
+| **Killer note:** Do not compare 21-25kg tube to 127kg system. Valid comps: tube vs tube (82kg) or system vs system (add PLSS). | | | |
 
-*Test calc 2026-09-05: BNNT 0.468kg + ATSP 0.022kg - aerogel 0.101kg = +0.389kg. Cost BNNT $0.144M real dip + aerogel $0.015M + vitrimer $0.005M = +$0.164M. Power 35.5→44.2mW avg. Thickness 10.6→8.81mm.*
+*Test calc 2026-09-05: BNNT 0.468kg + ATSP 0.022kg - aerogel 0.101kg = +0.389kg. Cost BNNT $0.144M + aerogel $0.015M + vitrimer $0.005M = +$0.164M. Thickness 10.6→8.81mm. **PLSS not included — see split above.** Patent US 11,192,667 blocks woven EDS until 2037; ATSP spiral on top is design-around.*
 
 ---
 
@@ -1507,7 +1511,7 @@ Every component serves multiple functions:
 | **Ceramic + CNT + pathways** | Epidermis (protective layer) | Impact protection + energy transfer + distribution |
 | **Snap-fit attachment** | Joints (connective tissue) | Modular connection to daily wear suit |
 | **Hybrid UHMWPE + Aramid (Kevlar), CNT co-woven** | Fascia (structural + EDS layer) | Cut resistance + radiation shielding + heat/UV resistance + electrodynamic dust shield (EDS) |
-| **Surlyn bladder** | Peritoneum (membrane) | Pressure containment + self-healing |
+| **sPUU/Surlyn bladder + UHMWPE/aramid restraint** | Peritoneum (membrane) + fascia restraint | Pressure containment + self-healing + hoop load |
 | **Aerogel + algae** | Tissue/organs (functional tissue) | Thermal + gas exchange + radiation |
 | **Comfort liner** | Dermis (innermost interface) | Comfort + moisture wicking |
 
@@ -1987,21 +1991,45 @@ The EDS pulsed at ~100 ms every 1-10 s during dust events → average ~0.5-1 W, 
 
 ---
 
-## LIFE SUPPORT ANALYSIS
+## LIFE SUPPORT ANALYSIS (Killer Review 2026-09-05 Applied)
 
-- **O₂ production (algae, supplemental):** ~3 L/hr ≈ 10–20% of the ~15 L/hr resting need (optimistic bench-scale max with ample illumination; in-suit, PV-limited lighting yields a few-percent contribution — primary O₂ from compressed/chemical reserves).
-- **CO₂ removal (algae, supplemental):** partial; primary CO₂ removal via LiOH/amine scrubber.
-- **Radiation shielding:** partial — hydrogen in the algae water content attenuates some SPE/charged-particle flux, but GCR (high-Z, high-energy) is largely unmitigated by a ~6 mm algae layer (see Radiation Gaps; rated PARTIAL).
-- **Thermal regulation:** 35-40°C passive (aerogel insulation + algae metabolism)
+- **O₂ production (algae, supplemental):** ~3 L/hr bench max with 25W LEDs — **OFF EVA bus, habitat loop only.** In-suit PV 44mW cannot drive it. Keep as CO2 scrubber + redundancy in habitat, not EVA life support. EVA primary = compressed O2 + chemical.
+- **CO₂ removal (EVA):** **Helmet + closed fan loop + LiOH/amine scrubber mandatory.** Kill “aerogel passive diffusion to alveoli” — need forced washout. Test fan power + CO2 pCO2 <7.6mmHg.
+- **Radiation shielding:** **GCR 1/5 unmitigated — admit PARTIAL.** 0.02 g/cm² wet layer vs 10-20 g/cm² needed. BNNT 0.2mm = SPE 2/5 only. Tiles = abrasion/thermal, increase secondaries. Keep habitat storm shelter.
+- **Thermal regulation:** **Ranked: 1) low-e outer to kill leak, 2) LCHG + fingertip/foot heaters only, 3) no whole-suit 500mW Peltier** (cannot move 100-300W). Mars chamber manikin required, not 35-40°C passive spec.
 
 ---
 
-## RESEARCH GAPS
+## WHAT TO KEEP / WHAT TO SPLIT (Killer Review)
 
-### HIGH Priority
-1. **Algae survival in microgravity** — Chlorella behavior in zero-g uncharacterized; needs ISS testing
-2. **Aerogel structural integrity under EVA impact** — Fragile; needs protective coating or honeycomb reinforcement
-3. **Emergency O₂ during eclipse/no-light** — Algae need light; compressed O₂ backup required
+**Keep:** Two-system architecture — soft IVA emergency layer (4.3 psi bladder + UHMWPE/aramid restraint at 2-3kg, helmet+fan+LiOH) + snap-on ExoArmor (thermal/tiles/EDS 23.39kg tube) for EVA. Matches real IVA/EVA split. Keep EDS coupon as first hardware (TRL 4/5 best subsystem).
+
+**Kill / Split:**
+- Kill mass comparison 21-25kg vs 127kg EMU without PLSS. Add PLSS mass (O2 storage, scrubber, fan, battery, radiators) for 8-hr EVA or explicitly down-scope to 500g/3-hr emergency IVA only. Current table is tube-only.
+- Kill “breathe through aerogel” and whole-suit Peltier. Rank thermal as above.
+- Patent US 11,192,667 blocks CNT-Aramid EDS weave until 2037 — must design-around (spiral ATSP on top of weave, not woven electrodes) or license.
+- Algae OFF EVA: habitat loop, not suit.
+
+### 4 TESTS THAT ACTUALLY RETIRE RISK (in order)
+
+| # | Test | Setup | Pass criteria | Retires |
+|---|------|-------|---------------|---------|
+| **1** | **Hoop-stress cylinder** | Surlyn/sPUU bladder + UHMWPE/aramid restraint tube at 4.3 psi, 24h | <5% diametral growth, no creep | 1mm bladder cannot carry hoop — invalidates 2.2kg target if fails |
+| **2** | **Tile flex** | 1x 60mm alumina tile on CNT mesh, 1000 flex cycles at knee geometry | 0 popped clips, <10% contact resistance rise | Mesh continuity after flex |
+| **3** | **EDS + perchlorate (seal)** | ATSP spiral 100-500V traveling wave, Mars simulant + 0.5wt% perchlorate at wrist-seal labyrinth, 6mbar CO2 | <1% residual by mass, no arcing at 500V | Dust+perchlorate kills seals/thyroid; flat swatch insufficient |
+| **3b** | **Perchlorate residual** | Same as #3, measure at rotary seals/gloves | <1% at seals | — |
+| **4** | **Power board** | 500mAh LiPo running EDS pulses + fingertip/foot heaters only (algae LEDs OFF) | 2hr EDS duty + 30min heaters | 2.5mW deficit proven; algae off bus |
+
+Run #1 before claiming daily-wear mass. Run #2/#3 in parallel.
+
+## RESEARCH GAPS (Re-ranked Post-Review)
+
+### HIGH Priority (Risk-Retiring)
+1. **Hoop-stress cylinder (Test #1)** — 4.3 psi restraint — **GATING**
+2. **Tile flex 1000 cycles (Test #2)** — pop-off / contact
+3. **EDS + perchlorate at seal 6mbar CO2 (Test #3)** — arcing, 85-95% insufficient, need 99% at seals
+4. **Power board EDS+heaters only (Test #4)** — proves bus without algae
+5. **Mars-chamber thermal manikin** — thin-gas convection + dust, not passive spec
 
 ### MEDIUM Priority
 4. **Ceramic-aerogel thermal expansion mismatch** — Different CTEs may cause delamination
@@ -2165,15 +2193,29 @@ The BioArmor architecture sits in a mixed patent landscape. Key points for any g
 **Free foundations to build on:**
 - **US 7,354,877** — Lockheed CNT-fiber garment fabric (incl. spacesuit fabrics). **Expired Oct 2023.**
 - **US 7,834,527** — DEA fiber/joint transducers. **Expired May 2026 (free now).**
+- **US 11,192,667 workaround:** ATSP spiral EDS deposited *on top of* CNT-Aramid weave (not interwoven electrodes) is design-around pending license — weave integration still blocked until 2037.
 
 **Defensible white space.** The combination of **wearable algae life support** and the **integrated modular architecture** (CNT mesh bus + snap-on pods + closed-loop control) is essentially unpatented — this is the strongest IP to claim.
 
 > Caveat: FTO positions above are based on the Aug-2026 deep-dive (see `docs/RESEARCH_DEEPDIVE_Aug2026.md`). Confirm current status with counsel before filing.
 
-## Conclusion
+## Killer Review Scorecard (2026-09-05) — Honest TRL
 
-BioArmor demonstrates that a modular, two-system spacesuit — passive daily-wear life support plus snap-on ExoArmor — can cut suit mass by ~80% versus the EMU while remaining buildable from existing technologies. The passive material stack is solved; the active avionics/data layer and the open gaps above are the real engineering work, and all are tractable. Integration, not invention, is the innovation.
+| Killer | BIOARMOR claim | Score / TRL | Why it fails | Fix that makes it testable (done in this reconfig) |
+|---|---|---|---|---|
+| Near-vacuum / ebullism | 4.3 psi (29.6 kPa) sPUU/Surlyn bladder | 4/5 pressure right, 2/5 garment | 1mm bladder at 2.2kg can't carry hoop stress. EMU 127-145kg because restraint/bearings/PLSS carry load. | **Test #1: Surlyn/sPUU + UHMWPE/aramid restraint cylinder at 4.3 psi. Measure ballooning/creep <5% @24h. If fails, daily-wear mass invalid. Drop “healing in vacuum” until vacuum chamber.** |
+| 95% CO2 | Helmet+fan+LiOH/amine, algae habitat loop | 3/5 closed loop, 1/5 if “breathe through aerogel” | O2 in 6mm aerogel doesn't diffuse to alveoli. Need helmet + fan + washout. | **Kill passive-pore breathing. Require helmet, closed fan loop, LiOH/amine. Algae OFF EVA bus (44mW vs 25W).** |
+| Cold -63 to -125°C | 4mm ceramic NF + VO2 low-e + LCHG fingertip | 3/5 insul, 1/5 500mW Peltier | Thin-gas convection + dust on Mars. 500mW can't move 100-300W. | **Rank: 1) low-e outer 2) LCHG + fingertip/foot heaters only 3) no whole-suit Peltier. Mars-chamber manikin test.** |
+| Radiation | UHMWPE + 0.2mm BNNT + 4mm wet | 2/5 SPE, 1/5 GCR | 300g wet/1.8m²=0.02 g/cm². Need 10-1000x for GCR. Tiles increase secondaries. | **Admit GCR PARTIAL = unmitigated. BNNT = SPE 2/5 only. Keep habitat storm shelter. No wearable HDPE mass comp.** |
+| Polar CO2 geysers | Ceramic tiles + boots | 2/5 | Survives debris, not jet. | **Ops control: stay off caps during spring. Impingement test to claim jet.** |
+| Dust devils / charge | ATSP spiral 0.3kV | 4/5 best subsystem | Real hardware (Blue Ghost Mar 2025). Open: arcing at 6mbar CO2, tile pop breaks continuity. | **Test #3: EDS coupon at seal geometry, 1kV isolation, grounding.** |
+| Dust + perchlorates | ATSP 90-97% flat | 2/5 | 5-15% residual kills seals/thyroid once in airlock. | **2-stage: EDS + wash + labyrinth. Test #3b perchlorate-spiked <1% at seals.** |
 
-*Concept developed through collaborative brainstorming session.*
-*All individual technologies exist; integration is the innovation.*
-*The polymath sees what the specialist cannot.*
+**What to keep / what to split:** Keep two-system (IVA emergency 4.3psi bladder+restraint + ExoArmor snap-on). Kill tube-vs-system mass comp; add PLSS 8-12kg for 8hr or 500g/3hr emergency only. Patent US 11,192,667 until 2037 — spiral on top is workaround.
+
+## Conclusion (Revised Post-Review)
+
+BioArmor demonstrates that a modular, two-system spacesuit — IVA emergency layer (4.3 psi bladder + restraint + helmet/fan/LiOH) plus snap-on ExoArmor (thermal/tiles/EDS) — can cut **tube mass** ~75% vs EMU **system** when PLSS is added (31-35kg vs 127kg), or be a valid 3.5kg emergency IVA vs EMU. The passive material stack is not solved until Tests #1-4 pass. Honest TRL: **EDS 4/5, pressure 2/5, thermal 2/5, radiation 1/5 GCR**. Integration is still the innovation, but integration now means **helmet+fan+restraint+PLSS**, not aerogel breathing.
+
+*Concept developed through collaborative brainstorming + killer review 2026-09-05.*
+*All individual technologies exist; integration + honest test gates is the innovation.*
