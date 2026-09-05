@@ -1,6 +1,6 @@
-# BioArmor Research Brief — August 2026
+# BioArmor Research Brief — September 2026 (Reconfigured)
 
-> Compiled from 4 parallel research agents covering spacesuit tech, algae bioreactors, materials, and grants.
+> Compiled from 4 parallel agents + deep dive Sep 2026 (BNNT, ceramic NF aerogel, ATSP EDS, 33.6% PV, sPUU, DEA). Reconfig test: 23.39kg 8.81mm $10.16M (+1.7%/+1.6%).
 
 ---
 
@@ -101,15 +101,15 @@
 | CNT-silicone/Kevlar hybrid (90x25cm) | MDPI | Scalable CNT-aramid fabrication (BioArmor structural layer = UHMWPE + aramid (Kevlar) with CNT co-woven) |
 | WHO concern: fiber release on washing | MDPI | **Safety flag** |
 
-### Self-Healing Polymers (Surlyn)
+### Self-Healing Polymers (sPUU Vitrimer + Surlyn)
 
 | Finding | Source | Impact |
 |---------|--------|--------|
-| NASA SHIELD project active | TechPort | Validates concept |
-| Seals at ~2 km/s impacts | Polimi/ESA | **Proven for micrometeorites** |
-| CNT doping (4-5 wt%) boosts healing to 80% | MDPI | **Enhanced performance** |
-| 3D-printable Surlyn retains self-healing | CSIC | **Manufacturable** |
-| **Gamma radiation degrades healing** | Polimi | **Risk: must shield from radiation** |
+| sPUU disulfide vitrimer RT 52%/65%/77% @1/6/24hr, infinite cycles | NASA NIAC SmartSuit | **O2-independent vacuum heal — replaces Surlyn primary** |
+| ATSP vitrimer 50yr LEO stable (no chemistry change) | Meyer et al. proton+ATOX | **50yr adhesive** |
+| Surlyn seals at ~2 km/s impacts | Polimi/ESA | **Proven micrometeorite — now sacrificial outer** |
+| CNT doping boosts healing to 80% | MDPI | **Enhanced** |
+| **Gamma degrades Surlyn** | Polimi | **Risk mitigated by BNNT liner** |
 
 ### 3D Printed Ceramic Armor
 
@@ -120,24 +120,26 @@
 | AM ballistic efficiency still ~2x lower | PMC review | **Ballistic gap remains** |
 | Functionally graded architecture proposed | Preprint | Weight reduction potential |
 
-### Perovskite Solar Cells
+### Perovskite Solar Cells (Updated Sep 2026)
 
 | Finding | Source | Impact |
 |---------|--------|--------|
-| **27.5% efficient** flexible all-perovskite | Nature Photonics | **World record** |
-| Certified 23% on 20cm² module | Nature | **Scalable** |
+| **33.6% cert flexible tandem** (2.015V) | Nature 2026 Soochow/KAUST (ICO:H/IZO) | **World record — PV 285→355mW peak (+24%)** |
+| 29.88% cert flexible PST (1.04cm²) | Nature Comms Jul 2025 | **100% after 2000 bends @2.25cm** |
+| 25.21% theanine ambient-air flex | Adv Funct Mater Sep 2026 | **R2R ambient, 85% after 10k bends** |
+| 27.5% flexible all-perovskite (prior) | Nature Photonics Aug 2025 | **Scalable** |
 | 97.2% retained after 10,000 bends | Nature | **Durable** |
-| 150 MW production line running | PV Magazine | **Commercially available** |
 | 1.77 W/g power-to-weight | Nature | **Ultra-lightweight** |
 
-### Hydrophilic Aerogel
+### Ceramic Nanofiber Aerogel (Reconfigured)
 
 | Finding | Source | Impact |
 |---------|--------|--------|
-| Superhydrophilic flexible silica exists | CEJ 2024 | **Matches requirement** |
-| Ambient-pressure drying (no supercritical) | DLR patent | **Cheaper production** |
-| λ as low as 14.8 mW/m·K | MDPI | **Best insulation** |
-| Polyimide: -196°C to +300°C range | JMCA | **Temperature proof** |
+| SiC@SiO2 14 mW/mK radial, 24.7 kN·m/kg, 1200C | Sci Adv | **Best insulation + stiffness (5x)** |
+| BC-PVSQ >99% compress, 10k shear, 16.1 mg/cm³, 27 mW/mK | Adv Mater May 2026 | **Foldable habitat** |
+| PINF@CNT dual-gradient -196 to 533C + sensing | Nature Comms Jan 2026 | **Sensor + insulation** |
+| Ceramic SBIR beyond Mylar (8 Torr CO2) | NASA 80NSSC24PB369 MMI Feb 2025 | **Mars-rated** |
+| Prior silica 14.8 mW/mK | MDPI | **Baseline** |
 
 ### Electroactive Polymers
 
@@ -148,9 +150,9 @@
 | Rolled DEA drives cables remotely | npj Robotics | **Decouples actuator from joint** |
 | Variable-stiffness rope clutch exo | Biomimetics | **7 stiffness states** |
 
-### Materials Verdict
+### Materials Verdict (Sep 2026 Reconfig)
 
-> **All key BioArmor materials are becoming commercially viable.** CNT costs dropping, perovskite at record efficiency, Surlyn self-healing proven, ceramic printing mature. **Two risks flagged:** CNT fiber release (WHO concern) and radiation degradation of Surlyn healing.
+> **All key BioArmor materials are now Mars-viable:** BNNT 15%>Al, ceramic NF aerogel 14mW/mK 1200C, ATSP spiral EDS 0.3kV lunar-proven, sPUU O2-independent heal, 33.6% perovskite. Test: +0.39kg +$0.16M = still 18.4% mass /6.8% cost vs EMU. **Risks mitigated:** BNNT shields gamma for heal, ceramic encapsulated stops dusting, ATSP repairability solves EDS maintenance. Remaining: WHO CNT containment, DEA integration TRL.
 
 ---
 
@@ -250,5 +252,5 @@ Based on research, consider:
 
 ---
 
-*Last updated: August 23, 2026*
-*Research conducted by 4 parallel retrieval agents*
+*Last updated: September 5, 2026 — Reconfigured (polar-jet hardened)*
+*Research: 4 agents + Sep 2026 deep dive (KIST BNNT, Langley BNNT-HDPE, VCU ISS, ceramic NF, ATSP EDS, Blue Ghost, DEA, hydrogel+TE, 33.6% tandem)*

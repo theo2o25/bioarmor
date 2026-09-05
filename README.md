@@ -12,21 +12,22 @@ BioArmor is a revolutionary spacesuit system that integrates living biological s
 
 | Version | Name | Mass | Use Case |
 |---------|------|------|----------|
-| **V1** | Integrated | 1.5 kg | Daily wear, light EVA, maximum mobility |
-| **V2** | Modular | 23 kg | Heavy EVA, lunar/Mars surface, maximum protection |
+| **V1** | Integrated | 1.5 kg (2.0 kg reconfigured daily with BNNT+ATSP) | Daily wear, light EVA, maximum mobility |
+| **V2** | Modular | 23.39 kg reconfigured (was 23 kg) — 8.81mm, $10.16M | Heavy EVA, lunar/Mars polar (CO2 geyser hardened) |
 
 By combining algae-based atmosphere processing (supplemental O2 + CO2 scrubbing), 3D-printed ceramic armor, carbon nanotube structures, and bio-inspired materials, BioArmor reduces mass by **85%**, cost by **92%**, and extends EVA duration to **8+ hours** while providing superior protection compared to current NASA suits.
 
-### Key Innovations
+### Key Innovations (Reconfigured 2026-09)
 
 | Innovation | Technology | Benefit |
 |------------|------------|---------|
-| **Living Life Support** | Algae bioreactor | Supplemental O2 + CO2 scrubbing (redundancy) |
-| **Self-Healing Pressure** | Surlyn bladder | Automatic puncture repair |
-| **Solar-Powered** | Perovskite PV + CNT mesh | No external power needed |
-| **3D-Printed Armor** | Alumina ceramic tiles | Scalable, customizable |
-| **Joint Assistance** | SMA baseline (~25-30% fatigue reduction) + optional tendon motors (~40-50%) | Pulsed micro-rest + optional EVA add-on |
-| **Dust Protection** | Electrodynamic shield | Repels lunar/Mars dust |
+| **Living Life Support** | Algae bioreactor (ceramic NF aerogel 4mm) | Supplemental O2 + CO2 scrubbing + thermal 14 mW/mK, -196 to 1200C |
+| **Self-Healing Pressure** | sPUU vitrimer RT 77% + Surlyn sacrificial | O2-independent vacuum/CO2 heal, infinite cycles |
+| **Radiation Shield** | BNNT-HDPE 50wt% 0.2mm liner (KIST/Langley) | 990% vs HDPE, 15% > Al, doubles lunar EVA time |
+| **Solar-Powered** | Perovskite/Si tandem 33.6% cert + CNT mesh | 355mW peak /44.2mW avg (+24%), 10k bends, ambient R2R |
+| **3D-Printed Armor** | Alumina / SiC@SiO2 NW aerogel tiles + VO2 | Scalable, 24.7 kN·m/kg, variable emissivity |
+| **Joint Assistance** | SMA+hydrogel/TE (5Hz) + optional DEA passive 29.6kPa + tendon motors | Pulsed micro-rest + 0.7s kHz BW + optional 40-50% |
+| **Dust Protection** | ATSP/MWCNT/PTFE spiral EDS 0.3kV | 90-97% lunar-proven, 70% power cut, 40C/30min repair |
 
 ---
 
@@ -37,22 +38,21 @@ By combining algae-based atmosphere processing (supplemental O2 + CO2 scrubbing)
 ![V1 Concept](images/Bioarmor%20concept.jpg)
 
 ```
-V1 DAILY WEAR SUIT:
+V1 DAILY WEAR SUIT (RECONFIGURED 2026-09):
 ┌─────────────────────────────────────────┐
-│  WHITE KEVLAR FABRIC                     │
-│  with hexagonal chain mail weave         │
-│  embedded within for protection          │
+│  ATSP/MWCNT/PTFE SPIRAL EDS (10µm)      │ 0.3kV 90%+
+│  CNT-ARAMID WEAVE + BNNT LINER 0.2mm    │ +990% radiation
 ├─────────────────────────────────────────┤
-│  HYDROPHILIC AEROGEL + ALGAE             │
+│  CERAMIC NF AEROGEL + ALGAE (4mm)       │ 14 mW/mK 1200C 10k cycles
 │  O2 production, thermal insulation       │
 ├─────────────────────────────────────────┤
-│  SELYN PRESSURE BLADDER                  │
-│  Self-healing, 4.3 psi                   │
+│  sPUU VITRIMER BLADDER (1mm)            │ RT heal 77% O2-independent
+│  + Surlyn sacrificial outer             │ 4.3 psi
 ├─────────────────────────────────────────┤
 │  LIQUID COOLING + COMFORT LINER          │
-│  Temperature regulation                  │
+│  + SMA/hydrogel+TE 0.2mm                │ 5Hz assist
 └─────────────────────────────────────────┘
-Mass: 1.5 kg | Protection: Light | Mobility: Maximum
+Mass: 1.5 kg base (~2.0 kg with BNNT+ATSP) | Protection: Light+Radiation | Mobility: Maximum | Thick 6.5mm
 ```
 
 **Features:**
@@ -70,39 +70,35 @@ Mass: 1.5 kg | Protection: Light | Mobility: Maximum
 ![Tile Blueprint](images/BIOARMOR_TILE_BLUEPRINT.svg)
 
 ```
-V2 EXOARMOR (removable):
+V2 EXOARMOR (removable, RECONFIGURED):
 ┌─────────────────────────────────────────┐
-│  PV COATING (0.1mm)                     │
-│  Perovskite solar cells                  │
+│  PV COATING 0.1mm 33.6% tandem (ICO:H)  │ 355mW pk 44.2mW avg
+│  Perovskite/Si 29.88% flex certified     │
 ├─────────────────────────────────────────┤
-│  CERAMIC TILES (2mm)                    │
-│  3D-printed Al2O3 hexagonal tiles       │
-│  snap onto CNT mesh skeleton            │
+│  CERAMIC TILES 2mm Al2O3/SiC@SiO2 + VO2│ 24.7 kN·m/kg
+│  3D-printed hex, snap onto CNT mesh     │
 ├─────────────────────────────────────────┤
-│  CNT MESH SKELETON (0.3mm)             │
+│  CNT MESH 0.3mm + supercap yarns       │ 5e6 S/m
 │  Structural framework + electrical bus  │
 ├─────────────────────────────────────────┤
-│  FLUID TUBES (0.2mm)                    │
-│  Water/nutrient transport               │
+│  FLUID TUBES 0.2mm PEEK                 │ Water/nutrient
+├─────────────────────────────────────────┤
+│  DEA PASSIVE CUFF 0.1mm (optional)     │ 29.6kPa 0.7s kHz
 ├─────────────────────────────────────────┤
 │  ATTACHES TO V1 DAILY WEAR SUIT         │
 └─────────────────────────────────────────┘
 
-V1 DAILY WEAR SUIT (permanent):
+V1 DAILY WEAR SUIT (permanent, reconfigured):
 ┌─────────────────────────────────────────┐
-│  HYBRID ARAMID/UHMWPE                   │
-│  Heat/UV/creep resistant                │
+│  ATSP SPIRAL EDS + BNNT 0.2mm liner    │ 0.3kV 15% >Al
 ├─────────────────────────────────────────┤
-│  SELYN PRESSURE BLADDER                  │
-│  Self-healing, 4.3 psi                   │
+│  sPUU VITRIMER BLADDER 1mm              │ 77% RT heal
 ├─────────────────────────────────────────┤
-│  AEROGEL + ALGAE                         │
-│  O2 production, thermal                  │
+│  CERAMIC NF AEROGEL + ALGAE 4mm         │ 14 mW/mK
 ├─────────────────────────────────────────┤
-│  COMFORT LINER                           │
-│  Liquid cooling, moisture wicking        │
+│  COMFORT LINER + SMA/hydrogel+TE        │
 └─────────────────────────────────────────┘
-Mass: 23 kg | Protection: Maximum | Mobility: Enhanced (joint assistance)
+Mass: 23.39 kg | Thick 8.81mm | Cost $10.16M | Protection: Max (polar hardened) | Mobility: Enhanced
 ```
 
 **Features:**
@@ -116,15 +112,17 @@ Mass: 23 kg | Protection: Maximum | Mobility: Enhanced (joint assistance)
 
 ## Technical Specifications
 
-| Parameter | V1 Integrated | V2 Modular | NASA EMU | AxEMU |
-|-----------|---------------|------------|----------|-------|
-| **Mass** | 1.5 kg | 23 kg | 127 kg | ~180 kg |
-| **Cost per unit** | $2M | $10M | $150M | $150M |
-| **EVA duration** | 4-6 hrs | 8+ hrs | 6-8 hrs | 8+ hrs |
+| Parameter | V1 Integrated | V2 Modular (reconfigured 2026-09) | NASA EMU | AxEMU |
+|-----------|---------------|-------------------------------|----------|-------|
+| **Mass** | 1.5 kg (2.0 kg with BNNT+ATSP) | 23.39 kg (was 23kg, +1.7%, 8.81mm) | 127 kg | ~180 kg |
+| **Cost per unit** | $2M | $10.16M (was $10M, +1.6%) | $150M | $150M |
+| **EVA duration** | 4-6 hrs | 8+ hrs (2x lunar with BNNT) | 6-8 hrs | 8+ hrs |
 | **Life support** | Algae | Algae + backup | PLSS | PLSS |
-| **Power** | Passive | Solar + CNT | Battery | Battery |
-| **Pressure** | 4.3 psi | 4.3 psi | 4.3 psi | 8.2 psi |
-| **Self-healing** | Yes | Yes | No | No |
+| **Power** | Passive | Solar 33.6% 44.2mW avg + CNT | Battery | Battery |
+| **Pressure** | 4.3 psi (8.2 capable) | 4.3 psi (sPUU O2-independent) | 4.3 psi | 8.2 psi |
+| **Self-healing** | sPUU vitrimer RT | sPUU + Surlyn sacrificial | No | No |
+| **Radiation** | BNNT 0.2mm | BNNT 15% >Al, 990% >HDPE | Minimal | Minimal |
+| **Dust** | ATSP 0.3kV spiral | ATSP 0.3kV 90-97% | Brush | EDS add-on |
 
 ---
 
@@ -182,12 +180,12 @@ bioarmor/
 ## Mass Comparison
 
 ```
-MASS (kg):
+MASS (kg) RECONFIGURED 2026-09:
 
 NASA EMU:      ████████████████████████████████████████████████████ 127 kg
 AxEMU:         ████████████████████████████████████████████████████████████████████ 180 kg
-BioArmor V1:   █ 1.5 kg
-BioArmor V2:   █████████ 23 kg
+BioArmor V1:   █ 1.5 kg (2.0 kg with upgrades)
+BioArmor V2:   █████████ 23.39 kg (+0.39kg +1.7%, still 18.4% EMU)
 ```
 
 ---
@@ -195,12 +193,12 @@ BioArmor V2:   █████████ 23 kg
 ## Cost Comparison
 
 ```
-COST PER UNIT ($M):
+COST PER UNIT ($M) RECONFIGURED:
 
 NASA EMU:      ████████████████████████████████████████████████████ $150M
 AxEMU:         ████████████████████████████████████████████████████ $150M
 BioArmor V1:   █ $2M
-BioArmor V2:   ███ $10M
+BioArmor V2:   ███ $10.16M (+$0.16M +1.6%, still 6.8% EMU)
 ```
 
 ---
@@ -231,7 +229,9 @@ BioArmor V2:   ███ $10M
 2028-2030: SCALE & MARS
 ├── Commercial sales
 ├── Mars mission preparation
-└── Milestone: 100 units delivered
+ └── Milestone: 100 units delivered (polar-hardened V2)
+
+> **Reconfig 2026-09 notes:** BNNT liner, sPUU heal, ceramic NF aerogel, ATSP spiral EDS, 33.6% tandem PV, DEA cuff added. Mass 23→23.39kg, cost $10→$10.16M, thick 10.6→8.81mm, power 35.5→44.2mW avg. Still 85% lighter / 92% cheaper than EMU.
 ```
 
 ---

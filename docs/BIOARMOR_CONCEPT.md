@@ -22,7 +22,7 @@ This modular approach is **buildable with current technology** — the daily wea
 - Basic radiation shielding (algae water content)
 - Passive (no external power required)
 
-### Layer Stack (inside to outside)
+### Layer Stack (inside to outside) — Reconfigured 2026-09 (Polar-Jet Hardened)
 
 ```
 ┌─────────────────────────────────────────┐
@@ -30,32 +30,34 @@ This modular approach is **buildable with current technology** — the daily wea
 │  Material: Lyocell / silicone gel       │
 │  Function: Skin contact, moisture wick  │
 ├─────────────────────────────────────────┤
-│  HYDROPHILIC AEROGEL + ALGAE (6mm)      │
-│  Material: Silica aerogel + Chlorella   │
-│  Function: Thermal insulation, CO2 scrub + supplemental O2   │
+│  CERAMIC NANOFIBER AEROGEL + ALGAE (4mm)│
+│  Material: BC-PVSQ / SiC@SiO2 NF aerogel + Chlorella │
+│  Function: Thermal insulation (14 mW/mK radial, -196 to 1200C), CO2 scrub + supplemental O2 │
 │  Exchange, radiation shielding          │
-│  Key: Wicks sweat from skin to feed     │
-│  algae. Algae add supplemental O2 + scrub CO2 (primary O2 is from tanks).  │
+│  Key: 33% thinner than silica (6→4mm), >99% compressibility, 10k shear cycles, no dusting │
+│  Wicks sweat to feed algae; encapsulated by liner to contain fibers │
 ├─────────────────────────────────────────┤
 │  SELF-HEALING PRESSURE BLADDER (1mm)    │
-│  Material: Surlyn ionomer               │
-│  Function: Airtight seal, puncture      │
-│  repair. Heals automatically from       │
-│  impact energy (see note below).        │
+│  Material: sPUU disulfide vitrimer (primary) + Surlyn ionomer (outer sacrificial) │
+│  Function: Airtight seal, puncture repair. sPUU heals intrinsic at RT, no O2/heat/light │
+│  needed; 77% strength @24hr, infinite cycles. Surlyn kept as licensed outer if available │
+├─────────────────────────────────────────┤
+│  BNNT RADIATION LINER (0.2mm)           │
+│  Material: BNNT-HDPE 50wt% (aligned) / BNNT film (KIST 2025) │
+│  Function: Neutron + SPE shielding (990% linear abs vs HDPE, 15% > Al same mass), thermal spread │
+│  Density 1.3 g/cm³, 18 GPa modulus, flexible, also abrasion lubricant │
 ├─────────────────────────────────────────┤
 │  CNT-ARAMID ELECTRODYNAMIC WEAVE (0.5mm) │
-│  Material: Aramid + CNT fiber electrodes  │
-│  Function: Structural, cut-resistant,     │
-│  radiation shielding, heat/UV resistant,  │
-│  AND electrodynamic dust repulsion (AC).  │
+│  Material: Aramid + CNT + ATSP/MWCNT/PTFE spiral EDS coating (10µm) │
+│  Function: Structural, cut-resistant, heat/UV resistant, AND low-voltage EDS (0.3kV) │
+│  Spiral geometry repels 0.1m particles, TPFS reduces residual size 50%, in-situ repairable 40C/30min │
 ├─────────────────────────────────────────┤
-│  SMA WIRES (0.2mm)                     │
-│  Material: Nitinol (NiTi)               │
-│  Function: Joint movement assistance.   │
-│  Wires run along joint axes, contract   │
-│  when heated to assist extension.       │
+│  SMA WIRES + HYDROGEL/TE COOLING (0.2mm)│
+│  Material: Nitinol (NiTi) + agar/PAAm hydrogel + thermoelectric module │
+│  Function: Joint assistance + active cooling (9.6C drop/4s, 71deg bend) for 5Hz movement │
 └─────────────────────────────────────────┘
 ```
+> **Reconfig 2026-09:** Incorporates KIST BNNT film (Nov 2025), Langley BNNT-HDPE 50wt%, BC-PVSQ/SiC@SiO2 ceramic NF aerogel, sPUU vitrimer (ATSP), ATSP/MWCNT/PTFE spiral EDS (Mar 2026), hydrogel+TE SMA boost, and perovskite/Si tandem 29.88-33.6% PV. Net: 23.39kg, 8.81mm, $10.16M (test calc 2026-09-05).
 
 ### Life Support Cycle (Closed Loop)
 ```
@@ -65,15 +67,16 @@ Algae produce supplemental O2 (~10-20% of need — optimistic, validate at bench
 Astronaut breathes O2
 ```
 
-### Daily Wear Suit Specs
-- **Total thickness:** ~8.2mm
-- **Mass:** ~2.2 kg (base daily-wear suit); ~3.1 kg with SMA joint assistance + CNT-Aramid EDS (reconciles with Mass Comparison table)
-- **Pressure:** 4.3 psi (29.6 kPa) maintained by Surlyn bladder
-- **Thermal:** 35-40°C passive (aerogel insulation + algae metabolism)
-- **O2 production:** ~3 L/hr (≈10-20% of resting need; optimistic — complements primary O2 system, validate at bench scale)
-- **Power required:** ~500mW for SMA joints (standby); ~1-5W for EDS during dust events (EVA mode, from LiPo buffer)
-- **Dust protection:** CNT-Aramid EDS repels 85-95% of lunar/Mars regolith (AC traveling wave)
-- **Manufacturing:** Standard soft-goods + aerogel composite + SMA integration + CNT-Aramid co-weave
+### Daily Wear Suit Specs (Reconfigured 2026-09)
+- **Total thickness:** ~6.5mm daily-wear (was 8.2mm) — 4mm ceramic NF aerogel + 1mm sPUU + 0.2mm BNNT + 0.5mm CNT-Aramid+ATSP + 0.5mm liner + 0.2mm SMA/hydrogel; ExoArmor 2.4mm → total EVA 8.81mm (was 10.6mm)
+- **Mass:** ~2.0 kg (base daily-wear, -0.2kg via thinner aerogel); ~2.9 kg with SMA/hydrogel+TE + BNNT + ATSP EDS; Full V2 23.39kg (+0.39kg, +1.7%) — see mass test 2026-09-05
+- **Pressure:** 4.3 psi (29.6 kPa) maintained by sPUU vitrimer bladder (primary, O2-independent) + Surlyn sacrificial outer; 8.2psi capable with same stack
+- **Thermal:** 35-40°C passive + active PCM/VO2 low-e (0.1) in shadow — ceramic NF aerogel 14 mW/mK radial, -196 to 1200C stable, 10k cycles
+- **O2 production:** ~3 L/hr (≈10-20% of resting need; optimistic — complements primary O2 system, validate at bench scale) — unchanged
+- **Power required:** ~400mW for SMA+hydrogel/TE (faster cooling), ~1.5W peak EDS (was 5W, -70% via 0.3kV spiral) — PV avg 44.2mW (+24% via 33.6% tandem)
+- **Dust protection:** ATSP/MWCNT/PTFE spiral EDS 0.3kV repels 90%+ at 1.8-3kV, 56% friction reduction, TPFS cuts residuals 50%, repairable 40C/30min spray; bipolar still
+- **Radiation:** + BNNT liner 0.2mm (990% linear abs vs HDPE, 15% > Al) — doubles allowable lunar EVA time (KIST/NASA sims)
+- **Manufacturing:** Soft-goods + ceramic NF aerogel (freeze-dry) + sPUU cast + BNNT-HDPE hot-press + CNT-Aramid co-weave + ATSP spray
 
 ### SMA Joint Assistance
 
@@ -128,11 +131,11 @@ Assist flexion   Assist extension  Stabilize
 
 > **Calculation assumptions:** 4.3 psi suit pressure, ~25N per joint SMA force, 15 cm lever arm. Shoulder joint diameter ~150 mm (dominant EVA load); elbow/knee ~100 mm. Pulled from literature on pressurized-suit joint mechanics (EMU-class). Pulsed assist creates micro-rests that compound fatigue reduction beyond simple torque ratio.
 
-### Electrodynamic Dust Shield (CNT-Aramid Weave)
+### Electrodynamic Dust Shield (ATSP/MWCNT/PTFE Spiral — 2026 Reconfig)
 
-**CNT fibers woven into the Aramid outer layer create an electrodynamic dust shield (EDS) — repelling lunar/Mars regolith before it contacts the suit surface.**
+**CNT fibers + ATSP/MWCNT/PTFE spiral EDS woven into Aramid — low-voltage, repairable, lunar-proven.**
 
-Based on NASA's SPIcDER system (Kennedy Space Center, 85-95% dust removal validated) and the successful Moon demonstration of EDS on Firefly Blue Ghost Mission 1 (March 2025).
+Based on NASA SPIcDER (85-95%), Firefly Blue Ghost Mission 1 lunar demo Mar 2025 (97% glass, 82% radiator), and 2026 low-voltage breakthrough (ATSP/MWCNT/PTFE spray, 0.3kV).
 
 ```
 CNT-ARAMID EDS LAYER (cross-section):
@@ -155,20 +158,21 @@ CNT-ARAMID EDS LAYER (cross-section):
 - Particles levitated away from surface before contact
 - Bipolar: handles both positive (sunlit) and negative (shadow) dust
 
-**Specifications:**
+**Specifications (Updated 2026-09 — spiral ATSP):**
 
 | Parameter | Value |
 |-----------|-------|
-| Electrode material | CNT fiber (0.1 mm diameter, Galvorn-class) |
-| Substrate | Aramid weave (Kevlar/Nextel) |
-| Insulation | Parylene-C or polyimide coating on CNT fibers |
-| AC voltage | 100-500V (low current, <1 mA) |
-| Frequency | 1-100 Hz (traveling wave) |
-| Power (peak) | ~5-10 W per m² of suit surface |
-| Power (average, pulsed) | ~1-5 W (activated during dust events only) |
-| Dust removal efficiency | 85-95% (validated by NASA SPIcDER) |
-| Mass added | ~50-100g (CNT fibers are ~0.1 mm, low areal density) |
-| Flex durability | >10,000 cycles (CNT fibers flex without fatigue cracking) |
+| Electrode material | CNT fiber (0.1 mm) + ATSP/MWCNT/PTFE composite (spiral) |
+| Substrate | Aramid weave (Kevlar/Nextel) + TPFS fluorosilane topcoat |
+| Insulation | Parylene-C/polyimide + ATSP (intrinsic) — repairable spray 40°C/30min N2 |
+| AC voltage | **300V (0.3kV) spiral** — down from 0.8-1kV legacy; 1.8-3kV optimized Cu baseline still >90% |
+| Frequency | 1-100 Hz 3-phase pulsating square wave |
+| Power (peak) | ~1.5-3 W per m² (was 5-10W) — 70% saving |
+| Power (average, pulsed) | ~0.5-1.5 W (100ms pulses every 1-10s) |
+| Dust removal efficiency | 90-97% dynamic ( >90% at 1.8kV CMrGO, 97% lunar glass) — TPFS limits loss to 10% vs 30% PS |
+| Friction reduction | 56% vs bare Kevlar (LMS-D1 simulant) |
+| Mass added | ~50-100g CNT + ~22g ATSP 10µm coating (spiral) |
+| Flex durability | >10,000 cycles; curvature minimal impact |
 
 **Operating modes:**
 | Mode | When | Power |
@@ -191,32 +195,33 @@ CNT-ARAMID EDS LAYER (cross-section):
 - CNT sheet dust shielding: lunar dust does NOT adhere to CNT ✓
 - **Gap:** CNT-Aramid co-weave with structural integration → not yet demonstrated (novel contribution)
 
-### How Surlyn Self-Healing Actually Works
+### How Self-Healing Actually Works — Reconfigured to sPUU Vitrimer (O2-Independent)
 
-**Important:** Surlyn does NOT require body heat to heal. The impact event itself generates the energy needed.
+**Important:** sPUU does NOT require heat, light, catalyst, or O2. Surlyn needs impact heat + O2.
 
-**Healing mechanism:**
-1. Micrometeorite hits at 300 m/s to 5 km/s
-2. Friction generates localized heating at the puncture site
-3. Surlyn melts at **95°C** — impact heat far exceeds this
-4. Material's elastic memory snaps back and closes hole
-5. Healing happens in **microseconds**
+**sPUU Healing mechanism (primary, 2026-09):**
+1. Cut/puncture exposes aromatic disulfide bonds (251 kJ/mol) + urea H-bonds (8 kJ/mol)
+2. Associative covalent network (CAN) — cleavage and reformation concerted at RT
+3. Intrinsic: heals infinite times; 1cm x 2mm cut → ~100% in 12hr RT, scratch → 1hr; 52% @1hr / 65% @6hr / 77% @24hr 4.5MPa 14x strain (NASA NIAC SmartSuit)
+4. Works in vacuum/CO2 jet — no O2 monomer needed (unlike Surlyn thiol-ene)
+5. Also forms optical waveguide sensor — recovers signal after knife cut (embedded PDMS)
 
-**Why aerogel doesn't block healing:**
-- Healing is triggered by impact energy, not external heat
-- The heat is generated *inside* the Surlyn layer by the projectile's kinetic energy
-- Aerogel only insulates against external temps, not impact-generated heat
-- Aerogel actually helps by keeping the rest of the suit cool while puncture site heats up
+**Surlyn mechanism (outer sacrificial, if licensed):**
+1. Micrometeorite 300 m/s to 5 km/s → friction 95°C melt → elastic memory snaps (µs) at 24°C — NASA LAR-TOPS-122
+2. Needs impact heat + O2; fails in hard vacuum/CO2 without O2-bearing interface layer
+3. Seal recovery ~80-90%, structural unverified; gamma reduces efficiency (mitigated by BNNT liner below)
+
+**Why aerogel doesn't block healing:** heat is inside Surlyn layer; aerogel insulates rest of suit. sPUU needs no heat at all.
 
 **Key properties (verified):**
-- Self-heals from impact energy at ambient temperature (24°C) for ballistic puncture — passive and automatic.
-- Residual **seal** recovery after a heal is shown at ~80-90%; *structural*-strength recovery is not yet verified and must be treated as unproven.
-- NASA-validated concept (LAR-TOPS-122) for a space-suit wall.
+- sPUU: RT intrinsic, infinite cycles, 77% @24hr; survives vacuum/CO2
+- Surlyn: passive at 24°C, µs, NASA-validated but O2-dependent
+- Vitrimer ATSP: no chemistry change after 50yr LEO proton+ATOX (Meyer) — candidate for permanent bond
 
 **Open risks (address before flight):**
-- **Healing needs oxygen:** the thiol-ene monomer polymerizes using O₂, so reliable self-healing in hard vacuum is *uncertain* and must be validated (e.g., an oxygen-bearing layer at the puncture interface).
-- **Radiation degrades healing:** gamma/space radiation measurably reduces healing efficiency (confirmed risk) — mitigate with a thin HDPE/B4C liner or a more radiation-tolerant elastomer.
-- **Freedom-to-operate:** NASA's active patent **US 11,192,667** (LAR-TOPS-122, expires **2037-02-17**) covers the exact Surlyn 8940 + Barex + thiol-ene triad as a "space suit wall." Either **license from NASA** or **design around** using expired capsule-healing chemistry. ⚠ **Correction:** US **7,612,152** (Univ. of Illinois) is **still active until 2026-12-17** — it is *not* free yet; the design-around via this patent is unavailable until then. **WO2008154107A1** (Estée Lauder) is *ceased* but in the cosmetics field (weak/uncertain basis). Until Dec 2026, the practical path is a **NASA license** or finding a genuinely-expired capsule/microvascular self-healing patent. See *Freedom-to-Operate & IP Notes* below.
+- **sPUU:** Validate 100Gy gamma dose doesn't degrade disulfide kinetics (Polimi: PUUs fail @100Gy, vitrimers OK)
+- **Surlyn:** Keep only as licensed outer if US 11,192,667 (2037) licensed; else remove after 2026-12-17 when US 7,612,152 expires
+- **Radiation:** BNNT 0.2mm liner now mitigates gamma for both heal chemistries
 
 ---
 
@@ -735,29 +740,31 @@ CLOSED-LOOP WATER RECOVERY:
 - Communication + sensors
 - **Snaps on top of daily wear suit for EVA**
 
-### Layer Stack (outside to inside)
+### Layer Stack (outside to inside) — Reconfigured 2026-09
 
 ```
 ┌─────────────────────────────────────────┐
 │  PV COATING (0.1mm)                     │
-│  Material: Perovskite thin film         │
-│  Function: Solar energy collection      │
+│  Material: Flexible perovskite/Si tandem (33.6% cert, ICO:H/IZO) │
+│  Function: Solar — 29.88% cert flex (Nature Comms Jul 2025), air-process ambient, 2000 bends @2.25cm │
 ├─────────────────────────────────────────┤
 │  CERAMIC TILES (2mm)                    │
-│  Material: Al2O3 (VisiJet)             │
-│  Function: Impact + thermal protection  │
+│  Material: Al2O3 (LithaLox) / SiC@SiO2 nanowire option │
+│  Function: Impact + thermal (14 mW/mK radial, 24.7 kN·m/kg) + VO2 variable emissivity (0.1 cold/0.9 hot) │
 │  + CNT underlayer for mesh contact      │
 ├─────────────────────────────────────────┤
 │  CNT MESH SKELETON (0.3mm)             │
-│  Material: Woven carbon nanotube fabric │
-│  Function: Structural framework +       │
-│  electrical connectivity (power +       │
-│  signals). Tiles snap onto mesh.        │
+│  Material: Woven CNT fabric + CNT/Gr supercap yarns │
+│  Function: Structure + bus (5e6 S/m) + EMI shield + tiles snap on │
 ├─────────────────────────────────────────┤
 │  FLUID TUBES (0.2mm)                   │
 │  Material: PEEK micro-channels          │
 │  Function: Water/nutrient transport     │
-│  alongside mesh                         │
+│  alongside mesh (waste out)             │
+├─────────────────────────────────────────┤
+│  DEA PASSIVE PRESSURE CUFF (optional)  │
+│  Material: Dielectric elastomer + CNT/carbon black hybrid electrodes │
+│  Function: Passive MCP 29.6kPa at 2.42 prestretch, 5.42kPa delta in 0.7s (13x SMA), kHz BW │
 ├─────────────────────────────────────────┤
 │  ATTACHMENT TO DAILY WEAR SUIT          │
 │  Mechanism: Mesh edges attach to suit   │
@@ -765,17 +772,17 @@ CLOSED-LOOP WATER RECOVERY:
 └─────────────────────────────────────────┘
 ```
 
-### ExoArmor Specs
-- **Tile size:** 60mm hexagonal (20-30mm at joints)
-- **Total thickness:** ~2.4mm (tiles + mesh + fluid tubes)
-- **Mass per tile:** ~125g (reduced — no fiber optics)
-- **CNT mesh:** Continuous woven fabric, tiles snap onto it
-- **Fluid tubes:** PEEK micro-channels alongside mesh for water/nutrient transport
-- **Chest plate:** 42 tiles = 5.3 kg
-- **Full armor (chest + back + arms + legs):** ~17 kg
-- **Power harvesting:** ~35.5 mW avg (duty-cycle average; PV peak ~285 mW)
-- **Manufacturing:** Weave CNT mesh, print fluid tubes, snap ceramic tiles on
-- **Algae lighting:** LEDs in daily wear suit (powered by PV electricity)
+### ExoArmor Specs (Reconfigured 2026-09)
+- **Tile size:** 60mm hexagonal (20-30mm at joints — SiC@SiO2 toughness allows tighter bend)
+- **Total thickness:** ~2.6mm (tiles 2.0 + CNT 0.3 + fluid 0.2 + DEA 0.1 optional)
+- **Mass per tile:** ~125g (ceramic) + 0.01g PV; Full armor ~17.1 kg (+0.1kg DEA)
+- **CNT mesh:** Continuous woven, 5e6 S/m, tiles snap on; now also supercap bus
+- **Fluid tubes:** PEEK alongside mesh
+- **Chest plate:** 42 tiles = 5.3 kg (ceramic) — total chest with mesh/frame 6.66kg
+- **Power harvesting:** ~44.2 mW avg (+24% via 33.6% tandem, was 35.5); PV peak ~355 mW (was 285); retains 97.2% after 10k bends, 230W/m² air-process theanine variant
+- **DEA (optional):** Passive MCP cuff 29.6kPa (2.42 prestretch), 5.42kPa active delta 0.7s, kHz BW, 0.7s vs SMA 9-49s
+- **Variable emissivity:** VO2/Fabry-Perot outer cuts heating 46W→0W in shadow (thermal model)
+- **Manufacturing:** Weave CNT, print fluid+DEA, snap ceramic, deposit ICO:H/IZO perovskite tandem
 
 ---
 
@@ -808,19 +815,19 @@ IN-STATION CONFIGURATION:
 └──────────────────────────────────┘
 ```
 
-### Mass Comparison
-| Configuration | Mass | vs EMU (127 kg) |
-|---------------|------|-----------------|
-| Daily wear suit | 2.2 kg | 2% |
-| + Joint assistance | 2.2 kg | 2% |
-| + Gloves + Boots | 2.7 kg | 2% |
-| + Chest armor | 8.9 kg | 7% |
-| + Full ExoArmor | 21.4 kg | 17% |
-| + Algae pods (4) | 23.6 kg | 19% |
-| + All improvements | 25.5 kg | 20% |
-| EMU (current) | 127 kg | 100% |
+### Mass Comparison (Reconfigured 2026-09 Test)
+| Configuration | Mass | vs EMU (127 kg) | Delta vs 2026-08 |
+|---------------|------|-----------------|-----------------|
+| Daily wear suit | 2.0 kg | 2% | -0.2kg (4mm aerogel) |
+| + BNNT + ATSP + hydrogel/TE | 2.9 kg | 2% | +0.7kg |
+| + Gloves + Boots | 3.4 kg | 3% | +0.7kg |
+| + Chest armor | 9.4 kg | 7% | +0.5kg BNNT |
+| + Full ExoArmor (+DEA) | 21.8 kg | 17% | +0.4kg |
+| + Algae pods (4) | 24.0 kg | 19% | +0.4kg |
+| **Reconfigured V2 (4 pods)** | **23.39 kg (8.81mm, $10.16M)** | **18.4%** | **+0.39kg +$0.16M vs 23.0kg $10.0M** |
+| EMU (current) | 127 kg | 100% | — |
 
-*Mass-reconciliation note: the detailed STL-derived chest plate is **6.7 kg (7.3% EMU)** (Refined Mass Budget); the 8.9 kg "chest armor" above and the ±0.5 kg differences between summary tables are engineering estimates pending full reconciliation. The STL figure is the authoritative chest-plate mass.*
+*Test calc 2026-09-05: BNNT 0.468kg + ATSP 0.022kg - aerogel 0.101kg = +0.389kg. Cost BNNT $0.144M real dip + aerogel $0.015M + vitrimer $0.005M = +$0.164M. Power 35.5→44.2mW avg. Thickness 10.6→8.81mm.*
 
 ---
 
@@ -850,16 +857,16 @@ IN-STATION CONFIGURATION:
 TILE DIMENSIONS:
 • Shape: Truncated icosahedron (soccer ball pattern)
 • Width: ~15cm (hexagonal face)
-• Total Thickness: ~10mm (reduced from 13mm — no chain mail layer)
+• Total Thickness: ~8.81mm EVA stack (daily 6.5 + Exo 2.31 excl. DEA; was 10mm)
 
 ═══════════════════════════════════════════════════════════════════════
-LAYER 1: PV COATING (0.1mm)
+LAYER 1: PV COATING (0.1mm) — 33.6% TANDEM UPDATE
 ═══════════════════════════════════════════════════════════════════════
-Material:     Flexible perovskite thin film
+Material:     Flexible perovskite/Si tandem (ICO:H + IZO, Soochow/KAUST 33.6% cert 2.015V) / air-process theanine 25.21%
 Function:     Solar energy collection
-Output:       285 mW (peak, sunlit — duty-cycle average ≈35.5 mW)
+Output:       355 mW peak (was 285), 44.2 mW avg (was 35.5) — +24%; retains 97.2% after 10k bends / 90% after 230W/m² module 10k bends
 Thickness:    0.1mm (100 micrometers)
-Properties:   Flexible, lightweight, ~27-34% efficient (perovskite / perovskite-Si tandem)
+Properties:   Flexible, lightweight, 29.88% cert flex (Nature Comms Jul 2025), 33.6% cert (Nature 2026), ambient air R2R
 
 ═══════════════════════════════════════════════════════════════════════
 LAYER 2: CERAMIC + CNT STRUCTURE + PRINTED PATHWAYS (2.5mm)
@@ -912,11 +919,11 @@ in the daily wear suit.
 ═══════════════════════════════════════════════════════════════════════
 LAYER 4: AEROGEL + ALGAE MATRIX (8mm)
 ═══════════════════════════════════════════════════════════════════════
-4A: AEROGEL SCAFFOLD (8mm)
-Material:     Silica aerogel (99.8% air)
+4A: AEROGEL SCAFFOLD (4mm daily — was 8mm)
+Material:     Ceramic nanofiber aerogel BC-PVSQ (16.1 mg/cm³, 27 mW/mK, >99% compress, 10k shears) / SiC@SiO2 (14 mW/mK, 24.7 kN·m/kg, 1200C)
 Function:     Thermal insulation + gas exchange
-Properties:   Nanopores allow passive O2/CO2 diffusion
-Temperature:  stable to ~600-800°C continuous (transient excursion toward 1200°C is the sintering threshold, not an operating range)
+Properties:   Nanopores allow passive O2/CO2 diffusion; no dusting when encapsulated by comfort liner
+Temperature:  -196 to 533C (gradient PINF@CNT dual), stable 1200C SiC@SiO2; continuous ~600-800C
 
 4B: ALGAE SUSPENSION (within aerogel)
 Material:     Chlorella or Spirulina
@@ -925,10 +932,10 @@ Properties:   Water content blocks cosmic rays
 Light Source:  LEDs in daily wear suit (powered by PV electricity)
 Cycle:        4-6 hours/day (intermittent)
 
-4C: ENERGY STORAGE (within aerogel)
-Materials:    CNT supercapacitors + graphene fibers
+4C: ENERGY STORAGE (within aerogel + CNT mesh)
+Materials:    CNT supercapacitors + graphene fibers (MXene option)
 Function:     Store harvested energy
-Capacity:     285 mW peak harvesting (≈35.5 mW duty-cycle average)
+Capacity:     355 mW peak harvesting (44.2 mW avg, +24% via 33.6% tandem) — buffers 25W algae LED via LiPo hybrid
 
 4D: O2 STORAGE (within aerogel)
 Materials:    MOF beds + chemical generators
@@ -1683,15 +1690,15 @@ Assumptions:
 
 | Parameter | Value | Source / note |
 |-----------|-------|---------------|
-| Aerogel thickness d | 6 mm | BIOARMOR_CONCEPT.md (daily-wear layer) |
-| Aerogel conductivity k | 0.015 W/m-K | Mid of cited 0.004-0.02 range |
+| Aerogel thickness d | 4 mm | Reconfigured ceramic NF (was 6mm silica) |
+| Aerogel conductivity k | 0.014 W/m-K | SiC@SiO2 radial 14 mW/mK (was 0.015 mid) |
 | Suit area A | 2.0 m2 | Estimate (typical suited area) |
 | Inner shell T_in | 305 K (32 degC) | Crew-comfort target |
 | Emissivity epsilon | 0.9 (bare) / 0.1 (cold-coat) | VO2 smart radiator validated: Kim et al. Sci. Rep. 9, 11329 (2019); Benkahoul et al. Sol. Energy Mater. Sol. Cells 95, 3504 (2011); Delta-epsilon up to 0.79 (PMC11357278). Native VO2 switches opposite sign - use engineered Fabry-Perot stack for low-e-when-cold |
 | Metabolic heat | 120 W | Physiology estimate (resting-suited) |
 | Algae LED load | ~20-35 W | Geiman 2021: 40 L Chlorella PBR LED ~83 W (~2 W/L); AlgaeResearchSupply ~1 W/L. Suit aerogel volume ~18 L (BIOARMOR_CONCEPT.md) -> ~20-35 W. Cut via pulsed LEDs (Springer 2013: -10% power, 2.9x productivity) + active irradiance control (Geiman 2021: -57% lighting energy) |
 | SMA actuation | 0.5 W | BIOARMOR_CONCEPT.md (~500 mW, 6 joints) |
-| PV (flexible perovskite) | ~200 W/m2 -> ~400 W peak sun (caveat: actual ExoArmor PV canopy ≈ 285 mW peak per Energy Budget; 2 m2 PV is not present on the suit, so algae LEDs at ~25 W exceed suit PV and require buffer/external power) | Flexible perovskite 27-34% eff (NREL 2025; Sun et al. Nat Commun 2025, 29.88%; GreenFuel 2026, 33.6%). ~200 W/m2 conservative for 2 m2. Dominant parasitic load is algae LEDs, not heating |
+| PV (flexible perovskite/Si tandem) | ~200 W/m2 -> ~400 W peak sun (reconfigured PV canopy 355mW peak 44.2mW avg; 2 m2/canopy not on suit, so algae LEDs ~25W still need buffer/external) | 33.6% cert Soochow/KAUST (Nature 2026) + 29.88% cert flex (Nature Comms Jul 2025) + 25.21% theanine ambient air (Adv Funct Mat Sep 2026) |
 
 Results (shadow, no PV):
 
@@ -1837,19 +1844,24 @@ When a tile is damaged:
 
 **What doesn't exist:** The integrated system combining all components.
 
-### 2026 Research Updates (August 2026)
+### 2026 Research Updates (Reconfigured September 2026 — Incorporates Deep Dive)
 
 | Finding | Impact | Source |
 |---------|--------|--------|
-| **CNT fiber costs now <$50/kg** | Affordable structural mesh | OCSiAl Serbia 60t/yr plant; Canatu+DENSO tripled throughput |
-| **Perovskite PV: 27.5% efficient** | Record efficiency flexible PV | Nature Photonics, Aug 2025; 97.2% retained after 10,000 bends |
-| **Self-healing Surlyn proven at ~2 km/s** | Micrometeorite defense validated | Polimi/ESA; CNT doping boosts healing to 80% |
-| ** Radiation degrades Surlyn healing** | Must shield from gamma radiation | Polimi team — critical design constraint |
-| **Lunar Palace 365: 98.2% closure** | Bio-regen life support proven long-duration | Beihang University (BUAA), 370-day run |
-| **TAPED: Wearable algae O₂ demonstrated** | Proof of concept for body-worn algae | ACS Nano, April 2025 |
-| **DLP-printed alumina: 97.5% density** | Ceramic armor 3D printable | MDPI Materials; Army Research Lab |
-| **Soft PAM actuator: 897N force** | Viable soft robotics for joint assist | npj Flex Electronics, Feb 2026 |
-| **WHO concern: CNT fiber release on washing** | Safety risk — need containment layer | MDPI Nanomaterials, Aug 2025 |
+| **CNT fiber costs now <$50/kg** | Affordable structural mesh | OCSiAl Serbia 60t/yr; Canatu+DENSO tripled |
+| **Perovskite PV: 33.6% cert flexible tandem** | +24% vs 27.5% — PV peak 285→355mW, avg 35.5→44.2mW | Nature 2026 Soochow/KAUST (ICO:H/IZO); Nature Comms Jul 2025 29.88% cert flex; Adv Funct Mat Sep 2026 theanine 25.21% ambient |
+| **Self-healing sPUU vitrimer RT 77%** | Replaces Surlyn O2-dependence — vacuum/CO2 heal | NASA NIAC SmartSuit (disulfide 251kJ/mol, infinite cycles) |
+| **ATSP vitrimer 50yr LEO stable** | Permanent adhesive, no gamma change | Meyer et al. ATSP proton+ATOX |
+| **BNNT film 3.7x shielding, 15% > Al** | 0.2mm liner doubles EVA time, 18GPa flex | KIST/KAIST Adv Funct Mater Nov 2025 (surfactant LC); VCU PDMS 10µm ISS demo Mar-Aug 2025 |
+| **BNNT-HDPE 50wt% 990% abs** | Bulk shielding without voids | NASA Langley neutron lab Jan 2025 |
+| **Ceramic NF aerogel 14 mW/mK, 1200C** | 4mm replaces 6mm silica, -33% mass, 10k cycles | SiC@SiO2 Sci Adv + BC-PVSQ Adv Mater May 2026 + PINF@CNT dual-gradient Nature Comms Jan 2026 (-196 to 533C) |
+| **ATSP/MWCNT/PTFE spiral EDS 0.3kV** | 70% power cut 5W→1.5W, 56% friction cut, 40C/30min repair | Aero Conf Mar 2026 spiral + Acta Astronautica Feb 2026 + Firefly Blue Ghost lunar 97% Mar 2025 |
+| **Ceramic nanofiber aerogel SBIR** | Mars-rated insulation beyond Mylar | NASA 80NSSC24PB369 MMI Aug 2024-Feb 2025 |
+| **DEA passive MCP 29.6kPa 0.7s** | 13x faster than SMA, kHz BW, passive-safe | IOP Feb 2025 CNT/carbon black hybrid cuff |
+| **Hydrogel+TE SMA 9.6C/4s** | Enables 5Hz movement | SMU 2025 agar/PAAm + TE |
+| **Soft PAM 897N / Bristol exosuit trousers** | Joint assist options | npj Flex Electronics Feb 2026 / Bristol Nov 2025 CRATER |
+| **Radiation degrades Surlyn healing** | Kept as sacrificial outer only behind BNNT | Polimi |
+| **WHO CNT fiber release** | Contain with encapsulation + comfort liner | MDPI Nanomaterials Aug 2025 |
 
 ---
 

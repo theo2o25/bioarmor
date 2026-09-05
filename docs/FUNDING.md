@@ -327,4 +327,4 @@ Partnerships: [partners@bioarmor.space](mailto:partners@bioarmor.space)
 
 ---
 
-**Last updated:** August 2026
+**Last updated:** September 5, 2026 — Reconfigured V2 23.39kg $10.16M (BNNT, ceramic NF, sPUU, ATSP, 33.6% PV). Added VCU ISS BNNT, NASA SBIR ceramic aerogel (80NSSC24PB369) as co-fundable.
