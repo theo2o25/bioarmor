@@ -58,27 +58,27 @@ const slides = [
     bullets: [
       "Separates <b>permanent soft life-support suit</b> from <b>snap-on hard ExoArmor tiles</b>.",
       "Buildable with current technology: soft-goods manufacturing + printable ceramic tiles.",
-      "Target: ~80% mass reduction vs the 127&nbsp;kg EMU (documented goal: 85%).",
-      "Integrates algae supplemental O2/CO2 scrubbing, self-healing pressure bladder, and active thermal control."
+      "Target: ~75% lighter SYSTEM vs EMU (V2 tube 23.39 kg + 8-12 kg PLSS = 31-35 kg vs 127 kg EMU system).",
+      "Integrates helmet + closed fan loop + LiOH/amine scrubber life support (algae = habitat, off EVA bus), self-healing pressure bladder, and passive low-e + LCHG thermal control."
     ],
     image: I.concept
   },
   {
     title: "1 · Overview — Two Systems",
     bullets: [
-      "<b>System 1 — Daily Wear Suit (Bio-Layer):</b> soft suit worn in-station; life support, thermal, comfort, basic radiation shielding. Passive (no external power).",
-      "<b>System 2 — ExoArmor (Modular Shell):</b> hard ceramic tiles that snap onto the daily suit for EVA; impact, energy harvesting, heavy radiation, extreme thermal.",
+      "<b>System 1 - Daily Wear Suit (Bio-Layer):</b> soft suit worn in-station; IVA emergency pressure garment (4.3 psi bladder + UHMWPE/aramid restraint + helmet + closed fan loop + LiOH/amine scrubber), thermal, comfort. Passive (no external power).",
+      "<b>System 2 - ExoArmor (Modular Shell):</b> hard ceramic tiles that snap onto the daily suit for EVA; impact, energy harvesting, SPE mitigation (BNNT liner 2/5), extreme thermal.",
       "Modular approach lets ExoArmor iterate independently of the soft suit."
     ]
   },
   {
     title: "2 · Daily Wear Suit — Layer Stack",
-    sub: "Inside → outside (≈8.2 mm total, ~3 kg)",
+    sub: "Inside → outside (≈6.5 mm total, ~2.9 kg tube)",
     bullets: [
       "Comfort liner (Lyocell/silicone gel) — moisture wick.",
-      "Hydrophilic aerogel + algae (6 mm) — insulation, CO2 scrub + supplemental O2, radiation (H-rich).",
-      "Self-healing Surlyn bladder (1 mm) — airtight, puncture repair.",
-      "UHMWPE + Aramid (Kevlar), CNT co-woven (0.5 mm) — structural + radiation + electrodynamic dust shield (EDS).",
+      "Ceramic nanofiber aerogel (4 mm) - insulation (14 mW/mK); algae = habitat loop, off EVA bus.",
+      "Self-healing sPUU/Surlyn bladder (1 mm) + UHMWPE/aramid restraint — airtight, puncture repair; hoop-stress gated on Test #1.",
+      "UHMWPE + Aramid (Kevlar), CNT co-woven (0.5 mm) — structural + electrodynamic dust shield (EDS).",
       "SMA wires (0.2 mm) — joint movement assistance."
     ],
     image: I.blueprint
@@ -86,10 +86,10 @@ const slides = [
   {
     title: "3 · Daily Wear Suit — Specs & Life Support",
     bullets: [
-      "Total thickness ≈ 8.2 mm · Mass ≈ 3.0 kg · Pressure 4.3 psi (29.6 kPa).",
-      "Thermal 35–40 °C passive (aerogel + algae metabolism).",
-      "O2 production ~3 L/hr ≈ 10–20% of resting need (optimistic) — <i>complements</i> primary O2 from tanks.",
-      "Closed loop: sweat → aerogel wicks → algae get water+CO2+LED light → O2 diffuses back to astronaut."
+      "Daily-wear tube ≈ 6.5 mm · Mass ≈ 2.9 kg tube · Pressure 4.3 psi (29.6 kPa); V2 EVA tube = 8.81 mm / 23.39 kg.",
+      "Thermal: passive low-e VO2 outer (0.1 emissivity) + LCHG + fingertip/foot heaters; no whole-suit Peltier; Mars-chamber manikin test required.",
+      "EVA life support = helmet + closed fan loop + LiOH/amine scrubber (PRIMARY). Algae = habitat loop, OFF the EVA power bus (PV 44.2 mW cannot drive 25 W algae LEDs) — not a suit O2 source.",
+      "Closed loop (habitat): sweat → aerogel wicks → nutrient loop → algae culture (water + CO2 + LED light)."
     ]
   },
   {
@@ -103,10 +103,10 @@ const slides = [
   },
   {
     title: "5 · Modular Algae Pods (Snap-On)",
-    sub: "Redundant, scalable life support",
+    sub: "Habitat-loop scrubbers - not EVA O2; off the EVA bus",
     bullets: [
       "500 mL pod, 500 g filled · O2 tens of mL/hr (literature-scale) · ~50 mW (internal LEDs).",
-      "Mission scaling: 0 pods (short EVA) → 4 pods (+10,000 mL/hr, +2 kg) for multi-day.",
+      "Mission scaling: 0 pods (short EVA) → 1-4 pods for habitat (multi-day), NOT suit breathing - PV 44.2 mW cannot drive a suit algae loop.",
       "Self-contained, swappable, transparent health panels, O2/CO2 sensors → HUD.",
       "Snap onto CNT mesh; fluid quick-connect for water/nutrients."
     ]
@@ -122,12 +122,12 @@ const slides = [
   },
   {
     title: "7 · Active Thermal Control",
-    sub: "Liquid cooling/heating garment (LCHG)",
+    sub: "Passive low-e VO2 primary; LCHG + fingertip/foot heaters only",
     bullets: [
-      "Heats in lunar shadow (−173 °C), cools in sun (127 °C), removes body heat.",
-      "Micro-tubes (100 g) + micro-pump (50 g) + Peltier (100 g) + sensors/controller (50 g) = 300 g.",
+      "Ranking: 1) low-e VO2 outer (0.1 emissivity) 2) LCHG + fingertip/foot heaters only 3) NO whole-suit Peltier - 500 mW cannot move 100-300 W metabolic heat.",
+      "Micro-tubes (100 g) + micro-pump (50 g) + sensors/controller (50 g) = 200 g; heaters at fingertips/feet.",
       "60–100 °F adjustable · 500 mW peak, 100 mW avg · powered by CNT mesh + battery buffer.",
-      "Works with the aerogel insulation layer as the primary thermal barrier."
+      "Mars thin-gas convection + dust invalidate 35-40 °C passive target - Mars-chamber manikin test required."
     ],
     image: I.thermal
   },
@@ -136,7 +136,7 @@ const slides = [
     sub: "Breathing loop, power, thermal, comms",
     image: I.subsystems,
     bullets: [
-      "Breathing loop: helmet → O2 supply → algae scrub (supplemental) → CO2 removal (LiOH/adsorbent backup).",
+      "Breathing loop: helmet -> closed fan loop -> CO2 removal (LiOH/amine scrubber) -> O2 supply. Algae = habitat loop, off the EVA bus.",
       "Power: PV coating → CNT mesh bus → battery buffer → loads.",
       "Thermal + comms + HUD feed off the same distributed architecture."
     ]
@@ -156,19 +156,19 @@ const slides = [
     title: "10 · ExoArmor Specs & Combined Mass",
     bullets: [
       "Hex tile 60 mm (20–30 mm at joints) · ~125 g/tile · chest plate 42 tiles = 5.3 kg · full armor ≈ 17 kg.",
-      "Power harvesting ~35.5 mW avg (duty cycle; PV peak ~285 mW)."
+      "Power harvesting ~44.2 mW avg (duty cycle; PV peak ~355 mW)."
     ],
     table: `<table>
-      <tr><th>Configuration</th><th>Mass</th><th>vs EMU (127 kg)</th></tr>
-      <tr><td>Daily wear suit</td><td>2.2 kg</td><td>2%</td></tr>
-      <tr><td>+ Gloves + Boots</td><td>2.7 kg</td><td>2%</td></tr>
-      <tr><td>+ Chest armor</td><td>8.9 kg</td><td>7%</td></tr>
-      <tr><td>+ Full ExoArmor</td><td>21.4 kg</td><td>17%</td></tr>
-      <tr><td>+ Algae pods (4)</td><td>23.6 kg</td><td>19%</td></tr>
-      <tr><td>+ All improvements</td><td>25.5 kg</td><td>20%</td></tr>
-      <tr><td>EMU (current)</td><td>127 kg</td><td>100%</td></tr>
+      <tr><th>Configuration</th><th>Mass (tube)</th><th>vs EMU tube (82 kg)</th></tr>
+      <tr><td>Daily wear suit (bladder+restraint)</td><td>2.0 kg</td><td>2%</td></tr>
+      <tr><td>+ BNNT + ATSP + hydrogel/TE</td><td>2.9 kg</td><td>4%</td></tr>
+      <tr><td>+ Gloves + Boots</td><td>3.4 kg</td><td>4%</td></tr>
+      <tr><td>+ Chest armor</td><td>9.4 kg</td><td>11%</td></tr>
+      <tr><td>+ Full ExoArmor (+DEA)</td><td>21.8 kg</td><td>27%</td></tr>
+      <tr><td>V2 EVA tube (8.81 mm, $10.16M)</td><td>23.39 kg</td><td>29%</td></tr>
+      <tr><td>EMU suit (tube, excl. PLSS)</td><td>82 kg</td><td>100%</td></tr>
     </table>`,
-    sub: "≈80% lighter than EMU — the documented target is 85%."
+    sub: "Tube-to-tube. SYSTEM comparison: add 8-12 kg PLSS = 31-35 kg vs EMU 127 kg (still ~75% lighter); or 3.5 kg emergency 3-hr IVA (tube + 500 g PLSS) vs EMU."
   },
   {
     title: "11 · Avionics, Data & Closed-Loop Control",
@@ -187,7 +187,7 @@ const slides = [
     table: `<table>
       <tr><th>Function</th><th>Status</th></tr>
       <tr><td>Pressure / O2 / Thermal / MMOD / SPE rad</td><td class="gap-done">DONE</td></tr>
-      <tr><td>GCR radiation / Mobility / Water-waste</td><td class="gap-done">PARTIAL</td></tr>
+      <tr><td>GCR radiation / Mobility / Water-waste</td><td class="gap-done">PARTIAL - GCR 1/5 unmitigated</td></tr>
       <tr><td>Avionics &amp; data / Closed-loop control</td><td class="gap-miss">GAP → now specified</td></tr>
       <tr><td>Lunar dust / Helmet-visor / Gamma-on-Surlyn</td><td class="gap-miss">GAP</td></tr>
       <tr><td>Redundancy (SPOF) / Prebreathe protocol</td><td class="gap-miss">GAP</td></tr>
@@ -202,7 +202,7 @@ const slides = [
     bullets: [
       "<b>Dust:</b> Electrostatic Dust Shields (EDS), lotus coatings, positive-pressure purge at joints, sealed dust-tolerant bearings.",
       "<b>Helmet/visor:</b> impact-rated polycarbonate, active anti-fog film, HUD, bone-conduction comms, EDS dust ring.",
-      "<b>Radiation hardening:</b> thin HDPE/B4C liner outboard of bladder for gamma; algae water for neutrons; dual bladder + dual O2 path for redundancy.",
+      "<b>Radiation hardening:</b> BNNT 0.2 mm liner helps SPE only (2/5); GCR 1/5 UNMITIGATED - 0.02 g/cm2 wet layer vs 10-1000x needed; ceramic tiles increase secondaries (abrasion/thermal only, not shielding); keep habitat storm shelter.",
       "<b>Prebreathe:</b> 4.3 psi pure-O2 matches EMU protocol — standard denitrogenation still required."
     ]
   },
@@ -210,7 +210,7 @@ const slides = [
     title: "14 · Design Philosophy & Roadmap",
     bullets: [
       "Mimic mitochondria — create gradients, harvest them, store the energy, protect the source.",
-      "Near-term: tile layer-order validation, thermal model, algae sizing, self-healing under radiation.",
+      "Funded near-term: 4 risk-retirement tests - #1 hoop-stress cylinder (bladder + UHMWPE/aramid restraint, 4.3 psi, 24 h, <5% growth); #2 tile flex 1000 cycles; #3 EDS + perchlorate at seal in 6 mbar CO2 (<1% residual, no 500 V arc); #4 power board EDS + heaters with algae off bus.",
       "Mid-term: integrated subsystem test — full prototype in vacuum + NBL.",
       "Concept art (right) communicates the vision; engineering lives in the spec docs."
     ],
@@ -221,7 +221,7 @@ const slides = [
     sub: "Materials exist. Integration is the innovation.",
     bullets: [
       "Two-system architecture: daily-wear life support + modular ExoArmor.",
-      "Passive stack solved; active avionics/data layer now specified.",
+      "Passive stack is credible but NOT solved until Tests #1-4 pass; subsystem TRL honest (EDS 4/5, pressure 2/5, thermal 2/5, GCR 1/5).",
       "Open gaps are engineering tasks, not unknown science.",
       "See BIOARMOR_CONCEPT.md for full spec, matrix, and design responses."
     ]
